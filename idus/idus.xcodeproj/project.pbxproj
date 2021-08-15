@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53D2C142ACB8A4D6560EC0BA /* Pods_idus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D66314D730CD63119D70A7 /* Pods_idus.framework */; };
+		6F9F6CAE26C9436D00802FD1 /* mainidus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F6CAD26C9436D00802FD1 /* mainidus.png */; };
+		6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F6CAF26C94F2400802FD1 /* MenuCell.swift */; };
+		6F9F6CB626C94F8C00802FD1 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F6CB526C94F8C00802FD1 /* MenuCell.xib */; };
+		6F9F6CB826C9511400802FD1 /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F6CB726C9511400802FD1 /* FocusView.xib */; };
 		6FEE742D26C7DA7700D0D159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE742C26C7DA7700D0D159 /* AppDelegate.swift */; };
 		6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE742E26C7DA7700D0D159 /* SceneDelegate.swift */; };
 		6FEE743126C7DA7700D0D159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE743026C7DA7700D0D159 /* ViewController.swift */; };
@@ -20,9 +25,15 @@
 		6FEE744B26C802B400D0D159 /* mypagebottom.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FEE744A26C802B300D0D159 /* mypagebottom.jpeg */; };
 		6FEE744D26C8036C00D0D159 /* mainImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FEE744C26C8036C00D0D159 /* mainImage.jpg */; };
 		6FEE744F26C8044B00D0D159 /* mainpage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEE744E26C8044B00D0D159 /* mainpage.png */; };
+		6FEE745626C81E5A00D0D159 /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEE745526C81E5900D0D159 /* signup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60D66314D730CD63119D70A7 /* Pods_idus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9F6CAD26C9436D00802FD1 /* mainidus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainidus.png; sourceTree = "<group>"; };
+		6F9F6CAF26C94F2400802FD1 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		6F9F6CB526C94F8C00802FD1 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		6F9F6CB726C9511400802FD1 /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
 		6FEE742926C7DA7700D0D159 /* idus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FEE742C26C7DA7700D0D159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FEE742E26C7DA7700D0D159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +49,9 @@
 		6FEE744A26C802B300D0D159 /* mypagebottom.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mypagebottom.jpeg; sourceTree = "<group>"; };
 		6FEE744C26C8036C00D0D159 /* mainImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainImage.jpg; sourceTree = "<group>"; };
 		6FEE744E26C8044B00D0D159 /* mainpage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainpage.png; sourceTree = "<group>"; };
+		6FEE745526C81E5900D0D159 /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signup.png; path = ../../../../../../signup.png; sourceTree = "<group>"; };
+		7C39EB99D35627575853C08A /* Pods-idus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idus.release.xcconfig"; path = "Target Support Files/Pods-idus/Pods-idus.release.xcconfig"; sourceTree = "<group>"; };
+		CAADC838E83EED02E260E43A /* Pods-idus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idus.debug.xcconfig"; path = "Target Support Files/Pods-idus/Pods-idus.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +59,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D2C142ACB8A4D6560EC0BA /* Pods_idus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FC9B235711804739028299D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAADC838E83EED02E260E43A /* Pods-idus.debug.xcconfig */,
+				7C39EB99D35627575853C08A /* Pods-idus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F9F6CB926C9543400802FD1 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F6CB726C9511400802FD1 /* FocusView.xib */,
+				6F9F6CB526C94F8C00802FD1 /* MenuCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		6FEE742026C7DA7700D0D159 = {
 			isa = PBXGroup;
 			children = (
 				6FEE742B26C7DA7700D0D159 /* idus */,
 				6FEE742A26C7DA7700D0D159 /* Products */,
+				5FC9B235711804739028299D /* Pods */,
+				CF3618F72D03A3FEBB4DF080 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,11 +105,13 @@
 		6FEE742B26C7DA7700D0D159 /* idus */ = {
 			isa = PBXGroup;
 			children = (
+				6F9F6CB926C9543400802FD1 /* xib */,
 				6FEE744526C7E1D600D0D159 /* VC */,
 				6FEE744026C7DF8000D0D159 /* images */,
 				6FEE742C26C7DA7700D0D159 /* AppDelegate.swift */,
 				6FEE742E26C7DA7700D0D159 /* SceneDelegate.swift */,
 				6FEE743226C7DA7700D0D159 /* Main.storyboard */,
+				6F9F6CAF26C94F2400802FD1 /* MenuCell.swift */,
 				6FEE743526C7DA7900D0D159 /* Assets.xcassets */,
 				6FEE743726C7DA7900D0D159 /* LaunchScreen.storyboard */,
 				6FEE743A26C7DA7900D0D159 /* Info.plist */,
@@ -85,8 +122,11 @@
 		6FEE744026C7DF8000D0D159 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6FEE745526C81E5900D0D159 /* signup.png */,
+				6FEE744E26C8044B00D0D159 /* mainpage.png */,
 				6FEE744C26C8036C00D0D159 /* mainImage.jpg */,
 				6FEE744126C7DF9600D0D159 /* kakao.png */,
+				6F9F6CAD26C9436D00802FD1 /* mainidus.png */,
 				6FEE744A26C802B300D0D159 /* mypagebottom.jpeg */,
 				6FEE744326C7DFA400D0D159 /* btnG_완성형.png */,
 			);
@@ -99,9 +139,16 @@
 				6FEE743026C7DA7700D0D159 /* ViewController.swift */,
 				6FEE744626C7E5B100D0D159 /* MyPageViewController.swift */,
 				6FEE744826C7EC8000D0D159 /* MainViewController.swift */,
-				6FEE744E26C8044B00D0D159 /* mainpage.png */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		CF3618F72D03A3FEBB4DF080 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60D66314D730CD63119D70A7 /* Pods_idus.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FEE743D26C7DA7900D0D159 /* Build configuration list for PBXNativeTarget "idus" */;
 			buildPhases = (
+				C4CCFD90D6D3C6CEF9271D23 /* [CP] Check Pods Manifest.lock */,
 				6FEE742526C7DA7700D0D159 /* Sources */,
 				6FEE742626C7DA7700D0D159 /* Frameworks */,
 				6FEE742726C7DA7700D0D159 /* Resources */,
+				615BBDC28B2B239E2F966621 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,17 +211,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FEE743926C7DA7900D0D159 /* LaunchScreen.storyboard in Resources */,
+				6F9F6CB826C9511400802FD1 /* FocusView.xib in Resources */,
+				6F9F6CAE26C9436D00802FD1 /* mainidus.png in Resources */,
 				6FEE744F26C8044B00D0D159 /* mainpage.png in Resources */,
 				6FEE743626C7DA7900D0D159 /* Assets.xcassets in Resources */,
 				6FEE744D26C8036C00D0D159 /* mainImage.jpg in Resources */,
+				6F9F6CB626C94F8C00802FD1 /* MenuCell.xib in Resources */,
 				6FEE744426C7DFA400D0D159 /* btnG_완성형.png in Resources */,
 				6FEE744B26C802B400D0D159 /* mypagebottom.jpeg in Resources */,
 				6FEE743426C7DA7700D0D159 /* Main.storyboard in Resources */,
 				6FEE744226C7DF9600D0D159 /* kakao.png in Resources */,
+				6FEE745626C81E5A00D0D159 /* signup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		615BBDC28B2B239E2F966621 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-idus/Pods-idus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-idus/Pods-idus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-idus/Pods-idus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4CCFD90D6D3C6CEF9271D23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-idus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FEE742526C7DA7700D0D159 /* Sources */ = {
@@ -181,6 +276,7 @@
 			files = (
 				6FEE743126C7DA7700D0D159 /* ViewController.swift in Sources */,
 				6FEE742D26C7DA7700D0D159 /* AppDelegate.swift in Sources */,
+				6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */,
 				6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */,
 				6FEE744726C7E5B100D0D159 /* MyPageViewController.swift in Sources */,
 				6FEE744926C7EC8000D0D159 /* MainViewController.swift in Sources */,
@@ -327,6 +423,7 @@
 		};
 		6FEE743E26C7DA7900D0D159 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAADC838E83EED02E260E43A /* Pods-idus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +443,7 @@
 		};
 		6FEE743F26C7DA7900D0D159 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C39EB99D35627575853C08A /* Pods-idus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

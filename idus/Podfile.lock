@@ -1,0 +1,16 @@
+PODS:
+  - PagingKit (1.18.0)
+
+DEPENDENCIES:
+  - PagingKit
+
+SPEC REPOS:
+  trunk:
+    - PagingKit
+
+SPEC CHECKSUMS:
+  PagingKit: 366cc22d74f4de7768bb31d8fcd49182f53e3ce7
+
+PODFILE CHECKSUM: 48044161f8577de048e3588328a30711c734f73f
+
+COCOAPODS: 1.10.1
