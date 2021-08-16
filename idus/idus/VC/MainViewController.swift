@@ -18,18 +18,36 @@ class MainViewController: UIViewController{
        return vc
    }
        
-       var dataSource = [(menuTitle: "투데이", vc: viewController(.red)), (menuTitle: "실시간", vc: viewController(.blue)), (menuTitle: "NEW", vc: viewController(.yellow))]
+    var dataSource = [(menu: String, content: UIViewController)](){
+        didSet{
+            menuViewController.reloadData()
+            contentViewController.reloadData()
+        }
+    }
+    
+    lazy var firstLoad: (()-> Void)? = {[weak self, menuViewController, contentViewController] in
+        menuViewController?.reloadData()
+        contentViewController?.reloadData()
+        self?.firstLoad = nil
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        firstLoad?()
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
-                menuViewController.registerFocusView(nib: UINib(nibName: "FocusView", bundle: nil))
+        menuViewController.registerFocusView(view: UnderlineFocusView())
         tabbarConfigure()
         navigationSetting()
         menuViewController.reloadData()
         contentViewController.reloadData()
-
+        menuViewController.cellAlignment = .center
+        dataSource = makeDataSource()
     }
     
     // MARK: - 탭바 설정
@@ -47,48 +65,84 @@ class MainViewController: UIViewController{
         navigationController?.navigationBar.barTintColor = UIColor.white
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    // MARK: - 커스텀탭바 설정들
+    
+    fileprivate func makeDataSource() -> [(menu: String, content: UIViewController)]{
+        let myMenuArray = ["투데이","실시간","NEW"]
+        
+        return myMenuArray.map {
+            let title = $0
+            
+            switch title {
+            case "투데이":
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+                return (menu: title, content: vc)
+            case "실시간":
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+                return (menu: title, content: vc)
+            case "NEW":
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+                return (menu: title, content: vc)
+            default:
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+                return (menu: title, content: vc)
+                
+                }
+            }
+        }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? PagingMenuViewController {
             menuViewController = vc
             menuViewController.dataSource = self // <- set menu data source
+            menuViewController.delegate = self // <- set menu delegate
         } else if let vc = segue.destination as? PagingContentViewController {
             contentViewController = vc
+            contentViewController.dataSource = self
+            contentViewController.delegate = self
         }
     }
 
 }
-//메뉴 데이터소스
-extension MainViewController: PagingMenuViewControllerDataSource {
-    func numberOfItemsForMenuViewController(viewController: PagingMenuViewController) -> Int {
-        return dataSource.count
+    //메뉴 데이터소스
+    extension MainViewController: PagingMenuViewControllerDataSource {
+        func numberOfItemsForMenuViewController(viewController: PagingMenuViewController) -> Int {
+            return dataSource.count
+        }
+        
+        func menuViewController(viewController: PagingMenuViewController, widthForItemAt index: Int) -> CGFloat {
+            return 135
+        }
+        
+        func menuViewController(viewController: PagingMenuViewController, cellForItemAt index: Int) -> PagingMenuViewCell {
+            let cell = viewController.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: index) as! MenuCell
+            //let cell = viewController.dequeueReusableCell(withReuseIdentifier: "TitleLabelMenu", for: index) as! TitleLabelMenuViewCell
+            cell.titleLabel.text = dataSource[index].menu
+            cell.titleLabel.textColor = .lightGray
+            return cell
+        }
     }
-    
-    func menuViewController(viewController: PagingMenuViewController, widthForItemAt index: Int) -> CGFloat {
-        return 100
+    //컨텐트 데이터소스
+    extension MainViewController: PagingContentViewControllerDataSource {
+        func numberOfItemsForContentViewController(viewController: PagingContentViewController) -> Int {
+            return dataSource.count
+        }
+        
+        func contentViewController(viewController: PagingContentViewController, viewControllerAt index: Int) -> UIViewController {
+            return dataSource[index].content
+        }
     }
-    
-    func menuViewController(viewController: PagingMenuViewController, cellForItemAt index: Int) -> PagingMenuViewCell {
-        let cell = viewController.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: index) as! MenuCell
-        cell.titleLabel.text = dataSource[index].menuTitle
-        return cell
+
+    extension MainViewController: PagingMenuViewControllerDelegate {
+        func menuViewController(viewController: PagingMenuViewController, didSelect page: Int, previousPage: Int) {
+            contentViewController.scroll(to: page, animated: true)
+        }
     }
-}
-//컨텐트 데이터소스
-extension MainViewController: PagingContentViewControllerDataSource {
-    func numberOfItemsForContentViewController(viewController: PagingContentViewController) -> Int {
-        return dataSource.count
+
+    extension MainViewController: PagingContentViewControllerDelegate {
+        func contentViewController(viewController: PagingContentViewController, didManualScrollOn index: Int, percent: CGFloat) {
+            menuViewController.scroll(index: index, percent: percent, animated: false)
+        }
     }
-    
-    func contentViewController(viewController: PagingContentViewController, viewControllerAt index: Int) -> UIViewController {
-        return dataSource[index].vc
-    }
-}
+

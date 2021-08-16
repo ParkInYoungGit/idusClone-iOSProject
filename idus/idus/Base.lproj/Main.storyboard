@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UmL-Ww-RAj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -33,6 +33,9 @@
                                 <state key="normal" title="     카카오로 3초만에 시작하기">
                                     <color key="titleColor" red="0.23118567470000001" green="0.12170635909999999" blue="0.1176412776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="kakaoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXX-PK-ucK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGg-sV-Gj0">
                                 <rect key="frame" x="134" y="598" width="147" height="32"/>
@@ -676,6 +679,54 @@
             </objects>
             <point key="canvasLocation" x="130" y="797"/>
         </scene>
+        <!--Today View Controller-->
+        <scene sceneID="3fY-Zk-wCF">
+            <objects>
+                <viewController storyboardIdentifier="today" id="nh0-4K-dhC" customClass="todayViewController" customModule="idus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gee-Rs-W1V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="투데이;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saD-DB-06R">
+                                <rect key="frame" x="168" y="346" width="78" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kBV-af-u3q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpk-aI-cRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-581.15942028985512" y="1482.5892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uYN-Vw-uNI">
+            <objects>
+                <viewController storyboardIdentifier="now" id="oJg-vs-Wnz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nv9-fb-JHF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="실시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAr-Oj-HWP">
+                                <rect key="frame" x="168" y="337" width="78" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ug7-0Q-2n1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Pv-id-xLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="1483"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="y3U-9E-Ajj">
             <objects>
@@ -702,20 +753,20 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-EJ-fzP">
-                                <rect key="frame" x="0.0" y="143" width="414" height="57"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNC-U4-QHV">
+                                <rect key="frame" x="0.0" y="221" width="414" height="592"/>
+                                <connections>
+                                    <segue destination="KnV-eu-hxf" kind="embed" id="0TN-G1-q4F"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-EJ-fzP">
+                                <rect key="frame" x="0.0" y="143" width="414" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="CZl-pR-2t1"/>
                                     <constraint firstAttribute="height" constant="57" id="RMk-Z1-ol6"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="9T4-vg-bv2" kind="embed" id="BUy-Hk-Wch"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNC-U4-QHV">
-                                <rect key="frame" x="0.0" y="210" width="414" height="603"/>
-                                <connections>
-                                    <segue destination="KnV-eu-hxf" kind="embed" id="0TN-G1-q4F"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -743,7 +794,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylQ-iQ-YFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="781"/>
+            <point key="canvasLocation" x="892.75362318840587" y="780.80357142857144"/>
         </scene>
         <!--클래스-->
         <scene sceneID="8w1-7p-gtr">
@@ -839,10 +890,10 @@
             <objects>
                 <viewController id="9T4-vg-bv2" customClass="PagingMenuViewController" customModule="PagingKit" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iht-tZ-aGa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="eUZ-fP-dsG"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3y-Zh-AuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -873,14 +924,39 @@
             <objects>
                 <viewController id="KnV-eu-hxf" customClass="PagingContentViewController" customModule="PagingKit" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vpn-B2-TWa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="592"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5f8-A0-rjh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwG-A3-M0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1613" y="1222"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nls-hK-Mbi">
+            <objects>
+                <viewController storyboardIdentifier="new" id="NVo-rp-vBJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwu-nx-S6w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="뉴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCd-1j-klx">
+                                <rect key="frame" x="178" y="328" width="78" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s2d-PF-KRn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gQ-aT-iTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="1483"/>
         </scene>
     </scenes>
     <resources>
@@ -908,9 +984,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		53D2C142ACB8A4D6560EC0BA /* Pods_idus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D66314D730CD63119D70A7 /* Pods_idus.framework */; };
+		6F9CD69726C9695100A2AEC0 /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9CD69626C9695100A2AEC0 /* FocusView.xib */; };
+		6F9CD69926CA200A00A2AEC0 /* todayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9CD69826CA200A00A2AEC0 /* todayViewController.swift */; };
 		6F9F6CAE26C9436D00802FD1 /* mainidus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F6CAD26C9436D00802FD1 /* mainidus.png */; };
 		6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F6CAF26C94F2400802FD1 /* MenuCell.swift */; };
 		6F9F6CB626C94F8C00802FD1 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F6CB526C94F8C00802FD1 /* MenuCell.xib */; };
-		6F9F6CB826C9511400802FD1 /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9F6CB726C9511400802FD1 /* FocusView.xib */; };
 		6FEE742D26C7DA7700D0D159 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE742C26C7DA7700D0D159 /* AppDelegate.swift */; };
 		6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE742E26C7DA7700D0D159 /* SceneDelegate.swift */; };
 		6FEE743126C7DA7700D0D159 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE743026C7DA7700D0D159 /* ViewController.swift */; };
@@ -30,10 +31,11 @@
 
 /* Begin PBXFileReference section */
 		60D66314D730CD63119D70A7 /* Pods_idus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9CD69626C9695100A2AEC0 /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		6F9CD69826CA200A00A2AEC0 /* todayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayViewController.swift; sourceTree = "<group>"; };
 		6F9F6CAD26C9436D00802FD1 /* mainidus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainidus.png; sourceTree = "<group>"; };
 		6F9F6CAF26C94F2400802FD1 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		6F9F6CB526C94F8C00802FD1 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
-		6F9F6CB726C9511400802FD1 /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
 		6FEE742926C7DA7700D0D159 /* idus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FEE742C26C7DA7700D0D159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FEE742E26C7DA7700D0D159 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,8 +80,8 @@
 		6F9F6CB926C9543400802FD1 /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				6F9F6CB726C9511400802FD1 /* FocusView.xib */,
 				6F9F6CB526C94F8C00802FD1 /* MenuCell.xib */,
+				6F9CD69626C9695100A2AEC0 /* FocusView.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 				6FEE743026C7DA7700D0D159 /* ViewController.swift */,
 				6FEE744626C7E5B100D0D159 /* MyPageViewController.swift */,
 				6FEE744826C7EC8000D0D159 /* MainViewController.swift */,
+				6F9CD69826CA200A00A2AEC0 /* todayViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FEE743926C7DA7900D0D159 /* LaunchScreen.storyboard in Resources */,
-				6F9F6CB826C9511400802FD1 /* FocusView.xib in Resources */,
+				6F9CD69726C9695100A2AEC0 /* FocusView.xib in Resources */,
 				6F9F6CAE26C9436D00802FD1 /* mainidus.png in Resources */,
 				6FEE744F26C8044B00D0D159 /* mainpage.png in Resources */,
 				6FEE743626C7DA7900D0D159 /* Assets.xcassets in Resources */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FEE743126C7DA7700D0D159 /* ViewController.swift in Sources */,
+				6F9CD69926CA200A00A2AEC0 /* todayViewController.swift in Sources */,
 				6FEE742D26C7DA7700D0D159 /* AppDelegate.swift in Sources */,
 				6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */,
 				6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */,
