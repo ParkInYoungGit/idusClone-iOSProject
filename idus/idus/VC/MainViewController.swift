@@ -21,7 +21,7 @@ class MainViewController: UIViewController{
     var dataSource = [(menu: String, content: UIViewController)](){
         didSet{
             menuViewController.reloadData()
-            contentViewController.reloadData()
+            contentViewController!.reloadData()
         }
     }
     
@@ -40,14 +40,16 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
         menuViewController.registerFocusView(view: UnderlineFocusView())
         tabbarConfigure()
         navigationSetting()
+        dataSource = makeDataSource()
         menuViewController.reloadData()
         contentViewController.reloadData()
         menuViewController.cellAlignment = .center
-        dataSource = makeDataSource()
+        
     }
     
     // MARK: - 탭바 설정

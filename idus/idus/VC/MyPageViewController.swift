@@ -8,11 +8,16 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
-
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var lblName: UILabel!
+    var userName: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-
+        userName = UserDefaults.standard.string(forKey: "nickName")!
+        lblName.text = userName
+        profileImage.image = UIImage(named: "profileImage.png")
+        profileImage.layer.cornerRadius = 10
 
         
         // Do any additional setup after loading the view.

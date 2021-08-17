@@ -15,13 +15,14 @@ import NaverThirdPartyLogin
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-      NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
-      return true
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//      NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
+//      return true
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        NaverThirdPartyLoginConnection.getSharedInstance()?.isInAppOauthEnable = true
+
         KakaoSDKCommon.initSDK(appKey: "ecde480714ca72f4205e6d74dc9dfb32")
         let instance = NaverThirdPartyLoginConnection.getSharedInstance()
             

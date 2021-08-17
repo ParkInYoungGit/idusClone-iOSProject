@@ -9,6 +9,7 @@ pod 'Alamofire', '~> 5.4'
 pod 'naveridlogin-sdk-ios'
 pod 'KakaoSDKUser'
 pod 'KakaoSDK'
+pod 'SnapKit', '~> 5.0.0'
   # Pods for idus
 
 end
