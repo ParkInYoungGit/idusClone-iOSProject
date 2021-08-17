@@ -161,8 +161,8 @@
                                     <fragment content="이메일 로그인">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Bold"/>
-                                            <font key="NSOriginalFont" size="22" name=".AppleSDGothicNeoI-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="22"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="22"/>
                                             <integer key="NSUnderline" value="1"/>
                                         </attributes>
                                     </fragment>
@@ -1083,6 +1083,7 @@
                     <view key="view" contentMode="scaleToFill" id="cPO-x4-7aW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="607"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YY6-Qu-1fu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
