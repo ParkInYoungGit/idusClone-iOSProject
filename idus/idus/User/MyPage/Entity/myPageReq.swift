@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct MyPageReq {
+struct MyPageReq: Encodable {
     var userIdx: Int
 }

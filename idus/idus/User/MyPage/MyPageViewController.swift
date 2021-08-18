@@ -9,6 +9,7 @@ import UIKit
 
 class MyPageViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
+    var dataManager = MyPageDataManager()
     
     @IBOutlet weak var lblName: UILabel!
     var userName: String = ""
@@ -19,6 +20,8 @@ class MyPageViewController: UIViewController {
         profileImage.image = UIImage(named: "profileImage.png")
         profileImage.layer.cornerRadius = 10
 
+        let idx = 5
+        dataManager.getMyPage(idx, delegate: self)
         
         // Do any additional setup after loading the view.
     }
@@ -35,4 +38,13 @@ class MyPageViewController: UIViewController {
     }
     */
 
+}
+extension MyPageViewController {
+    func didSuccessMypage(_ result: String) {
+        userName = result
+        lblName.text = userName
+    }
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
 }
