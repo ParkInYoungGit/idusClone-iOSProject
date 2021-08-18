@@ -8,6 +8,15 @@
 import Foundation
 import Alamofire
 
-struct Constant {
+class Constant {
     static let BASE_URL = "https://rpann.shop/app/"
+    static let shared = Constant()
+    private init(){
+        
+    }
+    var jwt: String = ""
+    var idx: Int = 0
+
 }
+
+// 이렇게 접근 Constant.shared.jwt

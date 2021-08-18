@@ -16,7 +16,12 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
     @IBOutlet weak var kakaobtn: UIButton!
     @IBOutlet weak var naverbtn: UIButton!
     @IBOutlet weak var userbtn: UIButton!
-    
+    @IBOutlet weak var bgImage: UIImageView!
+    let timeSelector: Selector = #selector(ViewController.updateTime)
+    let interval = 2.0
+    var numImage = 0
+    var count = 0
+    var imagName = ["signup.png","mainImage.jpg"]
  
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     override func viewDidLoad() {
@@ -28,6 +33,32 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        
+        Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+    }
+    @objc func updateTime(){
+        let formatter = DateFormatter()
+        
+        formatter.locale = Locale(identifier: "ko")
+        formatter.dateFormat = "yyyy-MM-dd EEE a hh:mm" //년도-월-일 요일 (오전/오후) 시간:분
+        
+        count += 1
+        if count >= imagName.count {
+            count = 0
+      }
+        backGroundImage(number: count)
+        print(count)
+    }
+    
+    func backGroundImage(number: Int){
+        bgImage.image = UIImage(named: imagName[number])
+        
+        UIView.transition(with: self.bgImage,
+                           duration: 1,
+                           options: [.allowAnimatedContent, .transitionCrossDissolve],
+                           animations: { self.bgImage.image = UIImage(named: self.imagName[number]) },
+                           completion: nil)
+    
     }
 
     @IBAction func otherLogin(_ sender: UIButton) {
@@ -37,11 +68,12 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
         
     }
     
+    
     func radiusSetting(){
         idusImage.layer.cornerRadius = 30
         kakaobtn.layer.cornerRadius = 30
         naverbtn.layer.cornerRadius = 30
-        userbtn.layer.cornerRadius = 30
+        userbtn.layer.cornerRadius = 20
         userbtn.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         userbtn.layer.borderWidth = 2
     }

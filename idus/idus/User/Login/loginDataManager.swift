@@ -20,6 +20,9 @@ class LoginDataManager {
                     if response.isSuccess, let result = response.result {
                         delegate.didSuccessLogIn(result)
                         print("\(response.message)")
+                        Constant.shared.idx = response.result!.userIdx
+                        Constant.shared.jwt = response.result!.jwt
+                        
                     }
                     // 실패했을 때
                     else {
