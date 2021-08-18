@@ -19,6 +19,9 @@ class loginViewController: UIViewController {
         btnLogin.layer.cornerRadius = 10
         btnLogin.layer.borderWidth = 2
         btnLogin.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        tfEmail.layer.addBorder([.bottom], color: UIColor.white, width: 1.0)
+        tfPassword.layer.addBorder([.bottom], color: UIColor.white, width: 1.0)
         // Do any additional setup after loading the view.
     }
     
@@ -28,13 +31,13 @@ class loginViewController: UIViewController {
     
     @IBAction func btnLogin(_ sender: Any) {
         guard let email = tfEmail.text?.trim, email.isExists else {
-            //self.presentAlert(title: "아이디를 입력해주세요")
+            self.presentAlert(title: "아이디를 입력해주세요")
             return
         }
         
         // Password validation
         guard let password = tfPassword.text, password.isExists else {
-            //self.presentAlert(title: "비밀번호를 입력해주세요")
+            self.presentAlert(title: "비밀번호를 입력해주세요")
             return
         }
         
@@ -56,13 +59,13 @@ class loginViewController: UIViewController {
     */
 extension loginViewController {
         func didSuccessLogIn(_ result: Result) {
-            self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt)
+            //self.presentAlert(title: "로그인에 성공하였습니다", message: result.jwt)
             let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
             self.changeRootViewController(mypageVC)
         }
         
-        func failedToRequest(message: String) {
+        func failedToLogin(message: String) {
             self.presentAlert(title: message)
         }
 }

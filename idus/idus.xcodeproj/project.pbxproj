@@ -12,6 +12,9 @@
 		6F2C026726CB7022004A32FF /* loginRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2C026626CB7022004A32FF /* loginRes.swift */; };
 		6F2C026926CB71BB004A32FF /* loginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2C026826CB71BB004A32FF /* loginDataManager.swift */; };
 		6F2C026C26CB72A8004A32FF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2C026B26CB72A8004A32FF /* Constant.swift */; };
+		6F79205A26CBFE1B005D07FA /* signupDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F79205926CBFE1B005D07FA /* signupDataManager.swift */; };
+		6F79205C26CBFEF7005D07FA /* signupReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F79205B26CBFEF7005D07FA /* signupReq.swift */; };
+		6F79205E26CBFF0C005D07FA /* signupRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F79205D26CBFF0C005D07FA /* signupRes.swift */; };
 		6F8C491E26CB987C00E4E1C4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C491D26CB987C00E4E1C4 /* UIViewController.swift */; };
 		6F8C492026CB98F200E4E1C4 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C491F26CB98F200E4E1C4 /* IndicatorView.swift */; };
 		6F8C492226CB990900E4E1C4 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8C492126CB990900E4E1C4 /* Device.swift */; };
@@ -48,6 +51,9 @@
 		6F2C026626CB7022004A32FF /* loginRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginRes.swift; sourceTree = "<group>"; };
 		6F2C026826CB71BB004A32FF /* loginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginDataManager.swift; sourceTree = "<group>"; };
 		6F2C026B26CB72A8004A32FF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6F79205926CBFE1B005D07FA /* signupDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupDataManager.swift; sourceTree = "<group>"; };
+		6F79205B26CBFEF7005D07FA /* signupReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupReq.swift; sourceTree = "<group>"; };
+		6F79205D26CBFF0C005D07FA /* signupRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupRes.swift; sourceTree = "<group>"; };
 		6F8C48F426CB949600E4E1C4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6F8C491626CB94A100E4E1C4 /* TransitionNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionNextViewController.swift; sourceTree = "<group>"; };
 		6F8C491726CB94A100E4E1C4 /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				6F8C492926CBD47500E4E1C4 /* signupViewController.swift */,
+				6F79205926CBFE1B005D07FA /* signupDataManager.swift */,
 				6F2C026226CB6EC7004A32FF /* Entity */,
 			);
 			path = Signup;
@@ -151,6 +158,8 @@
 		6F2C026226CB6EC7004A32FF /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				6F79205B26CBFEF7005D07FA /* signupReq.swift */,
+				6F79205D26CBFF0C005D07FA /* signupRes.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -452,11 +461,14 @@
 				6F2C026726CB7022004A32FF /* loginRes.swift in Sources */,
 				6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */,
 				6F8C491E26CB987C00E4E1C4 /* UIViewController.swift in Sources */,
+				6F79205A26CBFE1B005D07FA /* signupDataManager.swift in Sources */,
+				6F79205E26CBFF0C005D07FA /* signupRes.swift in Sources */,
 				6F9CD6C526CAD14500A2AEC0 /* loginViewController.swift in Sources */,
 				6F8C492226CB990900E4E1C4 /* Device.swift in Sources */,
 				6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */,
 				6F8C492026CB98F200E4E1C4 /* IndicatorView.swift in Sources */,
 				6FEE744726C7E5B100D0D159 /* MyPageViewController.swift in Sources */,
+				6F79205C26CBFEF7005D07FA /* signupReq.swift in Sources */,
 				6FEE744926C7EC8000D0D159 /* MainViewController.swift in Sources */,
 				6F8C492426CB999900E4E1C4 /* String.swift in Sources */,
 				6F2C026C26CB72A8004A32FF /* Constant.swift in Sources */,
