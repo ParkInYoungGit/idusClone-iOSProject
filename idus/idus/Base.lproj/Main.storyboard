@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jG8-jC-eTd">
-                                <rect key="frame" x="0.0" y="0.0" width="1604.5" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELC-GX-O5K">
-                                <rect key="frame" x="248" y="530.5" width="1108.5" height="52"/>
+                                <rect key="frame" x="64" y="530.5" width="286" height="52"/>
                                 <color key="backgroundColor" red="0.98343306779999995" green="0.89904093740000002" blue="0.30173850060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="     카카오로 3초만에 시작하기">
@@ -32,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGg-sV-Gj0">
-                                <rect key="frame" x="729" y="598" width="147" height="32"/>
+                                <rect key="frame" x="133.5" y="598" width="147" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="다른 방법으로 가입하기">
                                     <color key="titleColor" systemColor="systemGray6Color"/>
@@ -43,19 +42,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md5-mz-k5M">
-                                <rect key="frame" x="673.5" y="638" width="258" height="21"/>
+                                <rect key="frame" x="78" y="638" width="258" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="0.69762466127509315" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hU5-6W-BHL">
-                                <rect key="frame" x="733.5" y="817" width="138" height="30"/>
+                                <rect key="frame" x="138" y="817" width="138" height="30"/>
                                 <state key="normal" title="회원가입 없이 둘러보기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRd-Lw-0de">
-                                <rect key="frame" x="659.5" y="670" width="286" height="33"/>
+                                <rect key="frame" x="64" y="670" width="286" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="286" id="FS6-or-DRp"/>
                                 </constraints>
@@ -68,14 +67,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kakao.png" translatesAutoresizingMaskIntoConstraints="NO" id="atq-QQ-GhK">
-                                <rect key="frame" x="265" y="537.5" width="38" height="38"/>
+                                <rect key="frame" x="81" y="537.5" width="38" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="2Ew-h3-Qr8"/>
                                     <constraint firstAttribute="width" constant="38" id="jXE-t1-w4s"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainpage.png" translatesAutoresizingMaskIntoConstraints="NO" id="vly-B9-fsF">
-                                <rect key="frame" x="358.5" y="132" width="888" height="261"/>
+                                <rect key="frame" x="-237" y="132" width="888" height="261"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="261" id="ED4-Ti-Aqs"/>
                                 </constraints>
@@ -86,7 +85,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJt-9K-Idr">
-                                <rect key="frame" x="302.5" y="730" width="1000" height="50"/>
+                                <rect key="frame" x="78" y="730" width="258" height="50"/>
                                 <color key="backgroundColor" red="0.98343306779999995" green="0.89904093740000002" blue="0.30173850060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="258" id="wtm-g8-suX"/>
@@ -905,48 +904,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xqd-Va-OTw">
-                                <rect key="frame" x="0.0" y="81" width="414" height="781"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="554" id="9Wh-hO-5kn">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="554"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Wh-hO-5kn" id="hOz-YM-JQE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="554"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-J1-fUB">
-                                                    <rect key="frame" x="20" y="32" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WaY-ds-fMV">
-                                                        <size key="itemSize" width="128" height="128"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p3M-t3-scI">
-                                                            <rect key="frame" x="56" y="0.0" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ixI-iw-Ud9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                            </collectionViewCellContentView>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                </collectionView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                                <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="i8I-kW-ncA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="561"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="No0-b7-t6M">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <cells/>
+                                </collectionView>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kBV-af-u3q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="i8I-kW-ncA" id="vEq-FH-ssC"/>
                         <outlet property="tableView" destination="xqd-Va-OTw" id="GWP-53-Jvd"/>
                     </connections>
                 </viewController>
@@ -1048,13 +1027,13 @@
         <scene sceneID="8w1-7p-gtr">
             <objects>
                 <viewController id="eu5-iF-H4j" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jvo-9a-5RK">
+                    <view key="view" contentMode="scaleAspectFit" id="Jvo-9a-5RK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="L6b-hM-7XS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="클래스" image="tabBarItem:Sr3-uE-oIv:image" selectedImage="tabBarItem:Sr3-uE-oIv:image" id="Sr3-uE-oIv"/>
+                    <tabBarItem key="tabBarItem" title="클래스" image="tabBarItem:Sr3-uE-oIv:image" selectedImage="square.and.arrow.up.fill" catalog="system" id="Sr3-uE-oIv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BS-RZ-RIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1070,7 +1049,7 @@
                         <viewLayoutGuide key="safeArea" id="U4K-db-3P0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="검색" image="button:BdQ-wi-PTI:image" selectedImage="button:BdQ-wi-PTI:image" id="V4T-8B-NZj"/>
+                    <tabBarItem key="tabBarItem" title="검색" image="square.and.arrow.up.on.square.fill" catalog="system" selectedImage="square.and.arrow.down" id="V4T-8B-NZj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vw-xd-CcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1086,7 +1065,7 @@
                         <viewLayoutGuide key="safeArea" id="Exr-Dk-IY7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="카테고리" image="tabBarItem:X2F-rz-4Cj:image" selectedImage="tabBarItem:X2F-rz-4Cj:image" id="X2F-rz-4Cj"/>
+                    <tabBarItem key="tabBarItem" title="카테고리" image="tabBarItem:X2F-rz-4Cj:image" selectedImage="square.and.arrow.down" catalog="system" id="X2F-rz-4Cj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1i-om-i1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1208,6 +1187,7 @@
                 <tabBarController storyboardIdentifier="mainpage" automaticallyAdjustsScrollViewInsets="NO" id="0jU-A1-Fn9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Epa-fS-6A4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -17093,6 +17073,9 @@ gXYADoF7AA6BgwAOgYYADoGLAA6BkwAAAAAAAAQBAAAAAAAAAFYAAAAAAAAAAAAAAAAADoGWA
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="rectangle" catalog="system" width="128" height="93"/>
         <image name="signup.png" width="399" height="546"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up.on.square.fill" catalog="system" width="117" height="128"/>
         <image name="tabBarItem:Sr3-uE-oIv:image" width="128" height="93">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
