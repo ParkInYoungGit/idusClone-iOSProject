@@ -8,6 +8,7 @@
 import UIKit
 
 class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+    var dataManager = todayViewDataManager()
     
     var collectionImgArr = ["baner1.png","baner2.png","baner3.png","baner4.png","baner5.png","baner6.png","baner8.png","baner9.png"]
     var AdImagArr = ["today1.jpeg","today2.jpeg","today3.jpeg"]
@@ -42,6 +43,11 @@ class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // 데이터 불러오기 API연결
+
+        dataManager.getProduct(delegate: self)
+
+        
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -78,8 +84,14 @@ class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
 
         // Configure the view for the selected state
     }
+    
+}
 
-    
-    
-    
+extension todayTableViewCell {
+    func didSuccessProduct(_ result: todayResult) {
+      
+    }
+    func failedToRequest(message: String) {
+        
+    }
 }

@@ -36,6 +36,7 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
         
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
+    
     @objc func updateTime(){
         let formatter = DateFormatter()
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mE5-Y5-vgs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bj5-C4-xKf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4790" y="-861"/>
+            <point key="canvasLocation" x="4709" y="-1029"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="h6i-YQ-R7p">
@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYA-Ew-Ab2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5658" y="-861"/>
+            <point key="canvasLocation" x="5890" y="-861"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="y4Z-Lo-idZ">
@@ -866,7 +866,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmQ-0P-rsj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7226.0869565217399" y="811.60714285714278"/>
+            <point key="canvasLocation" x="8136.2318840579719" y="811.60714285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zy9-Pc-cvN">
@@ -881,7 +881,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehb-To-bcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8107.2463768115949" y="603.34821428571422"/>
+            <point key="canvasLocation" x="9017.391304347826" y="603.34821428571422"/>
         </scene>
         <!--Today View Controller-->
         <scene sceneID="3fY-Zk-wCF">
@@ -954,51 +954,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="무료배송을 검색해보세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fc-Fh-zl1">
-                                <rect key="frame" x="11" y="101" width="393" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="393" id="265-Qy-9Uq"/>
-                                    <constraint firstAttribute="height" constant="34" id="N3i-Sr-h6J"/>
-                                </constraints>
+                                <rect key="frame" x="10.5" y="92" width="393" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdQ-wi-PTI">
-                                <rect key="frame" x="373" y="107" width="20" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdQ-wi-PTI">
+                                <rect key="frame" x="374" y="96" width="20" height="26"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="magnifyingglass" catalog="system">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-EJ-fzP">
-                                <rect key="frame" x="0.0" y="143" width="414" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="CZl-pR-2t1"/>
-                                    <constraint firstAttribute="height" constant="57" id="RMk-Z1-ol6"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="9T4-vg-bv2" kind="embed" id="BUy-Hk-Wch"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pCB-c3-5Sx">
-                                <rect key="frame" x="0.0" y="206" width="414" height="607"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCB-c3-5Sx">
+                                <rect key="frame" x="0.0" y="208" width="414" height="605"/>
                                 <connections>
                                     <segue destination="kex-mn-Sei" kind="embed" id="TLX-78-nqU"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-EJ-fzP">
+                                <rect key="frame" x="0.0" y="130" width="414" height="70"/>
+                                <connections>
+                                    <segue destination="9T4-vg-bv2" kind="embed" id="BUy-Hk-Wch"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z1o-Ur-MUh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Z1o-Ur-MUh" firstAttribute="trailing" secondItem="8fc-Fh-zl1" secondAttribute="trailing" constant="10" id="EUo-C6-q6q"/>
-                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="top" secondItem="8fc-Fh-zl1" secondAttribute="bottom" constant="8" symbolic="YES" id="RNJ-UQ-H9D"/>
-                            <constraint firstItem="8fc-Fh-zl1" firstAttribute="top" secondItem="Z1o-Ur-MUh" secondAttribute="top" constant="13" id="VOF-3a-3MJ"/>
-                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="leading" secondItem="Z1o-Ur-MUh" secondAttribute="leading" id="ffw-yu-AQh"/>
-                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="trailing" secondItem="Z1o-Ur-MUh" secondAttribute="trailing" id="qG6-CP-JzF"/>
-                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="top" secondItem="8fc-Fh-zl1" secondAttribute="bottom" constant="8" symbolic="YES" id="s48-Hc-GdL"/>
-                            <constraint firstItem="8fc-Fh-zl1" firstAttribute="leading" secondItem="Z1o-Ur-MUh" secondAttribute="leading" constant="11" id="xFk-Sq-GT5"/>
+                            <constraint firstItem="pCB-c3-5Sx" firstAttribute="height" secondItem="JuY-Ut-nWq" secondAttribute="height" multiplier="0.675223" id="1vO-QT-Me2"/>
+                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="top" secondItem="8fc-Fh-zl1" secondAttribute="bottom" constant="4" id="Cam-oO-X1s"/>
+                            <constraint firstItem="BdQ-wi-PTI" firstAttribute="centerY" secondItem="8fc-Fh-zl1" secondAttribute="centerY" id="NjZ-yn-PgJ"/>
+                            <constraint firstItem="8fc-Fh-zl1" firstAttribute="top" secondItem="Z1o-Ur-MUh" secondAttribute="top" constant="4" id="Rpm-xW-Zet"/>
+                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="centerX" secondItem="JuY-Ut-nWq" secondAttribute="centerX" id="XF2-7w-nqb"/>
+                            <constraint firstItem="pCB-c3-5Sx" firstAttribute="width" secondItem="JuY-Ut-nWq" secondAttribute="width" id="XXn-sU-ljd"/>
+                            <constraint firstItem="8fc-Fh-zl1" firstAttribute="centerX" secondItem="JuY-Ut-nWq" secondAttribute="centerX" id="YG3-g6-djk"/>
+                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="height" secondItem="JuY-Ut-nWq" secondAttribute="height" multiplier="0.078125" id="b8C-9x-aAB"/>
+                            <constraint firstItem="pCB-c3-5Sx" firstAttribute="top" secondItem="uh1-EJ-fzP" secondAttribute="bottom" constant="8" symbolic="YES" id="edT-Xu-HPo"/>
+                            <constraint firstItem="8fc-Fh-zl1" firstAttribute="height" secondItem="JuY-Ut-nWq" secondAttribute="height" multiplier="0.0379464" id="jMR-wA-NXt"/>
+                            <constraint firstItem="8fc-Fh-zl1" firstAttribute="width" secondItem="JuY-Ut-nWq" secondAttribute="width" multiplier="0.949275" id="r1r-4s-4XW"/>
+                            <constraint firstItem="pCB-c3-5Sx" firstAttribute="centerX" secondItem="JuY-Ut-nWq" secondAttribute="centerX" id="tad-hZ-UAw"/>
+                            <constraint firstItem="uh1-EJ-fzP" firstAttribute="width" secondItem="JuY-Ut-nWq" secondAttribute="width" id="yZj-t8-64O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="w0f-Fw-S1i">
@@ -1009,28 +1005,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylQ-iQ-YFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="689.73214285714278"/>
+            <point key="canvasLocation" x="2698.5507246376815" y="689.73214285714278"/>
         </scene>
-        <!--클래스-->
+        <!--Class View Controller-->
         <scene sceneID="8w1-7p-gtr">
             <objects>
-                <viewController id="eu5-iF-H4j" sceneMemberID="viewController">
+                <viewController id="eu5-iF-H4j" customClass="classViewController" customModule="idus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="Jvo-9a-5RK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afA-hK-Wtk">
+                                <rect key="frame" x="0.0" y="208" width="414" height="605"/>
+                                <connections>
+                                    <segue destination="fWx-BQ-9Kr" kind="embed" identifier="" id="iCv-Ls-TcZ"/>
+                                </connections>
+                            </containerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="무료배송을 검색해보세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v02-Pz-N3y">
+                                <rect key="frame" x="10.5" y="92" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyw-qX-ybg">
+                                <rect key="frame" x="377" y="96" width="20" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="magnifyingglass" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yua-8D-IHE">
+                                <rect key="frame" x="0.0" y="130" width="414" height="70"/>
+                                <connections>
+                                    <segue destination="ZiE-9c-WEy" kind="embed" identifier="" id="fC8-GN-7pf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="L6b-hM-7XS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v02-Pz-N3y" firstAttribute="height" secondItem="Jvo-9a-5RK" secondAttribute="height" multiplier="0.0379464" id="1Wq-2X-Z1R"/>
+                            <constraint firstItem="pyw-qX-ybg" firstAttribute="centerY" secondItem="v02-Pz-N3y" secondAttribute="centerY" id="2Z9-Df-fXz"/>
+                            <constraint firstItem="afA-hK-Wtk" firstAttribute="top" secondItem="Yua-8D-IHE" secondAttribute="bottom" constant="8" symbolic="YES" id="3Mj-Md-ctE"/>
+                            <constraint firstItem="afA-hK-Wtk" firstAttribute="centerX" secondItem="Jvo-9a-5RK" secondAttribute="centerX" id="6Qm-QY-Jcj"/>
+                            <constraint firstItem="v02-Pz-N3y" firstAttribute="width" secondItem="Jvo-9a-5RK" secondAttribute="width" multiplier="0.949275" id="HiO-wj-yMU"/>
+                            <constraint firstItem="Yua-8D-IHE" firstAttribute="width" secondItem="Jvo-9a-5RK" secondAttribute="width" id="IRv-lN-3Hz"/>
+                            <constraint firstItem="Yua-8D-IHE" firstAttribute="centerX" secondItem="Jvo-9a-5RK" secondAttribute="centerX" id="KUi-Bw-rTJ"/>
+                            <constraint firstItem="v02-Pz-N3y" firstAttribute="centerX" secondItem="Jvo-9a-5RK" secondAttribute="centerX" id="PMg-kX-pab"/>
+                            <constraint firstItem="Yua-8D-IHE" firstAttribute="top" secondItem="v02-Pz-N3y" secondAttribute="bottom" constant="4" id="ZBk-xo-mN7"/>
+                            <constraint firstItem="afA-hK-Wtk" firstAttribute="height" secondItem="Jvo-9a-5RK" secondAttribute="height" multiplier="0.675223" id="eV7-uf-85i"/>
+                            <constraint firstItem="afA-hK-Wtk" firstAttribute="width" secondItem="Jvo-9a-5RK" secondAttribute="width" id="mlt-0j-igF"/>
+                            <constraint firstItem="Yua-8D-IHE" firstAttribute="height" secondItem="Jvo-9a-5RK" secondAttribute="height" multiplier="0.078125" id="p5K-BC-Y9E"/>
+                            <constraint firstItem="v02-Pz-N3y" firstAttribute="top" secondItem="L6b-hM-7XS" secondAttribute="top" constant="4" id="sSZ-T4-D5o"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="클래스" image="play.tv" catalog="system" selectedImage="play.tv" id="Sr3-uE-oIv"/>
+                    <navigationItem key="navigationItem" id="bk8-QA-ob5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="AWh-Ew-PDI">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BS-RZ-RIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4127.536231884058" y="616.74107142857144"/>
+            <point key="canvasLocation" x="3334.7826086956525" y="689.73214285714278"/>
         </scene>
         <!--검색-->
         <scene sceneID="iK8-Tu-Gqp">
             <objects>
-                <viewController id="wac-1F-iKW" sceneMemberID="viewController">
+                <viewController id="wac-1F-iKW" customClass="searchViewController" customModule="idus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PTy-WR-C7a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1041,7 +1083,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vw-xd-CcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4773.913043478261" y="616.74107142857144"/>
+            <point key="canvasLocation" x="5684.057971014493" y="616.74107142857144"/>
         </scene>
         <!--카테고리-->
         <scene sceneID="Zaz-Cw-heq">
@@ -1057,7 +1099,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1i-om-i1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5407.2463768115949" y="616.74107142857144"/>
+            <point key="canvasLocation" x="6317.3913043478269" y="616.74107142857144"/>
         </scene>
         <!--내 정보-->
         <scene sceneID="k8W-fM-5ok">
@@ -1076,7 +1118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29Z-jy-YOt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6442.0289855072469" y="616.74107142857144"/>
+            <point key="canvasLocation" x="7352.1739130434789" y="616.74107142857144"/>
         </scene>
         <!--Paging Menu View Controller-->
         <scene sceneID="PY1-5t-kx7">
@@ -1091,7 +1133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3y-Zh-AuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3452.1739130434785" y="966.96428571428567"/>
+            <point key="canvasLocation" x="3180" y="1150"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nls-hK-Mbi">
@@ -1140,7 +1182,7 @@
             <objects>
                 <viewController id="kex-mn-Sei" customClass="PagingContentViewController" customModule="PagingKit" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPO-x4-7aW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="607"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="605"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YY6-Qu-1fu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1218,7 +1260,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="SIY-RI-uZv" kind="relationship" relationship="viewControllers" id="cGb-9l-5bk"/>
-                        <segue destination="eu5-iF-H4j" kind="relationship" relationship="viewControllers" id="8zd-0y-5jB"/>
+                        <segue destination="jYK-nd-hHB" kind="relationship" relationship="viewControllers" id="8zd-0y-5jB"/>
                         <segue destination="wac-1F-iKW" kind="relationship" relationship="viewControllers" id="ygc-TA-FmY"/>
                         <segue destination="5cM-PK-ucH" kind="relationship" relationship="viewControllers" id="uGg-d3-1II"/>
                         <segue destination="A8O-rv-Uvu" kind="relationship" relationship="viewControllers" id="F1o-Yw-GiF"/>
@@ -1228,8 +1270,113 @@
             </objects>
             <point key="canvasLocation" x="3657" y="-78"/>
         </scene>
+        <!--Paging Menu View Controller-->
+        <scene sceneID="ZNM-W0-Ml4">
+            <objects>
+                <viewController id="ZiE-9c-WEy" customClass="PagingMenuViewController" customModule="PagingKit" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9C-Kw-MCO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcY-49-ed8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4078" y="326"/>
+        </scene>
+        <!--Paging Content View Controller-->
+        <scene sceneID="Hq7-UM-TsY">
+            <objects>
+                <viewController id="fWx-BQ-9Kr" customClass="PagingContentViewController" customModule="PagingKit" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TGo-D2-sMq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="605"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZP-AU-pvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4126" y="1249"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mO1-CN-WFC">
+            <objects>
+                <viewController storyboardIdentifier="searchClicked" id="eow-Wo-Lm9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qg6-2w-vPU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWp-eI-UzB">
+                                <rect key="frame" x="20" y="44" width="40" height="48"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button" image="arrow.backward" catalog="system"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="z플립을 검색해보세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0d-lO-dB1">
+                                <rect key="frame" x="67" y="51" width="280" height="34"/>
+                                <color key="backgroundColor" red="0.89338011829457831" green="0.89975003985080859" blue="0.91885980451949922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wY-oI-UUf">
+                                <rect key="frame" x="369" y="55" width="20" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="21"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="magnifyingglass" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="PIE-mF-hUh">
+                                <rect key="frame" x="0.0" y="114" width="414" height="726"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ifv-zq-B2O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GWp-eI-UzB" firstAttribute="leading" secondItem="ifv-zq-B2O" secondAttribute="leading" constant="20" id="2UO-eA-CNS"/>
+                            <constraint firstItem="PIE-mF-hUh" firstAttribute="height" secondItem="Qg6-2w-vPU" secondAttribute="height" multiplier="0.810268" id="4sK-RN-8WM"/>
+                            <constraint firstItem="Y0d-lO-dB1" firstAttribute="width" secondItem="Qg6-2w-vPU" secondAttribute="width" multiplier="0.676329" id="D6g-lg-Wwa"/>
+                            <constraint firstItem="PIE-mF-hUh" firstAttribute="width" secondItem="Qg6-2w-vPU" secondAttribute="width" id="GC4-fc-W7I"/>
+                            <constraint firstItem="GWp-eI-UzB" firstAttribute="top" secondItem="ifv-zq-B2O" secondAttribute="top" id="PR9-Wb-EsL"/>
+                            <constraint firstItem="ifv-zq-B2O" firstAttribute="trailing" secondItem="8wY-oI-UUf" secondAttribute="trailing" constant="25" id="Vhq-yW-u2A"/>
+                            <constraint firstItem="PIE-mF-hUh" firstAttribute="centerX" secondItem="Qg6-2w-vPU" secondAttribute="centerX" id="YxR-0l-IFZ"/>
+                            <constraint firstItem="PIE-mF-hUh" firstAttribute="top" secondItem="GWp-eI-UzB" secondAttribute="bottom" constant="22" id="atv-Lc-kky"/>
+                            <constraint firstItem="Y0d-lO-dB1" firstAttribute="centerX" secondItem="Qg6-2w-vPU" secondAttribute="centerX" id="dav-7N-Vhq"/>
+                            <constraint firstItem="GWp-eI-UzB" firstAttribute="width" secondItem="Qg6-2w-vPU" secondAttribute="width" multiplier="0.0966184" id="hv6-Mr-W8d"/>
+                            <constraint firstItem="8wY-oI-UUf" firstAttribute="width" secondItem="Qg6-2w-vPU" secondAttribute="width" multiplier="0.0483092" id="j1E-CN-3pg"/>
+                            <constraint firstItem="8wY-oI-UUf" firstAttribute="top" secondItem="ifv-zq-B2O" secondAttribute="top" constant="11" id="jht-Jx-ewK"/>
+                            <constraint firstItem="Y0d-lO-dB1" firstAttribute="top" secondItem="ifv-zq-B2O" secondAttribute="top" constant="7" id="kIZ-eb-fTQ"/>
+                            <constraint firstItem="8wY-oI-UUf" firstAttribute="height" secondItem="Qg6-2w-vPU" secondAttribute="height" multiplier="0.0290179" id="lEP-ub-kfz"/>
+                            <constraint firstItem="GWp-eI-UzB" firstAttribute="height" secondItem="Qg6-2w-vPU" secondAttribute="height" multiplier="0.0535714" id="ojO-c1-hsy"/>
+                            <constraint firstItem="Y0d-lO-dB1" firstAttribute="height" secondItem="Qg6-2w-vPU" secondAttribute="height" multiplier="0.0379464" id="sHp-tv-yOM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q53-Hi-nCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5684" y="1278"/>
+        </scene>
+        <!--클래스-->
+        <scene sceneID="JVO-qa-vbc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jYK-nd-hHB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="클래스" image="play.tv" catalog="system" selectedImage="play.tv" id="Sr3-uE-oIv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lhq-at-awn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eu5-iF-H4j" kind="relationship" relationship="rootViewController" id="SU3-QK-YZR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueI-p4-66k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4124.6376811594209" y="673.66071428571422"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="btnG_완성형.png" width="1000" height="200"/>
         <image name="buyBtn.png" width="309" height="43"/>
@@ -1252,6 +1399,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="play.tv" catalog="system" width="128" height="97"/>
         <image name="rectangle" catalog="system" width="128" height="93"/>
+        <image name="searchPage.png" width="426" height="779"/>
         <image name="seller.png" width="85" height="77"/>
         <image name="signup.png" width="399" height="546"/>
         <image name="text.bubble" catalog="system" width="128" height="110"/>
