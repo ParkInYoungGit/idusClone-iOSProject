@@ -40,7 +40,7 @@ extension todayViewController: UITableViewDelegate, UITableViewDataSource {
             return 40
         }
         if indexPath.row == 2 {
-            return 700
+            return 850
         }
         
         return 0

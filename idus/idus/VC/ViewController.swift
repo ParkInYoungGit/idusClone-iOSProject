@@ -62,12 +62,15 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
     }
 
     @IBAction func otherLogin(_ sender: UIButton) {
-//        let actionR = UIAlertAction(title:"페이스북", style: .default) { action in
-//        }
-//        self.presentAlert(title: "다른 방법으로 가입하기", with: actionR)
+
         
     }
     
+    @IBAction func noLogin(_ sender: Any) {
+        let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
+        self.changeRootViewController(mypageVC)
+    }
     
     func radiusSetting(){
         idusImage.layer.cornerRadius = 30
