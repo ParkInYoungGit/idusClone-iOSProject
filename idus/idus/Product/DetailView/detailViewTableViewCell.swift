@@ -28,8 +28,12 @@ class detailViewTableViewCell: UITableViewCell {
         smallImageCollectionView.register(UINib(nibName: "smallCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "smallImage")
         smallImageCollectionView.collectionViewLayout = createCompositionalLayout2()
         
+        
+        
     }
+    
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -42,6 +46,18 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productImgArr.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let cellWidth = 50
+        let numberOfItems = productImgArr.count
+        let spaceBetweenCell = 5
+        let totalWidth = cellWidth * numberOfItems
+        let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
+        let leftInset = (collectionView.frame.width - CGFloat(totalWidth + totalSpacingWidth)) / 2
+        let rightInset = leftInset
+       
+        return UIEdgeInsets(top: 10, left: leftInset, bottom: 0, right: rightInset)
+      }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if collectionView == imageCollectionView {
@@ -73,9 +89,6 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         print("Cell \(indexPath.row + 1) clicked")
     }
     
-//    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-//        <#code#>
-//    }
 
     
     
@@ -136,7 +149,7 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
            
             // 아이템 간격 설정
             item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-                
+            
             // 그룹사이즈
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.13), heightDimension: itemSize.heightDimension)
                 
@@ -157,7 +170,7 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
                 
             // 아이템모여서 그룹 그룹이 모여서 섹션
             // 섹션에 대한 간격
-            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
             
             return section
         }

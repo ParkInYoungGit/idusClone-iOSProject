@@ -11,7 +11,9 @@ import UIKit
 
 class SecondTableViewCell: UITableViewCell{
     
-    
+    var itemArr: [todayResult?] = []
+
+    var dataManager = todayViewDataManager()
     
     var delegate: CVCellDelegate?
    // var itemTitleArr = item.init(itemNameArr: )
@@ -78,7 +80,21 @@ extension SecondTableViewCell: UICollectionViewDataSource {
         
         let item = itemArr[indexPath.item]
         
-        cell.cvProductImg.image = UIImage(named: "productImgSample.png")
+        //url에 정확한 이미지 url 주소를 넣는다.
+        let url = URL(string: "\(item!.itemPhotoURL)")
+        var image : UIImage?
+        //DispatchQueue를 쓰는 이유 -> 이미지가 클 경우 이미지를 다운로드 받기 까지 잠깐의 멈춤이 생길수 있다. (이유 : 싱글 쓰레드로 작동되기때문에)
+        //DispatchQueue를 쓰면 멀티 쓰레드로 이미지가 클경우에도 멈춤이 생기지 않는다.
+        DispatchQueue.global().async {
+        let data = try? Data(contentsOf: url!)
+        DispatchQueue.main.async {
+            cell.cvProductImg.image = UIImage(data: data!)
+            }
+        }
+
+        
+        
+        //cell.cvProductImg.image = UIImage(named: "productImgSample.png")
         cell.cvProductTitle.text = item?.itemName
         print("itemName>>>>\(item?.itemName)")
         cell.cvStarPoint.image = UIImage(named: "starPoint.png")
@@ -95,6 +111,9 @@ extension SecondTableViewCell: UICollectionViewDelegate {
         if let delegate = delegate {
             delegate.selectedCVCell(indexPath.item)
             print("\(indexPath.item + 1) 번째 셀")
+            
+            let detailView = detailViewController()
+            detailView.receiveIndexPath(indexPath.item)
         }
     }
 }

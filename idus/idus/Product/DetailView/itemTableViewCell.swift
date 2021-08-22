@@ -9,6 +9,8 @@ import UIKit
 
 class itemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sellerName: UILabel!
+    @IBOutlet weak var itemName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -6,9 +6,7 @@
 //
 
 import UIKit
-var itemArr: [todayResult?] = []
 
-var dataManager = todayViewDataManager()
 //struct item {
 //    var itemNameArr: [String]
 //    
