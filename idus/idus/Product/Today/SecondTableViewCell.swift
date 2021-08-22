@@ -7,46 +7,37 @@
 
 import UIKit
 
-class SecondTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+
+
+class SecondTableViewCell: UITableViewCell{
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = productCV.dequeueReusableCell(withReuseIdentifier: "productCVCell", for: indexPath) as! ProductCollectionViewCell
-        cell.cvProductImg.image = UIImage(named: "productImgSample.png")
-        cell.cvProductTitle.text = "태극기 키링 / 무궁화 키링 / 에어팟 키링"
-        cell.cvStarPoint.image = UIImage(named: "starPoint.png")
-        cell.cvCommentCount.text = "(5)"
-        cell.cvReview.text = "너무 예뻐요 좋아요"
-        
-        return cell
-    }
+    
+    var delegate: CVCellDelegate?
+   // var itemTitleArr = item.init(itemNameArr: )
     
     @IBOutlet weak var productCV: UICollectionView!
     
     override func awakeFromNib() {
+        
+        
         super.awakeFromNib()
-        // Initialization code
-//        let flowLayout = UICollectionViewFlowLayout()
-//        flowLayout.scrollDirection = .vertical
-//
-//        let halfWidth: CGFloat = UIScreen.main.bounds.width / 2.0
-//        flowLayout.itemSize = CGSize(width: halfWidth, height: 300)
-//        flowLayout.minimumLineSpacing = 0
-//        flowLayout.minimumInteritemSpacing = 0
+        print("어디가먼저secondViewCell")
 
-//        productCV.collectionViewLayout = flowLayout
         productCV.delegate = self
         productCV.dataSource = self
         
         let cellNib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         productCV.register(cellNib, forCellWithReuseIdentifier: "productCVCell")
-        
         productCV.collectionViewLayout = createCompositionalLayout()
+        
+        dataManager.getProduct(delegate: self)
     }
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
+        // Configure the view for the selected state
+    }
     fileprivate func createCompositionalLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -60,19 +51,50 @@ class SecondTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         
         return UICollectionViewCompositionalLayout(section: section)
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+}
 
-        // Configure the view for the selected state
+
+extension SecondTableViewCell {
+    func didSuccessProduct(data: todayRes) {
+        print("result확인>>>\(data)")
+            //items.itemNameArr.append(data[i]!.itemName)
+        itemArr = data.result
+        productCV.reloadData()
+        print("arr확인>>>>>\(itemArr)")
     }
-//    // 사이즈 결정
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let itemSpacing: CGFloat = 10
-//        let textAreaHeight: CGFloat = 80
-//
-//        let width: CGFloat = (productCV.bounds.width - itemSpacing) / 2
-//        let height: CGFloat = width * 10/7 + textAreaHeight
-//        return CGSize(width: width, height: height)
-//    }
+    func failedToRequest(message: String) {
+    
+    }
+}
+    
+extension SecondTableViewCell: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return itemArr.count
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = productCV.dequeueReusableCell(withReuseIdentifier: "productCVCell", for: indexPath) as! ProductCollectionViewCell
+        
+        let item = itemArr[indexPath.item]
+        
+        cell.cvProductImg.image = UIImage(named: "productImgSample.png")
+        cell.cvProductTitle.text = item?.itemName
+        print("itemName>>>>\(item?.itemName)")
+        cell.cvStarPoint.image = UIImage(named: "starPoint.png")
+        cell.cvCommentCount.text = "(\(String(item!.numOfReview)))"
+        cell.cvReview.text = item?.newReview
+        
+        return cell
+    }
+    
+}
+
+extension SecondTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            delegate.selectedCVCell(indexPath.item)
+            print("\(indexPath.item + 1) 번째 셀")
+        }
+    }
 }

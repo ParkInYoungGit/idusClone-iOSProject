@@ -6,9 +6,17 @@
 //
 
 import UIKit
+var productName = ""
+
+protocol CVCellDelegate {
+    func selectedCVCell(_ index: Int)
+}
+
 
 class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
-    var dataManager = todayViewDataManager()
+    
+
+    
     
     var collectionImgArr = ["baner1.png","baner2.png","baner3.png","baner4.png","baner5.png","baner6.png","baner8.png","baner9.png"]
     var AdImagArr = ["today1.jpeg","today2.jpeg","today3.jpeg"]
@@ -22,6 +30,7 @@ class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
             return collectionImgArr.count
         }
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -44,8 +53,8 @@ class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     override func awakeFromNib() {
         super.awakeFromNib()
         // 데이터 불러오기 API연결
-
-        dataManager.getProduct(delegate: self)
+        print("어디가먼저tableViewCell")
+        
 
         
         
@@ -87,11 +96,3 @@ class todayTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     
 }
 
-extension todayTableViewCell {
-    func didSuccessProduct(_ result: todayResult) {
-      
-    }
-    func failedToRequest(message: String) {
-        
-    }
-}

@@ -21,6 +21,7 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
     let interval = 2.0
     var numImage = 0
     var count = 0
+    var timer: Timer?
     var imagName = ["signup.png","mainImage.jpg"]
  
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
@@ -34,7 +35,7 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
-        Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
     
     @objc func updateTime(){
@@ -71,6 +72,12 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
         let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
         self.changeRootViewController(mypageVC)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.timer != nil {
+        self.timer?.invalidate()
+        }
     }
     
     func radiusSetting(){

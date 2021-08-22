@@ -8,12 +8,12 @@
 import Foundation
 
 
-// MARK: - Mypage
+// MARK: - todayView
 struct todayRes: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: todayResult?
+    let result: [todayResult?]
 }
 
 // MARK: - Result
@@ -24,4 +24,11 @@ struct todayResult: Decodable {
     let averageRate: Double
     let newReview: String
     let numOfReview: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case itemIdx, category, itemName, sellerName
+        case itemPhotoURL = "itemPhotoUrl"
+        case averageRate, newReview, numOfReview
+    }
+
 }

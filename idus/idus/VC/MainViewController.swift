@@ -40,6 +40,7 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
         menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
         menuViewController.registerFocusView(view: UnderlineFocusView())
@@ -147,4 +148,3 @@ class MainViewController: UIViewController{
             menuViewController.scroll(index: index, percent: percent, animated: false)
         }
     }
-
