@@ -100,6 +100,19 @@
 		6FC68FC026D39AD6006327DA /* onlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FBF26D39AD6006327DA /* onlineViewController.swift */; };
 		6FC68FC226D39AEF006327DA /* offlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FC126D39AEF006327DA /* offlineViewController.swift */; };
 		6FC68FCA26D3B3EC006327DA /* ctegoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FC926D3B3EC006327DA /* ctegoryCollectionViewController.swift */; };
+		6FC68FCD26D3C0A6006327DA /* buyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FCC26D3C0A6006327DA /* buyViewController.swift */; };
+		6FC68FD026D3F571006327DA /* buyDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FCE26D3F571006327DA /* buyDataTableViewCell.swift */; };
+		6FC68FD126D3F571006327DA /* buyDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FCF26D3F571006327DA /* buyDataTableViewCell.xib */; };
+		6FC68FD526D3F5DC006327DA /* buyTable.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FD426D3F5DC006327DA /* buyTable.png */; };
+		6FC68FD826D3FCFE006327DA /* payTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FD626D3FCFE006327DA /* payTableViewCell.swift */; };
+		6FC68FD926D3FCFE006327DA /* payTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FD726D3FCFE006327DA /* payTableViewCell.xib */; };
+		6FC68FDF26D3FE95006327DA /* pay2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FDA26D3FE95006327DA /* pay2.png */; };
+		6FC68FE026D3FE95006327DA /* pay3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FDB26D3FE95006327DA /* pay3.png */; };
+		6FC68FE126D3FE95006327DA /* pay4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FDC26D3FE95006327DA /* pay4.png */; };
+		6FC68FE226D3FE95006327DA /* pay5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FDD26D3FE95006327DA /* pay5.png */; };
+		6FC68FE326D3FE95006327DA /* pay1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FDE26D3FE95006327DA /* pay1.png */; };
+		6FC68FE626D416CB006327DA /* priceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FE426D416CB006327DA /* priceTableViewCell.swift */; };
+		6FC68FE726D416CB006327DA /* priceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC68FE526D416CB006327DA /* priceTableViewCell.xib */; };
 		6FDE138A26CE237900A52132 /* todayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE138926CE237900A52132 /* todayTableViewCell.swift */; };
 		6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */; };
 		6FDE139026CE25F000A52132 /* today2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138D26CE25F000A52132 /* today2.jpeg */; };
@@ -221,6 +234,19 @@
 		6FC68FBF26D39AD6006327DA /* onlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onlineViewController.swift; sourceTree = "<group>"; };
 		6FC68FC126D39AEF006327DA /* offlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offlineViewController.swift; sourceTree = "<group>"; };
 		6FC68FC926D3B3EC006327DA /* ctegoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctegoryCollectionViewController.swift; sourceTree = "<group>"; };
+		6FC68FCC26D3C0A6006327DA /* buyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buyViewController.swift; sourceTree = "<group>"; };
+		6FC68FCE26D3F571006327DA /* buyDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buyDataTableViewCell.swift; sourceTree = "<group>"; };
+		6FC68FCF26D3F571006327DA /* buyDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = buyDataTableViewCell.xib; sourceTree = "<group>"; };
+		6FC68FD426D3F5DC006327DA /* buyTable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buyTable.png; sourceTree = "<group>"; };
+		6FC68FD626D3FCFE006327DA /* payTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = payTableViewCell.swift; sourceTree = "<group>"; };
+		6FC68FD726D3FCFE006327DA /* payTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = payTableViewCell.xib; sourceTree = "<group>"; };
+		6FC68FDA26D3FE95006327DA /* pay2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay2.png; sourceTree = "<group>"; };
+		6FC68FDB26D3FE95006327DA /* pay3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay3.png; sourceTree = "<group>"; };
+		6FC68FDC26D3FE95006327DA /* pay4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay4.png; sourceTree = "<group>"; };
+		6FC68FDD26D3FE95006327DA /* pay5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay5.png; sourceTree = "<group>"; };
+		6FC68FDE26D3FE95006327DA /* pay1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay1.png; sourceTree = "<group>"; };
+		6FC68FE426D416CB006327DA /* priceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceTableViewCell.swift; sourceTree = "<group>"; };
+		6FC68FE526D416CB006327DA /* priceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = priceTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138926CE237900A52132 /* todayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayTableViewCell.swift; sourceTree = "<group>"; };
 		6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138D26CE25F000A52132 /* today2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = today2.jpeg; sourceTree = "<group>"; };
@@ -370,6 +396,7 @@
 		6F79206826CD620A005D07FA /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				6FC68FCB26D3C095006327DA /* buy */,
 				6FA4381526CFACC7008E887A /* DetailView */,
 				6FDE139D26CE329100A52132 /* Search */,
 				6F79206026CD21AF005D07FA /* Today */,
@@ -459,11 +486,11 @@
 		6FA4381526CFACC7008E887A /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
-				6FC68FAA26D38953006327DA /* imageTableViewCell.swift */,
-				6FC68FAB26D38953006327DA /* imageTableViewCell.xib */,
 				6FC68F9D26D2B82A006327DA /* Entity */,
 				6FC68F9C26D2B820006327DA /* DataManager */,
 				6FA4381C26D00CD0008E887A /* detailViewController.swift */,
+				6FC68FAA26D38953006327DA /* imageTableViewCell.swift */,
+				6FC68FAB26D38953006327DA /* imageTableViewCell.xib */,
 				6FA4381E26D00FBB008E887A /* detailViewTableViewCell.swift */,
 				6FA4381F26D00FBB008E887A /* detailViewTableViewCell.xib */,
 				6FA4382C26D0A4EA008E887A /* imageCollectionViewCell.swift */,
@@ -571,6 +598,20 @@
 			path = offline;
 			sourceTree = "<group>";
 		};
+		6FC68FCB26D3C095006327DA /* buy */ = {
+			isa = PBXGroup;
+			children = (
+				6FC68FCC26D3C0A6006327DA /* buyViewController.swift */,
+				6FC68FCE26D3F571006327DA /* buyDataTableViewCell.swift */,
+				6FC68FCF26D3F571006327DA /* buyDataTableViewCell.xib */,
+				6FC68FD626D3FCFE006327DA /* payTableViewCell.swift */,
+				6FC68FD726D3FCFE006327DA /* payTableViewCell.xib */,
+				6FC68FE426D416CB006327DA /* priceTableViewCell.swift */,
+				6FC68FE526D416CB006327DA /* priceTableViewCell.xib */,
+			);
+			path = buy;
+			sourceTree = "<group>";
+		};
 		6FDE139D26CE329100A52132 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,7 +669,13 @@
 		6FEE744026C7DF8000D0D159 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6FC68FDE26D3FE95006327DA /* pay1.png */,
+				6FC68FDA26D3FE95006327DA /* pay2.png */,
+				6FC68FDB26D3FE95006327DA /* pay3.png */,
+				6FC68FDC26D3FE95006327DA /* pay4.png */,
+				6FC68FDD26D3FE95006327DA /* pay5.png */,
 				6FC68F9826D16ECC006327DA /* searchPage.png */,
+				6FC68FD426D3F5DC006327DA /* buyTable.png */,
 				6FC68FAE26D389B1006327DA /* deliveryImg.PNG */,
 				6FA4383526D0A693008E887A /* detailProduct2.png */,
 				6FA4383026D0A692008E887A /* detailProduct3.png */,
@@ -749,13 +796,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC68FD526D3F5DC006327DA /* buyTable.png in Resources */,
 				6FA4383926D0A693008E887A /* detailProduct7.png in Resources */,
 				6FC68FAF26D389B1006327DA /* deliveryImg.PNG in Resources */,
 				6FA4383A26D0A693008E887A /* detailProduct6.png in Resources */,
 				6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */,
 				6FA4380026CF8880008E887A /* productImgSample.png in Resources */,
+				6FC68FE326D3FE95006327DA /* pay1.png in Resources */,
 				6FA4382F26D0A4EA008E887A /* imageCollectionViewCell.xib in Resources */,
 				6F9CD6C226CACD0800A2AEC0 /* mypageBaner.png in Resources */,
+				6FC68FD926D3FCFE006327DA /* payTableViewCell.xib in Resources */,
 				6FA437F826CF7AB0008E887A /* ProductCollectionViewCell.xib in Resources */,
 				6FA4383F26D0CB24008E887A /* smallCollectionViewCell.xib in Resources */,
 				6FDE139026CE25F000A52132 /* today2.jpeg in Resources */,
@@ -767,6 +817,7 @@
 				6FA4383B26D0A693008E887A /* detailProduct2.png in Resources */,
 				6F9F6CAE26C9436D00802FD1 /* mainidus.png in Resources */,
 				6FDE13A326CE4FC100A52132 /* CollectionViewCell.xib in Resources */,
+				6FC68FDF26D3FE95006327DA /* pay2.png in Resources */,
 				6FA4383626D0A693008E887A /* detailProduct3.png in Resources */,
 				6FEE743626C7DA7900D0D159 /* Assets.xcassets in Resources */,
 				6FA4381926D00B0D008E887A /* giftBtn.png in Resources */,
@@ -783,6 +834,8 @@
 				6FA4381426CF93A9008E887A /* myreview.png in Resources */,
 				6FA4381226CF93A9008E887A /* like.png in Resources */,
 				6FC68FA926D37842006327DA /* contentTableViewCell.xib in Resources */,
+				6FC68FD126D3F571006327DA /* buyDataTableViewCell.xib in Resources */,
+				6FC68FE226D3FE95006327DA /* pay5.png in Resources */,
 				6F9F6CB626C94F8C00802FD1 /* MenuCell.xib in Resources */,
 				6FA4380426CF8BD4008E887A /* HeaderTableViewCell.xib in Resources */,
 				6FA4381726D00AE6008E887A /* buyBtn.png in Resources */,
@@ -791,6 +844,7 @@
 				6F8C492826CB9FB500E4E1C4 /* mainpage.png in Resources */,
 				6FEE744426C7DFA400D0D159 /* btnG_완성형.png in Resources */,
 				6FA437EE26CF6FAA008E887A /* baner6.png in Resources */,
+				6FC68FE126D3FE95006327DA /* pay4.png in Resources */,
 				6F9CD6C326CACD0800A2AEC0 /* profileImage.png in Resources */,
 				6FA4383726D0A693008E887A /* detailProduct4.png in Resources */,
 				6FA437F026CF6FAA008E887A /* baner8.png in Resources */,
@@ -801,11 +855,13 @@
 				6FEE744B26C802B400D0D159 /* mypagebottom.jpeg in Resources */,
 				6FA4382326D01068008E887A /* 29.png in Resources */,
 				6FEE743426C7DA7700D0D159 /* Main.storyboard in Resources */,
+				6FC68FE026D3FE95006327DA /* pay3.png in Resources */,
 				6FA437F126CF6FAA008E887A /* baner9.png in Resources */,
 				6FC68F8726D153A2006327DA /* itemTableViewCell.xib in Resources */,
 				6FEE744226C7DF9600D0D159 /* kakao.png in Resources */,
 				6FDE139126CE25F000A52132 /* today1.jpeg in Resources */,
 				6FA4381B26D00BDE008E887A /* likeBtn.png in Resources */,
+				6FC68FE726D416CB006327DA /* priceTableViewCell.xib in Resources */,
 				6FC68FAD26D38953006327DA /* imageTableViewCell.xib in Resources */,
 				6FC68F9B26D171FA006327DA /* signup.png in Resources */,
 			);
@@ -882,6 +938,7 @@
 				6FA4382026D00FBB008E887A /* detailViewTableViewCell.swift in Sources */,
 				6FA437FB26CF7E87008E887A /* SecondTableViewCell.swift in Sources */,
 				6F8C492626CB9A0600E4E1C4 /* Color.swift in Sources */,
+				6FC68FD026D3F571006327DA /* buyDataTableViewCell.swift in Sources */,
 				6F79206326CD21D4005D07FA /* mypageDataManager.swift in Sources */,
 				6FC68F8D26D15AF8006327DA /* todayRes.swift in Sources */,
 				6FC68FCA26D3B3EC006327DA /* ctegoryCollectionViewController.swift in Sources */,
@@ -889,6 +946,7 @@
 				6FC68FB426D395E4006327DA /* MenuCell3.swift in Sources */,
 				6FC68FC026D39AD6006327DA /* onlineViewController.swift in Sources */,
 				6FA4382E26D0A4EA008E887A /* imageCollectionViewCell.swift in Sources */,
+				6FC68FD826D3FCFE006327DA /* payTableViewCell.swift in Sources */,
 				6FC68F9F26D2B9E5006327DA /* detailViewDataManager.swift in Sources */,
 				6FEE742D26C7DA7700D0D159 /* AppDelegate.swift in Sources */,
 				6F2C026726CB7022004A32FF /* loginRes.swift in Sources */,
@@ -899,8 +957,10 @@
 				6FC68FA126D2BA30006327DA /* detailViewRes.swift in Sources */,
 				6F79205A26CBFE1B005D07FA /* signupDataManager.swift in Sources */,
 				6F79205E26CBFF0C005D07FA /* signupRes.swift in Sources */,
+				6FC68FE626D416CB006327DA /* priceTableViewCell.swift in Sources */,
 				6F9CD6C526CAD14500A2AEC0 /* loginViewController.swift in Sources */,
 				6F8C492226CB990900E4E1C4 /* Device.swift in Sources */,
+				6FC68FCD26D3C0A6006327DA /* buyViewController.swift in Sources */,
 				6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */,
 				6FC68FAC26D38953006327DA /* imageTableViewCell.swift in Sources */,
 				6F8C492026CB98F200E4E1C4 /* IndicatorView.swift in Sources */,

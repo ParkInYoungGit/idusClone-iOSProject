@@ -37,10 +37,17 @@ class detailViewController: UIViewController {
         
     }
     
+    @IBAction func btnBuy(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "buyVC")as? buyViewController else { return }
+            self.navigationController?.pushViewController(vc, animated: true)
+        
+        let buyVc = buyViewController()
+        buyVc.receiveItem(data : detail)
+    }
+    
     func receiveIndexPath(_ indexPath: Int) {
         productNum = indexPath
         print("productNum>>>>>>>\(productNum)\(indexPath)")
-   
     }
 }
 
@@ -69,9 +76,15 @@ extension detailViewController: UITableViewDataSource {
             if let discount = detail?.rateOfDiscount{
                 cell.discount.text = "\(discount)%"
             }
+            
             if let price = detail?.reducedPrice {
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                if let price = numberFormatter.string(from: NSNumber(value: (price))) {
                 cell.price.text = "\(price)"
+                }
             }
+            
             if let oriprice = detail?.price{
                 cell.oriPrice.text = "\(oriprice)"
             }
@@ -97,8 +110,13 @@ extension detailViewController: UITableViewDataSource {
             
         case 3 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "contentCell", for: indexPath) as! contentTableViewCell
             cell.selectionStyle = .none
+            
             if let delivery = detail?.deliveryCharge {
-                cell.deliveryCharge.text = "\(delivery)원"
+                    let numberFormatter = NumberFormatter()
+                    numberFormatter.numberStyle = .decimal
+                if let price = numberFormatter.string(from: NSNumber(value: (delivery))) {
+                cell.deliveryCharge.text = "\(price)원"
+                }
             }
             if let free = detail?.freeShippingCondition {
                 cell.freeShippingCondition.text = "\(free)원 이상 무료배송"

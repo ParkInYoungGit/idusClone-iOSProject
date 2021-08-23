@@ -20,7 +20,7 @@ class MyPageDataManager {
                 case .success(let response):
                     // 성공했을 때
                     if response.isSuccess, let result = response.result {
-                        delegate.didSuccessMypage(response.result!.userName)
+                        delegate.didSuccessMypage(result)
                         print("\(response.message)")
                         
                     }
