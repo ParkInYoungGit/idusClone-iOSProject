@@ -83,7 +83,10 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             let cell = smallImageCollectionView.cellForItem(at: indexPath)
                 if cell?.isSelected == true{
                     cell?.layer.borderWidth = 1
-                    cell!.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                    cell!.layer.borderColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+                }
+                if cell?.isSelected == false {
+                    cell?.layer.borderWidth = 0
                 }
         }
         print("Cell \(indexPath.row + 1) clicked")

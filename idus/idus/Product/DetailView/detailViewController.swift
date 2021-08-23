@@ -17,12 +17,12 @@ class detailViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var detailViewToolbar: UIToolbar!
-    @IBOutlet weak var likeBtn: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var detailTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        toolbar.layer.cornerRadius = 40
+        
         detailTableView.delegate = self
         detailTableView.dataSource = self
         detailTableView.register(UINib(nibName: "detailViewTableViewCell", bundle: nil), forCellReuseIdentifier: "detailTableCell")

@@ -99,7 +99,7 @@
 		6FC68FBC26D39A29006327DA /* newViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FBB26D39A29006327DA /* newViewController.swift */; };
 		6FC68FC026D39AD6006327DA /* onlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FBF26D39AD6006327DA /* onlineViewController.swift */; };
 		6FC68FC226D39AEF006327DA /* offlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FC126D39AEF006327DA /* offlineViewController.swift */; };
-		6FC68FC626D39C18006327DA /* categoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FC526D39C18006327DA /* categoryCollectionViewController.swift */; };
+		6FC68FCA26D3B3EC006327DA /* ctegoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC68FC926D3B3EC006327DA /* ctegoryCollectionViewController.swift */; };
 		6FDE138A26CE237900A52132 /* todayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE138926CE237900A52132 /* todayTableViewCell.swift */; };
 		6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */; };
 		6FDE139026CE25F000A52132 /* today2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138D26CE25F000A52132 /* today2.jpeg */; };
@@ -220,7 +220,7 @@
 		6FC68FBB26D39A29006327DA /* newViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newViewController.swift; sourceTree = "<group>"; };
 		6FC68FBF26D39AD6006327DA /* onlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onlineViewController.swift; sourceTree = "<group>"; };
 		6FC68FC126D39AEF006327DA /* offlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = offlineViewController.swift; sourceTree = "<group>"; };
-		6FC68FC526D39C18006327DA /* categoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryCollectionViewController.swift; sourceTree = "<group>"; };
+		6FC68FC926D3B3EC006327DA /* ctegoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctegoryCollectionViewController.swift; sourceTree = "<group>"; };
 		6FDE138926CE237900A52132 /* todayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayTableViewCell.swift; sourceTree = "<group>"; };
 		6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138D26CE25F000A52132 /* today2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = today2.jpeg; sourceTree = "<group>"; };
@@ -534,7 +534,7 @@
 				6FC68FB126D3956D006327DA /* categoryViewController.swift */,
 				6FC68FB326D395E4006327DA /* MenuCell3.swift */,
 				6FC68FB526D395F7006327DA /* MenuCell3.xib */,
-				6FC68FC526D39C18006327DA /* categoryCollectionViewController.swift */,
+				6FC68FC926D3B3EC006327DA /* ctegoryCollectionViewController.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -884,6 +884,7 @@
 				6F8C492626CB9A0600E4E1C4 /* Color.swift in Sources */,
 				6F79206326CD21D4005D07FA /* mypageDataManager.swift in Sources */,
 				6FC68F8D26D15AF8006327DA /* todayRes.swift in Sources */,
+				6FC68FCA26D3B3EC006327DA /* ctegoryCollectionViewController.swift in Sources */,
 				6F79206A26CD6941005D07FA /* myPageRes.swift in Sources */,
 				6FC68FB426D395E4006327DA /* MenuCell3.swift in Sources */,
 				6FC68FC026D39AD6006327DA /* onlineViewController.swift in Sources */,
@@ -894,7 +895,6 @@
 				6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */,
 				6F8C491E26CB987C00E4E1C4 /* UIViewController.swift in Sources */,
 				6FA4380326CF8BD4008E887A /* HeaderTableViewCell.swift in Sources */,
-				6FC68FC626D39C18006327DA /* categoryCollectionViewController.swift in Sources */,
 				6FC68F9726D16C6A006327DA /* searchViewController.swift in Sources */,
 				6FC68FA126D2BA30006327DA /* detailViewRes.swift in Sources */,
 				6F79205A26CBFE1B005D07FA /* signupDataManager.swift in Sources */,
