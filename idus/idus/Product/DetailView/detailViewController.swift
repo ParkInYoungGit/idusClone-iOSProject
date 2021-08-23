@@ -6,35 +6,131 @@
 //
 
 import UIKit
-
+var productNum = 0
 class detailViewController: UIViewController {
     
 
     var dataManager = detailViewDataManager()
-    var detail : detailResult?
-    var productNum = 0
+    var detail : detailResult? {
+        didSet {
+            detailTableView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var detailViewToolbar: UIToolbar!
     @IBOutlet weak var likeBtn: UIBarButtonItem!
     @IBOutlet weak var detailTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         detailTableView.delegate = self
         detailTableView.dataSource = self
         detailTableView.register(UINib(nibName: "detailViewTableViewCell", bundle: nil), forCellReuseIdentifier: "detailTableCell")
         detailTableView.register(UINib(nibName: "itemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+        detailTableView.register(UINib(nibName: "contentTableViewCell", bundle: nil), forCellReuseIdentifier: "contentCell")
+        detailTableView.register(UINib(nibName: "imageTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCell")
+        
         detailTableView.rowHeight = UITableView.automaticDimension
-        dataManager.getProductDetail(productNum: (productNum+1), delegate: self)
+        
+        dataManager.getProductDetail(productNum: (productNum), delegate: self)
+        print("viewDidLoadproductNum>>>>>>>\(productNum)")
         
     }
     
     func receiveIndexPath(_ indexPath: Int) {
         productNum = indexPath
         print("productNum>>>>>>>\(productNum)\(indexPath)")
-        
+   
     }
 }
 
-extension detailViewController: UITableViewDelegate, UITableViewDataSource {
+extension detailViewController {
+    func didSuccessProductDetail(data: detailViewRes) {
+        detail = data.result
+        detailTableView.reloadData()
+    }
+    func failedToRequest(message: String) {
+    }
+}
+
+extension detailViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        switch indexPath.row {
+        case 0 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "detailTableCell", for: indexPath) as! detailViewTableViewCell
+            return cell
+       
+        case 1 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! itemTableViewCell
+            cell.selectionStyle = .none
+            cell.sellerName.text = detail?.sellerName
+            cell.itemName.text = detail?.name
+            if let discount = detail?.rateOfDiscount{
+                cell.discount.text = "\(discount)%"
+            }
+            if let price = detail?.reducedPrice {
+                cell.price.text = "\(price)"
+            }
+            if let oriprice = detail?.price{
+                cell.oriPrice.text = "\(oriprice)"
+            }
+            if let review = detail?.numOfReview{
+                cell.numOfReview.text = "\(review)"
+            }
+            if let customer = detail?.numOfCustomer{
+                cell.numberOfCustomer.text = "\(customer)"
+            }
+            if let profile = detail?.sellerProfile {
+                let url = URL(string: "\(profile)")
+                DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    cell.sellerImg.image = UIImage(data: data!)
+                    }
+                }
+            }
+            return cell
+        case 2 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! imageTableViewCell
+            cell.selectionStyle = .none
+            return cell
+            
+        case 3 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "contentCell", for: indexPath) as! contentTableViewCell
+            cell.selectionStyle = .none
+            if let delivery = detail?.deliveryCharge {
+                cell.deliveryCharge.text = "\(delivery)원"
+            }
+            if let free = detail?.freeShippingCondition {
+                cell.freeShippingCondition.text = "\(free)원 이상 무료배송"
+            }
+            cell.deliveryDay.text = detail?.deliveryDay
+            if let stock = detail?.totalStock {
+                if stock < 0 {
+                    cell.totalStack.text = "주문시 제작"
+                } else {
+                    cell.totalStack.text = "\(stock)"
+                }
+            }
+            cell.content.numberOfLines = 0
+            cell.content.lineBreakMode = .byCharWrapping
+            cell.content.text = detail?.content
+            cell.prodPolicyName.text = detail?.prodPolicyName
+            cell.prodPolicyDetail.text = detail?.prodPolicyDetail
+            cell.refundPolicyDetail.text = detail?.refundPolicyDetail
+            
+            
+            return cell
+            
+            
+            
+        default : UITableViewCell()
+        }
+        return UITableViewCell()
+    }
+}
+
+
+extension detailViewController: UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -43,29 +139,7 @@ extension detailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
-    }
-    
-    func didSuccessProductDetail(data: detailViewRes) {
-        detail = data.result
-        detailTableView.reloadData()
-    }
-    func failedToRequest(message: String) {
-    
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "detailTableCell", for: indexPath) as! detailViewTableViewCell
-            return cell
-        case 1 : let cell = detailTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! itemTableViewCell
-            cell.sellerName.text = detail?.sellerName
-            print("sellerName>>>>>>>>>\(detail?.sellerName)")
-            cell.itemName.text = detail?.name
-            return cell
-        default : UITableViewCell()
-        }
-        return UITableViewCell()
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

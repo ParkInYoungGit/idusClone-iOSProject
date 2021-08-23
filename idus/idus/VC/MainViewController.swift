@@ -82,10 +82,10 @@ class MainViewController: UIViewController{
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
                 return (menu: title, content: vc)
             case "실시간":
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "now") as! nowViewController
                 return (menu: title, content: vc)
             case "NEW":
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "new") as! newViewController
                 return (menu: title, content: vc)
             default:
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController

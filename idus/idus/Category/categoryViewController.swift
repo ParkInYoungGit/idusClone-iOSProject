@@ -1,28 +1,28 @@
 //
-//  classViewController.swift
+//  categoryViewController.swift
 //  idus
 //
-//  Created by YOUNG on 2021/08/22.
+//  Created by YOUNG on 2021/08/23.
 //
 
 import UIKit
 import PagingKit
 
-class classViewController: UIViewController {
+class categoryViewController: UIViewController {
     
-    var menuViewController2: PagingMenuViewController!
-    var contentViewController2: PagingContentViewController!
+    var menuViewController3: PagingMenuViewController!
+    var contentViewController3: PagingContentViewController!
     
     var dataSource = [(menu: String, content: UIViewController)](){
         didSet{
-            menuViewController2.reloadData()
-            contentViewController2!.reloadData()
+            menuViewController3.reloadData()
+            contentViewController3!.reloadData()
         }
     }
     
-    lazy var firstLoad: (()-> Void)? = {[weak self, menuViewController2, contentViewController2] in
-        menuViewController2?.reloadData()
-        contentViewController2?.reloadData()
+    lazy var firstLoad: (()-> Void)? = {[weak self, menuViewController3, contentViewController3] in
+        menuViewController3?.reloadData()
+        contentViewController3?.reloadData()
         self?.firstLoad = nil
     }
     
@@ -33,35 +33,27 @@ class classViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuViewController2.register(nib: UINib(nibName: "MenuCell2", bundle: nil), forCellWithReuseIdentifier: "MenuCell2")
-        menuViewController2.registerFocusView(view: UnderlineFocusView())
+        menuViewController3.register(nib: UINib(nibName: "MenuCell3", bundle: nil), forCellWithReuseIdentifier: "MenuCell3")
+        menuViewController3.registerFocusView(view: UnderlineFocusView())
         dataSource = makeDataSource()
-        menuViewController2.reloadData()
-        contentViewController2.reloadData()
-        menuViewController2.cellAlignment = .center
-        navigationSetting()
+        menuViewController3.reloadData()
+        contentViewController3.reloadData()
+        menuViewController3.cellAlignment = .center
         // Do any additional setup after loading the view.
     }
     
-    func navigationSetting(){
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "mainidus.png")
-        imageView.image = image
-        navigationItem.titleView = imageView
-        navigationController?.navigationBar.barTintColor = UIColor.white
-    }
+
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let vc = segue.destination as? PagingMenuViewController {
-                menuViewController2 = vc
-                menuViewController2.dataSource = self
-                menuViewController2.delegate = self
+                menuViewController3 = vc
+                menuViewController3.dataSource = self
+                menuViewController3.delegate = self
             } else if let vc = segue.destination as? PagingContentViewController {
-                contentViewController2 = vc
-                contentViewController2.dataSource = self
-                contentViewController2.delegate = self
+                contentViewController3 = vc
+                contentViewController3.dataSource = self
+                contentViewController3.delegate = self
             }
         }
 
@@ -75,17 +67,17 @@ class classViewController: UIViewController {
     }
     */
     fileprivate func makeDataSource() -> [(menu: String, content: UIViewController)]{
-        let myMenuArray = ["온라인","오프라인"]
+        let myMenuArray = ["작품","클래스"]
         
         return myMenuArray.map {
             let title = $0
             
             switch title {
             case "온라인":
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "online") as! onlineViewController
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
                 return (menu: title, content: vc)
             case "오프라인":
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "offline") as! offlineViewController
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
                 return (menu: title, content: vc)
             default:
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
@@ -97,7 +89,7 @@ class classViewController: UIViewController {
 }
 
 //메뉴 데이터소스
-extension classViewController: PagingMenuViewControllerDataSource {
+extension categoryViewController: PagingMenuViewControllerDataSource {
     func numberOfItemsForMenuViewController(viewController: PagingMenuViewController) -> Int {
         return dataSource.count
     }
@@ -107,14 +99,14 @@ extension classViewController: PagingMenuViewControllerDataSource {
     }
     
     func menuViewController(viewController: PagingMenuViewController, cellForItemAt index: Int) -> PagingMenuViewCell {
-        let cell = viewController.dequeueReusableCell(withReuseIdentifier: "MenuCell2", for: index) as! MenuCell2
+        let cell = viewController.dequeueReusableCell(withReuseIdentifier: "MenuCell3", for: index) as! MenuCell3
         //let cell = viewController.dequeueReusableCell(withReuseIdentifier: "TitleLabelMenu", for: index) as! TitleLabelMenuViewCell
-        cell.lblTitle.text = dataSource[index].menu
+        cell.lblMenuCell3.text = dataSource[index].menu
         return cell
     }
 }
 //컨텐트 데이터소스
-extension classViewController: PagingContentViewControllerDataSource {
+extension categoryViewController: PagingContentViewControllerDataSource {
     func numberOfItemsForContentViewController(viewController: PagingContentViewController) -> Int {
         return dataSource.count
     }
@@ -124,14 +116,14 @@ extension classViewController: PagingContentViewControllerDataSource {
     }
 }
 
-extension classViewController: PagingMenuViewControllerDelegate {
+extension categoryViewController: PagingMenuViewControllerDelegate {
     func menuViewController(viewController: PagingMenuViewController, didSelect page: Int, previousPage: Int) {
-        contentViewController2.scroll(to: page, animated: true)
+        contentViewController3.scroll(to: page, animated: true)
     }
 }
 
-extension classViewController: PagingContentViewControllerDelegate {
+extension categoryViewController: PagingContentViewControllerDelegate {
     func contentViewController(viewController: PagingContentViewController, didManualScrollOn index: Int, percent: CGFloat) {
-        menuViewController2.scroll(index: index, percent: percent, animated: false)
+        menuViewController3.scroll(index: index, percent: percent, animated: false)
     }
 }

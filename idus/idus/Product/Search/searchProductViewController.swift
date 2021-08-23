@@ -2,28 +2,24 @@
 //  searchViewController.swift
 //  idus
 //
-//  Created by YOUNG on 2021/08/22.
+//  Created by YOUNG on 2021/08/23.
 //
 
 import UIKit
 
-class searchViewController: UIViewController {
+class searchProductViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mypageVC = splashStoryboard.instantiateViewController(identifier: "searchClicked")
-        self.changeRootViewController2(mypageVC)
+
         // Do any additional setup after loading the view.
     }
     
-    func changeRootViewController2(_ viewControllerToPresent: UIViewController) {
+    @IBAction func btnClose(_ sender: Any) {
         let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mypageVC = splashStoryboard.instantiateViewController(identifier: "searchClicked")
+        let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
         self.changeRootViewController(mypageVC)
-        }
+    }
     
     /*
     // MARK: - Navigation
