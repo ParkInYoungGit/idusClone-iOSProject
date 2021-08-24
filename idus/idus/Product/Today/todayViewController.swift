@@ -58,7 +58,7 @@ extension todayViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-           return 280
+           return 260
         }
         if indexPath.row == 1 {
             return 40

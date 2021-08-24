@@ -48,6 +48,10 @@ extension MyPageViewController {
         UserDefaults.standard.set(data?.userName, forKey: "nickName")
     }
     func failedToRequest(message: String) {
-        self.presentAlert(title: message)
+        //self.presentAlert(title: message)
+        
+        let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mypageVC = splashStoryboard.instantiateViewController(identifier: "viewControlloer")
+        self.changeRootViewController(mypageVC)
     }
 }

@@ -142,7 +142,7 @@ extension detailViewController: UITableViewDataSource {
             }
             cell.content.numberOfLines = 0
             cell.content.lineBreakMode = .byCharWrapping
-            cell.content.text = detail?.content
+            cell.content.text = detail?.content.replacingOccurrences(of: "\\n", with: "\n")
             cell.prodPolicyName.text = detail?.prodPolicyName
             cell.prodPolicyDetail.text = detail?.prodPolicyDetail
             cell.refundPolicyDetail.text = detail?.refundPolicyDetail

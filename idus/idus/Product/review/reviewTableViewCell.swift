@@ -53,7 +53,7 @@ extension reviewTableViewCell: UITableViewDelegate, UITableViewDataSource {
         
         cell.userName.text = detail?.userName
         cell.createdDate.text = detail?.createdDate
-        if let photo = detail?.reviewPhoto{
+        if let photo = detail?.userProfile{
             let url = URL(string: photo)
             DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: url!){
@@ -64,8 +64,19 @@ extension reviewTableViewCell: UITableViewDelegate, UITableViewDataSource {
             }
         }
         
+        if let photo = detail?.reviewPhoto{
+            let url = URL(string: photo)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!){
+                    DispatchQueue.main.async {
+                        cell.reviewPhoto.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
         
-        cell.reviewContent.text = detail?.reviewContent
+        
+        cell.reviewContent.text = detail?.reviewContent.replacingOccurrences(of: "\\n", with: "\n")
         cell.option.text = "\(detail?.option1Value)\(detail?.option1Name),\(detail?.option2Value)\(detail?.option2Name),\(detail?.option3Value)\(detail?.option3Name)"
         return cell
     }

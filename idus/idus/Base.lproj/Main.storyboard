@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="idus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewControlloer" id="BYZ-38-t0r" customClass="ViewController" customModule="idus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,7 +360,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-c0-TU3">
-                                <rect key="frame" x="25" y="44" width="27" height="416.5"/>
+                                <rect key="frame" x="25" y="44" width="27" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="xmark" catalog="system"/>
@@ -370,10 +370,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6ha-p8-LR2">
-                                <rect key="frame" x="41.5" y="129" width="331" height="458"/>
+                                <rect key="frame" x="41.5" y="129" width="331" height="309"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f19-9c-wut">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="183"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -385,7 +385,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUV-jM-VwM">
-                                        <rect key="frame" x="0.0" y="204" width="331" height="34"/>
+                                        <rect key="frame" x="0.0" y="55" width="331" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -397,7 +397,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 (영문+숫자+특수문자 8자 이상)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-Cx-gYe">
-                                        <rect key="frame" x="0.0" y="259" width="331" height="34"/>
+                                        <rect key="frame" x="0.0" y="110" width="331" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -409,7 +409,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Frg-a6-T8g">
-                                        <rect key="frame" x="0.0" y="314" width="331" height="34"/>
+                                        <rect key="frame" x="0.0" y="165" width="331" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -421,7 +421,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxA-MP-Y18">
-                                        <rect key="frame" x="0.0" y="369" width="331" height="34"/>
+                                        <rect key="frame" x="0.0" y="220" width="331" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -433,7 +433,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="추천코드 (선택사항)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZz-Sc-hve">
-                                        <rect key="frame" x="0.0" y="424" width="331" height="34"/>
+                                        <rect key="frame" x="0.0" y="275" width="331" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -447,13 +447,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단, 14세 미만은 회원가입할 수 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBv-FU-Nby">
-                                <rect key="frame" x="25" y="872" width="146.5" height="11"/>
+                                <rect key="frame" x="25" y="639" width="146.5" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbo-GZ-QNw">
-                                <rect key="frame" x="25" y="603" width="364" height="258"/>
+                                <rect key="frame" x="25" y="454" width="364" height="174"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SMS, 이메일을 통해 쿠폰 및 이벤트 정보를 받아보실 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-VA-8N8">
                                         <rect key="frame" x="46" y="152" width="237" height="11"/>
@@ -565,7 +565,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-7O-I5l">
-                                <rect key="frame" x="68" y="1002" width="278" height="30"/>
+                                <rect key="frame" x="68" y="769" width="278" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="278" id="9qs-mG-rxr"/>
                                 </constraints>
@@ -633,7 +633,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="1329"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEB-0E-bWb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1108"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bS4-GF-8Nm">
                                                 <rect key="frame" x="0.0" y="8" width="414" height="285"/>
@@ -867,7 +867,7 @@
                                             <constraint firstItem="HsV-qw-c9t" firstAttribute="leading" secondItem="FEB-0E-bWb" secondAttribute="leading" id="QGK-pp-dJY"/>
                                             <constraint firstItem="Yr4-2X-tX8" firstAttribute="top" secondItem="HsV-qw-c9t" secondAttribute="bottom" constant="8" symbolic="YES" id="SPK-xa-QT0"/>
                                             <constraint firstItem="cJn-4r-aIL" firstAttribute="top" secondItem="3od-Wm-7l0" secondAttribute="bottom" constant="8" symbolic="YES" id="UYv-ib-NMa"/>
-                                            <constraint firstAttribute="bottom" secondItem="cJn-4r-aIL" secondAttribute="bottom" constant="12" id="Ut3-aB-KCk"/>
+                                            <constraint firstAttribute="bottom" secondItem="cJn-4r-aIL" secondAttribute="bottom" id="Ut3-aB-KCk"/>
                                             <constraint firstAttribute="trailing" secondItem="cJn-4r-aIL" secondAttribute="trailing" constant="8" id="b0K-yY-64Y"/>
                                             <constraint firstAttribute="trailing" secondItem="3od-Wm-7l0" secondAttribute="trailing" id="c5N-Bm-gy6"/>
                                             <constraint firstItem="bS4-GF-8Nm" firstAttribute="leading" secondItem="FEB-0E-bWb" secondAttribute="leading" id="c7b-PU-7x3"/>

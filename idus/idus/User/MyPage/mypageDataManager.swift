@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import Alamofire
 var userIdx = 5
 
@@ -29,7 +28,8 @@ class MyPageDataManager {
                         switch response.code {
                         case 2000: delegate.failedToRequest(message: "상황에 맞는")
                         case 3000: delegate.failedToRequest(message: "에러 메시지로")
-                        case 4000: delegate.failedToRequest(message: "사용자에게 적절한")
+                        case 4000: delegate.failedToRequest(message: "로그인이 필요합니다.")
+                            
                         default: delegate.failedToRequest(message: "피드백을 주세요")
                         }
                     }
