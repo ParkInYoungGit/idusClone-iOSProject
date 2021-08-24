@@ -8,7 +8,10 @@
 import UIKit
 
 class detailViewTableViewCell: UITableViewCell {
-
+    
+    var photo : [PhotoResult] = []
+    var photoArr = [""]
+    var dataManager = detailPhotoDataManager()
     @IBOutlet weak var smallImageCollectionView: UICollectionView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
     var productImgArr = ["detailProduct","detailProduct2","detailProduct3","detailProduct4","detailProduct5","detailProduct6","detailProduct7"]
@@ -17,7 +20,7 @@ class detailViewTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+       
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         imageCollectionView.register(UINib(nibName: "imageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageCell")
@@ -28,10 +31,25 @@ class detailViewTableViewCell: UITableViewCell {
         smallImageCollectionView.register(UINib(nibName: "smallCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "smallImage")
         smallImageCollectionView.collectionViewLayout = createCompositionalLayout2()
         
+        dataManager.getProductDetailPhoto(productNum: (productNum), delegate: self)
         
         
     }
     
+    func didSuccessProductDetailPhoto(data: detailPhotoRes) {
+        photo = data.result
+        for i in 0..<photo.count{
+            photoArr.append(photo[i].photoURL)
+        }
+        print("CV reload")
+        imageCollectionView.reloadData()
+        smallImageCollectionView.reloadData()
+        
+    }
+    
+    func failedToRequest2(message: String) {
+        
+    }
 
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -44,12 +62,12 @@ class detailViewTableViewCell: UITableViewCell {
 
 extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productImgArr.count
+        return photoArr.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let cellWidth = 50
-        let numberOfItems = productImgArr.count
+        let numberOfItems = photoArr.count
         let spaceBetweenCell = 5
         let totalWidth = cellWidth * numberOfItems
         let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
@@ -60,18 +78,42 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
       }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            if collectionView == imageCollectionView {
+        switch collectionView {
+        case imageCollectionView :
             let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! imageCollectionViewCell
-            cell.detailImage.image = UIImage(named: productImgArr[indexPath.row])
-            cell.detailImage.contentMode = .scaleAspectFit
-                return cell
-            } else {
+            
+//            let url = URL(string: "\(photoArr[indexPath.item])")
+//            let data = try? Data(contentsOf: url!)
+//            cell.detailImage.image = UIImage(data: data!)
+            
+                if let url = URL(string: "\(photoArr[indexPath.item])") {
+                    DispatchQueue.global().async {
+                        let data = try? Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        cell.detailImage.image = UIImage(data: data!)
+                        cell.detailImage.contentMode = .scaleAspectFill
+                        }
+                    }
+                }
+            
+            return cell
+                
+        case smallImageCollectionView :
                 let cell = smallImageCollectionView.dequeueReusableCell(withReuseIdentifier: "smallImage", for: indexPath) as! smallCollectionViewCell
-                cell.smallImage.image = UIImage(named: productImgArr[indexPath.row])
-                cell.smallImage.contentMode = .scaleAspectFit
+                if let url = URL(string: "\(photoArr[indexPath.item])") {
+                DispatchQueue.global().async {
+                    let data = try? Data(contentsOf: url)
+                DispatchQueue.main.async {
+                        cell.smallImage?.image = UIImage(data: data!)
+                        cell.smallImage.contentMode = .scaleAspectFit
+                        }
+                    }
+                }
+                //cell.smallImage.image = UIImage(named: productImgArr[indexPath.row])
                 return cell
-            }
-    
+            
+        default : UICollectionViewCell()
+    }
         
         return UICollectionViewCell()
     }
@@ -81,13 +123,13 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         imageCollectionView.scrollToItem(at: indexPath, at: .left, animated: true)
         if self.smallImageCollectionView.allowsMultipleSelection == false {
             let cell = smallImageCollectionView.cellForItem(at: indexPath)
-                if cell?.isSelected == true{
-                    cell?.layer.borderWidth = 1
-                    cell!.layer.borderColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-                }
-                if cell?.isSelected == false {
-                    cell?.layer.borderWidth = 0
-                }
+//                if cell?.isSelected == true{
+//                    cell?.layer.borderWidth = 1
+//                    cell!.layer.borderColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+//                }
+//                if cell?.isSelected == false {
+//                    cell?.layer.borderWidth = 0
+//                }
         }
         print("Cell \(indexPath.row + 1) clicked")
     }

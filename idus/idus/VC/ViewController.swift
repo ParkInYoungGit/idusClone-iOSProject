@@ -22,7 +22,7 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
     var numImage = 0
     var count = 0
     var timer: Timer?
-    var imagName = ["signup.png","mainImage.jpg"]
+    var imagName = ["signUp.jpeg","mainImage.jpg"]
  
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     override func viewDidLoad() {

@@ -22,7 +22,7 @@ class MyPageViewController: UIViewController {
         profileImage.image = UIImage(named: "profileImage.png")
         profileImage.layer.cornerRadius = 10
 
-        let idx = 5
+        let idx = Constant.shared.idx
         dataManager.getMyPage(idx, delegate: self)
         
         // Do any additional setup after loading the view.

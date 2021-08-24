@@ -41,7 +41,7 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+        navigationController?.navigationBar.shadowImage = UIImage()
         menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
         menuViewController.registerFocusView(view: UnderlineFocusView())
         tabbarConfigure()

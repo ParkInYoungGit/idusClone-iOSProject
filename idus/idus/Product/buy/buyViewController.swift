@@ -6,11 +6,12 @@
 //
 
 import UIKit
+var detail: detailResult?
 
 class buyViewController: UIViewController {
 
-    var detail: detailResult?
-    var imgArr = ["pay1.png","pay2.png","pay3.png","pay4.png","pay5.png",]
+   
+    var imgArr = ["pay1.png","pay2.png","pay3.png","pay4.png","pay5.png","pay6.png"]
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,12 @@ class buyViewController: UIViewController {
         tableView.register(UINib(nibName: "priceTableViewCell", bundle: nil), forCellReuseIdentifier: "priceCell")
         tableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
-        self.tabBarController?.tabBar.isHidden = true
+        //self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func receiveItem(data : detailResult?) {
+        detail = data
+        print(">>>>>>>>>>>>>>>>>\(data)")
     }
 
 }
@@ -63,6 +69,10 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
         let name = UserDefaults.standard.string(forKey: "nickName")
         let phone = UserDefaults.standard.string(forKey: "phone")
         if indexPath.section == 0 {
@@ -94,22 +104,26 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell", for: indexPath) as! priceTableViewCell
             
+            
             if let price1 = detail?.reducedPrice {
-                let numberFormatter = NumberFormatter()
-                numberFormatter.numberStyle = .decimal
                 if let price = numberFormatter.string(from: NSNumber(value: (price1))) {
             cell.lblPrice.text = "\(price)원"
                 }
             }
             
             if let delivery = detail?.deliveryCharge {
-                cell.lblDelivery.text = "\(delivery)원"
+                if let delive = numberFormatter.string(from: NSNumber(value: delivery)) {
+                cell.lblDelivery.text = "\(delive)원"
+                }
             }
             
             if let delivery = detail?.deliveryCharge, let price = detail?.reducedPrice {
-                cell.lblTotalPrice.text = "\(delivery+price)원"
-                print("테스트>>>>>>>>\(delivery+price)")
+                let total = delivery + price
+                    if let sum = numberFormatter.string(from: NSNumber(value: total)) {
+                cell.lblTotalPrice.text = "\(sum)원"
+                }
             }
+            
             
             
             return cell
@@ -123,8 +137,5 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension buyViewController {
-    func receiveItem(data : detailResult?) {
-        detail = data
-        print(">>>>>>>>>>>>>>>>>\(data)")
-    }
+
 }

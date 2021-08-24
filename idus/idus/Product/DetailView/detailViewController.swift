@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import PanModal
+
 var productNum = 0
 class detailViewController: UIViewController {
     
 
     var dataManager = detailViewDataManager()
+    var photoManager = detailPhotoDataManager()
+    var reviewdataManager = reviewDataManager()
     var detail : detailResult? {
         didSet {
             detailTableView.reloadData()
@@ -29,20 +33,26 @@ class detailViewController: UIViewController {
         detailTableView.register(UINib(nibName: "itemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         detailTableView.register(UINib(nibName: "contentTableViewCell", bundle: nil), forCellReuseIdentifier: "contentCell")
         detailTableView.register(UINib(nibName: "imageTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCell")
-        
+        detailTableView.register(UINib(nibName: "reviewTableViewCell", bundle: nil), forCellReuseIdentifier: "reviewCell")
         detailTableView.rowHeight = UITableView.automaticDimension
         
         dataManager.getProductDetail(productNum: (productNum), delegate: self)
-        print("viewDidLoadproductNum>>>>>>>\(productNum)")
+      
         
+        print("viewDidLoadproductNum>>>>>>>\(productNum)")
+        //self.tabBarController?.tabBar.isHidden = true
     }
     
     @IBAction func btnBuy(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "buyVC")as? buyViewController else { return }
-            self.navigationController?.pushViewController(vc, animated: true)
+//        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "buyVC")as? buyViewController else { return }
+//            self.navigationController?.pushViewController(vc, animated: true)
+//
+//        let buyVc = buyViewController()
+//        buyVc.receiveItem(data : detail)
         
-        let buyVc = buyViewController()
-        buyVc.receiveItem(data : detail)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionTable") as! optionTableViewController
+        presentPanModal(vc)
+        vc.receiveItem(data: detail)
     }
     
     func receiveIndexPath(_ indexPath: Int) {
@@ -58,6 +68,7 @@ extension detailViewController {
     }
     func failedToRequest(message: String) {
     }
+    
 }
 
 extension detailViewController: UITableViewDataSource {
@@ -139,6 +150,9 @@ extension detailViewController: UITableViewDataSource {
             
             return cell
             
+        case 4: let cell = detailTableView.dequeueReusableCell(withIdentifier: "reviewCell") as! reviewTableViewCell
+            
+            return cell
             
             
         default : UITableViewCell()
@@ -157,11 +171,13 @@ extension detailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
+        if indexPath.row == 4 {
+            return 500
+        }
         return tableView.rowHeight
     }
 }

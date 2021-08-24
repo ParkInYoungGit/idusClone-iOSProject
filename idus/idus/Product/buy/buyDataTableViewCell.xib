@@ -24,7 +24,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="318" id="gBs-gw-9XK"/>
                         </constraints>
-                        <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -39,7 +38,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="318" id="RI1-jo-877"/>
                         </constraints>
-                        <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -54,7 +52,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="318" id="OgZ-FQ-xxU"/>
                         </constraints>
-                        <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>

@@ -34,7 +34,7 @@ class todayViewController: UIViewController{
         tableView.register(UINib(nibName: "SecondTableViewCell", bundle: nil), forCellReuseIdentifier: "myCell2")
         tableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerCell")
         
-        
+        //self.tabBarController?.tabBar.isHidden = false
     }
 
 }
