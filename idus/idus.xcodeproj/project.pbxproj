@@ -136,7 +136,6 @@
 		6FC6902426D4DFD4006327DA /* category5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6900F26D4DFD3006327DA /* category5.png */; };
 		6FC6902526D4DFD4006327DA /* category6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6901026D4DFD3006327DA /* category6.png */; };
 		6FC6902626D4DFD4006327DA /* category18.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6901126D4DFD3006327DA /* category18.png */; };
-		6FC6902726D4DFD4006327DA /* category21.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6901226D4DFD3006327DA /* category21.png */; };
 		6FC6902926D4E099006327DA /* signUp.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6902826D4E099006327DA /* signUp.jpeg */; };
 		6FC6902E26D4E267006327DA /* naverlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6902A26D4E266006327DA /* naverlogo.png */; };
 		6FC6902F26D4E267006327DA /* kakaologo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6902B26D4E266006327DA /* kakaologo.png */; };
@@ -159,6 +158,21 @@
 		6FC6905426D55353006327DA /* reviewContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6905226D55353006327DA /* reviewContentTableViewCell.xib */; };
 		6FC6905826D55595006327DA /* reviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6905726D55595006327DA /* reviewDataManager.swift */; };
 		6FC6905A26D555B0006327DA /* reviewRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6905926D555B0006327DA /* reviewRes.swift */; };
+		6FC6905C26D5ED04006327DA /* optionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6905B26D5ED04006327DA /* optionViewController.swift */; };
+		6FC6905E26D618AF006327DA /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6905D26D618AF006327DA /* back.png */; };
+		6FC6906426D61A04006327DA /* back29.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6906326D61A04006327DA /* back29.png */; };
+		6FC6906826D61D39006327DA /* carticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6906526D61D38006327DA /* carticon.png */; };
+		6FC6906926D61D39006327DA /* homeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6906626D61D38006327DA /* homeicon.png */; };
+		6FC6906A26D61D39006327DA /* searchicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6906726D61D38006327DA /* searchicon.png */; };
+		6FC6907426D622F4006327DA /* home29.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907126D622F3006327DA /* home29.png */; };
+		6FC6907526D622F4006327DA /* search29.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907226D622F3006327DA /* search29.png */; };
+		6FC6907626D622F4006327DA /* cart29.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907326D622F3006327DA /* cart29.png */; };
+		6FC6907A26D623B9006327DA /* home40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907726D623B8006327DA /* home40.png */; };
+		6FC6907B26D623B9006327DA /* cart40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907826D623B8006327DA /* cart40.png */; };
+		6FC6907C26D623B9006327DA /* search40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907926D623B8006327DA /* search40.png */; };
+		6FC6907E26D62A0A006327DA /* category21.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6907D26D62A0A006327DA /* category21.png */; };
+		6FC6908126D65BAA006327DA /* optionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC6907F26D65BAA006327DA /* optionTableViewCell.swift */; };
+		6FC6908226D65BAA006327DA /* optionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC6908026D65BAA006327DA /* optionTableViewCell.xib */; };
 		6FDE138A26CE237900A52132 /* todayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE138926CE237900A52132 /* todayTableViewCell.swift */; };
 		6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */; };
 		6FDE139026CE25F000A52132 /* today2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138D26CE25F000A52132 /* today2.jpeg */; };
@@ -315,7 +329,6 @@
 		6FC6900F26D4DFD3006327DA /* category5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category5.png; sourceTree = "<group>"; };
 		6FC6901026D4DFD3006327DA /* category6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category6.png; sourceTree = "<group>"; };
 		6FC6901126D4DFD3006327DA /* category18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category18.png; sourceTree = "<group>"; };
-		6FC6901226D4DFD3006327DA /* category21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category21.png; sourceTree = "<group>"; };
 		6FC6902826D4E099006327DA /* signUp.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signUp.jpeg; sourceTree = "<group>"; };
 		6FC6902A26D4E266006327DA /* naverlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naverlogo.png; sourceTree = "<group>"; };
 		6FC6902B26D4E266006327DA /* kakaologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakaologo.png; sourceTree = "<group>"; };
@@ -337,6 +350,21 @@
 		6FC6905226D55353006327DA /* reviewContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = reviewContentTableViewCell.xib; sourceTree = "<group>"; };
 		6FC6905726D55595006327DA /* reviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewDataManager.swift; sourceTree = "<group>"; };
 		6FC6905926D555B0006327DA /* reviewRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewRes.swift; sourceTree = "<group>"; };
+		6FC6905B26D5ED04006327DA /* optionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionViewController.swift; sourceTree = "<group>"; };
+		6FC6905D26D618AF006327DA /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		6FC6906326D61A04006327DA /* back29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back29.png; sourceTree = "<group>"; };
+		6FC6906526D61D38006327DA /* carticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carticon.png; sourceTree = "<group>"; };
+		6FC6906626D61D38006327DA /* homeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeicon.png; sourceTree = "<group>"; };
+		6FC6906726D61D38006327DA /* searchicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchicon.png; sourceTree = "<group>"; };
+		6FC6907126D622F3006327DA /* home29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home29.png; sourceTree = "<group>"; };
+		6FC6907226D622F3006327DA /* search29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search29.png; sourceTree = "<group>"; };
+		6FC6907326D622F3006327DA /* cart29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart29.png; sourceTree = "<group>"; };
+		6FC6907726D623B8006327DA /* home40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home40.png; sourceTree = "<group>"; };
+		6FC6907826D623B8006327DA /* cart40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart40.png; sourceTree = "<group>"; };
+		6FC6907926D623B8006327DA /* search40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search40.png; sourceTree = "<group>"; };
+		6FC6907D26D62A0A006327DA /* category21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category21.png; sourceTree = "<group>"; };
+		6FC6907F26D65BAA006327DA /* optionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionTableViewCell.swift; sourceTree = "<group>"; };
+		6FC6908026D65BAA006327DA /* optionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = optionTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138926CE237900A52132 /* todayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayTableViewCell.swift; sourceTree = "<group>"; };
 		6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138D26CE25F000A52132 /* today2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = today2.jpeg; sourceTree = "<group>"; };
@@ -724,10 +752,13 @@
 		6FC6903C26D52A17006327DA /* Option */ = {
 			isa = PBXGroup;
 			children = (
-				6FC6904526D53468006327DA /* optionTableViewController.swift */,
+				6FC6903D26D52A6D006327DA /* optionTable.swift */,
 				6FC6904026D52B58006327DA /* optionDataManager */,
 				6FC6903F26D52B4B006327DA /* Entity */,
-				6FC6903D26D52A6D006327DA /* optionTable.swift */,
+				6FC6905B26D5ED04006327DA /* optionViewController.swift */,
+				6FC6904526D53468006327DA /* optionTableViewController.swift */,
+				6FC6907F26D65BAA006327DA /* optionTableViewCell.swift */,
+				6FC6908026D65BAA006327DA /* optionTableViewCell.xib */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -822,10 +853,21 @@
 			isa = PBXGroup;
 			children = (
 				6FC6902C26D4E266006327DA /* facebooklogo.png */,
+				6FC6906326D61A04006327DA /* back29.png */,
+				6FC6905D26D618AF006327DA /* back.png */,
 				6FC6902B26D4E266006327DA /* kakaologo.png */,
+				6FC6907326D622F3006327DA /* cart29.png */,
+				6FC6907126D622F3006327DA /* home29.png */,
+				6FC6907826D623B8006327DA /* cart40.png */,
+				6FC6907726D623B8006327DA /* home40.png */,
+				6FC6907926D623B8006327DA /* search40.png */,
+				6FC6907226D622F3006327DA /* search29.png */,
 				6FC6902A26D4E266006327DA /* naverlogo.png */,
 				6FC6902D26D4E267006327DA /* twiterlogo.png */,
 				6FC68FFA26D4DBCB006327DA /* toolbarImg.png */,
+				6FC6906526D61D38006327DA /* carticon.png */,
+				6FC6906626D61D38006327DA /* homeicon.png */,
+				6FC6906726D61D38006327DA /* searchicon.png */,
 				6FC6900126D4DFD0006327DA /* category1.png */,
 				6FC6900E26D4DFD3006327DA /* category2.png */,
 				6FC68FFF26D4DFCF006327DA /* category3.png */,
@@ -845,11 +887,11 @@
 				6FC68FFE26D4DFCF006327DA /* category15.png */,
 				6FC6900526D4DFD1006327DA /* category16.png */,
 				6FC6900426D4DFD0006327DA /* category17.png */,
+				6FC6907D26D62A0A006327DA /* category21.png */,
 				6FC6904926D54356006327DA /* offline.png */,
 				6FC6901126D4DFD3006327DA /* category18.png */,
 				6FC6900A26D4DFD2006327DA /* category19.png */,
 				6FC6900026D4DFD0006327DA /* category20.png */,
-				6FC6901226D4DFD3006327DA /* category21.png */,
 				6FC68FFB26D4DBCB006327DA /* toolbarImg2.png */,
 				6FC68FE826D4D139006327DA /* line.png */,
 				6FC68FF026D4DAD1006327DA /* pay1.png */,
@@ -986,6 +1028,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FC6901D26D4DFD4006327DA /* category12.png in Resources */,
+				6FC6906426D61A04006327DA /* back29.png in Resources */,
 				6FC68FD526D3F5DC006327DA /* buyTable.png in Resources */,
 				6FC6905026D55229006327DA /* reviewTableViewCell.xib in Resources */,
 				6FA4383926D0A693008E887A /* detailProduct7.png in Resources */,
@@ -1022,14 +1065,17 @@
 				6FA437ED26CF6FAA008E887A /* baner5.png in Resources */,
 				6FC68FE926D4D13A006327DA /* line.png in Resources */,
 				6FC68FB626D395F7006327DA /* MenuCell3.xib in Resources */,
+				6FC6906826D61D39006327DA /* carticon.png in Resources */,
 				6FDE139226CE25F000A52132 /* today3.jpeg in Resources */,
 				6FA4383826D0A693008E887A /* detailProduct5.png in Resources */,
 				6FA4381126CF93A9008E887A /* delivery.png in Resources */,
 				6FA437F226CF6FAA008E887A /* baner1.png in Resources */,
+				6FC6907526D622F4006327DA /* search29.png in Resources */,
 				6FC68FF726D4DAD2006327DA /* pay2.png in Resources */,
 				6FA437EF26CF6FAA008E887A /* baner7.png in Resources */,
 				6FC6903126D4E267006327DA /* twiterlogo.png in Resources */,
 				6FA437FC26CF7E87008E887A /* SecondTableViewCell.xib in Resources */,
+				6FC6906926D61D39006327DA /* homeicon.png in Resources */,
 				6FA4381326CF93A9008E887A /* seller.png in Resources */,
 				6FC6901C26D4DFD4006327DA /* category14.png in Resources */,
 				6FC6902026D4DFD4006327DA /* category10.png in Resources */,
@@ -1038,16 +1084,20 @@
 				6FEE744D26C8036C00D0D159 /* mainImage.jpg in Resources */,
 				6FA4381426CF93A9008E887A /* myreview.png in Resources */,
 				6FC6901E26D4DFD4006327DA /* category8.png in Resources */,
+				6FC6906A26D61D39006327DA /* searchicon.png in Resources */,
+				6FC6907626D622F4006327DA /* cart29.png in Resources */,
 				6FC6901326D4DFD4006327DA /* category15.png in Resources */,
 				6FC6901426D4DFD4006327DA /* category3.png in Resources */,
 				6FA4381226CF93A9008E887A /* like.png in Resources */,
-				6FC6902726D4DFD4006327DA /* category21.png in Resources */,
+				6FC6908226D65BAA006327DA /* optionTableViewCell.xib in Resources */,
 				6FC6901F26D4DFD4006327DA /* category19.png in Resources */,
 				6FC68FA926D37842006327DA /* contentTableViewCell.xib in Resources */,
+				6FC6907C26D623B9006327DA /* search40.png in Resources */,
 				6FC6902F26D4E267006327DA /* kakaologo.png in Resources */,
 				6FC68FD126D3F571006327DA /* buyDataTableViewCell.xib in Resources */,
 				6F9F6CB626C94F8C00802FD1 /* MenuCell.xib in Resources */,
 				6FA4380426CF8BD4008E887A /* HeaderTableViewCell.xib in Resources */,
+				6FC6907E26D62A0A006327DA /* category21.png in Resources */,
 				6FA4381726D00AE6008E887A /* buyBtn.png in Resources */,
 				6FC6901526D4DFD4006327DA /* category20.png in Resources */,
 				6FA4382726D0A254008E887A /* detailProduct.png in Resources */,
@@ -1056,18 +1106,21 @@
 				6FC68FF926D4DAD2006327DA /* pay5.png in Resources */,
 				6FEE744426C7DFA400D0D159 /* btnG_완성형.png in Resources */,
 				6FC6901B26D4DFD4006327DA /* category4.png in Resources */,
+				6FC6907A26D623B9006327DA /* home40.png in Resources */,
 				6FA437EE26CF6FAA008E887A /* baner6.png in Resources */,
 				6FC6901726D4DFD4006327DA /* category11.png in Resources */,
 				6F9CD6C326CACD0800A2AEC0 /* profileImage.png in Resources */,
 				6FA4383726D0A693008E887A /* detailProduct4.png in Resources */,
 				6FC6902626D4DFD4006327DA /* category18.png in Resources */,
 				6FC6904A26D54356006327DA /* offline.png in Resources */,
+				6FC6907426D622F4006327DA /* home29.png in Resources */,
 				6FC68FF826D4DAD2006327DA /* pay3.png in Resources */,
 				6FA437F026CF6FAA008E887A /* baner8.png in Resources */,
 				6FC6901926D4DFD4006327DA /* category17.png in Resources */,
 				6FA437FF26CF8880008E887A /* starPoint.png in Resources */,
 				6FA4382126D00FBB008E887A /* detailViewTableViewCell.xib in Resources */,
 				6FC6901626D4DFD4006327DA /* category1.png in Resources */,
+				6FC6907B26D623B9006327DA /* cart40.png in Resources */,
 				6FC68F9926D16ECC006327DA /* searchPage.png in Resources */,
 				6FC68F9426D1639A006327DA /* MenuCell2.xib in Resources */,
 				6FC6902426D4DFD4006327DA /* category5.png in Resources */,
@@ -1081,6 +1134,7 @@
 				6FA437F126CF6FAA008E887A /* baner9.png in Resources */,
 				6FC68F8726D153A2006327DA /* itemTableViewCell.xib in Resources */,
 				6FEE744226C7DF9600D0D159 /* kakao.png in Resources */,
+				6FC6905E26D618AF006327DA /* back.png in Resources */,
 				6FC68FFC26D4DBCB006327DA /* toolbarImg.png in Resources */,
 				6FDE139126CE25F000A52132 /* today1.jpeg in Resources */,
 				6FA4381B26D00BDE008E887A /* likeBtn.png in Resources */,
@@ -1152,6 +1206,7 @@
 				6FC68FB926D39A0C006327DA /* nowViewController.swift in Sources */,
 				6F2C026926CB71BB004A32FF /* loginDataManager.swift in Sources */,
 				6FC68FB226D3956D006327DA /* categoryViewController.swift in Sources */,
+				6FC6905C26D5ED04006327DA /* optionViewController.swift in Sources */,
 				6FA437DD26CF67CC008E887A /* AdCollectionViewCell.swift in Sources */,
 				6F9CD69926CA200A00A2AEC0 /* todayViewController.swift in Sources */,
 				6FA4381D26D00CD0008E887A /* detailViewController.swift in Sources */,
@@ -1180,6 +1235,7 @@
 				6FA4382E26D0A4EA008E887A /* imageCollectionViewCell.swift in Sources */,
 				6FC68FD826D3FCFE006327DA /* payTableViewCell.swift in Sources */,
 				6FC68F9F26D2B9E5006327DA /* detailViewDataManager.swift in Sources */,
+				6FC6908126D65BAA006327DA /* optionTableViewCell.swift in Sources */,
 				6FEE742D26C7DA7700D0D159 /* AppDelegate.swift in Sources */,
 				6F2C026726CB7022004A32FF /* loginRes.swift in Sources */,
 				6F9F6CB026C94F2400802FD1 /* MenuCell.swift in Sources */,

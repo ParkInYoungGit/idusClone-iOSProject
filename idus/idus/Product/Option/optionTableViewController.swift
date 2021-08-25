@@ -8,7 +8,8 @@
 import UIKit
 import PanModal
 
-class optionTableViewController: UITableViewController {
+class optionTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var tvlistView: UITableView!
     var item: [optionResult] = []
     var dataManager = optionDataManager()
     var sections = [""]
@@ -16,22 +17,27 @@ class optionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tvlistView.delegate = self
+        tvlistView.dataSource = self
+
+        tvlistView.register(UINib(nibName: "optionTableViewCell", bundle: nil), forCellReuseIdentifier: "optionCell")
+        
         if let productNum = detail?.itemIdx {
             dataManager.getOption(productNum: productNum, delegate: self)
         }
-        
     }
 
-    func receiveItem(data : detailResult?) {
+    func receiveItemToOption(data : detailResult?) {
         detail = data
-        //print("optionTableView>>>>>>>>>>>>>>>>>\(data)")
+        print("optionTableView>>>>>>>>>>>>>>>>>\(data)")
         //print("\(item.count)")
     }
 
     func didSuccessOption(data : optionRes){
         item = data.result
+        tvlistView.reloadData()
         print("optionitemTableView>>>>>>>>>>>>>>>>>\(item)")
-        tableView.reloadData()
+        
     }
 
     func failedToRequest(message: String) {
@@ -44,51 +50,61 @@ class optionTableViewController: UITableViewController {
 //    }
     
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         
-        return sections.count
+//        for i in 0 ... item.count {
+//            switch item[i].optionNum {
+//            case 1:
+//                return 1
+//            case 2:
+//                return 2
+//            case 3:
+//                return 3
+//            default:
+//                return 1
+//            }
+//        }
+        return 1
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
-    }
 
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return item.count
+        return 4
     }
 
    
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath)
-        
-        for i in 0 ..< item.count {
-            sections.append(item[i].optionName)
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath)
+//
+//        for i in 0 ..< item.count {
+//            sections.append(item[i].optionName)
+//        }
+//
+//        if indexPath.section == 0 {
+//            let optionValue = item[indexPath.row].optionValue
+//            cell.textLabel?.text = "\(optionValue)"
+//        }
+        let cell = tvlistView.dequeueReusableCell(withIdentifier: "optionCell") as! optionTableViewCell
+        cell.lblNumber.text = "test"
 
-        if indexPath.section == 0 {
-            let optionValue = item[indexPath.row].optionValue
-            cell.textLabel?.text = "\(optionValue)"
-        }
-        
-//        let optionName = item[indexPath.row].optionName
-//        let optionValue = item[indexPath.row].optionValue
-//        // Configure the cell...
-//        cell.textLabel?.text = "\(optionName)"
-//        cell.textLabel?.text = "\(optionValue)"
         return cell
     }
-    
-
 }
-
 extension optionTableViewController: PanModalPresentable {
 
     var panScrollable: UIScrollView? {
-        return tableView
+        return tvlistView
     }
-
-
+    var shortFormHeight: PanModalHeight {
+    return .contentHeight(430)
+  }
+  var longFormHeight: PanModalHeight {
+    return .maxHeightWithTopInset(300)
+  }
+  var anchorModalToLongForm: Bool {
+    return true
+  }
 }

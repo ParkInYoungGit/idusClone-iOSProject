@@ -23,7 +23,18 @@ class buyViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
         //self.tabBarController?.tabBar.isHidden = true
+        var image = UIImage(named: "back29.png")
+        image = image?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        
+        let backBtn = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem = backBtn
+        
     }
+    
+    @objc func back() {
+           self.navigationController?.popViewController(animated: true)
+       }
+
     
     func receiveItem(data : detailResult?) {
         detail = data

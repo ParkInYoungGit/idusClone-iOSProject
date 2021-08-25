@@ -17,16 +17,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y8N-oH-nKl">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y8N-oH-nKl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="y8N-oH-nKl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6lY-dI-Ssp"/>
-                    <constraint firstAttribute="bottom" secondItem="y8N-oH-nKl" secondAttribute="bottom" id="Hgb-eI-ga7"/>
-                    <constraint firstItem="y8N-oH-nKl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KKE-4P-dXR"/>
-                    <constraint firstAttribute="trailing" secondItem="y8N-oH-nKl" secondAttribute="trailing" id="drh-gM-hCM"/>
+                    <constraint firstAttribute="trailing" secondItem="y8N-oH-nKl" secondAttribute="trailing" id="52e-Tw-hg6"/>
+                    <constraint firstAttribute="bottom" secondItem="y8N-oH-nKl" secondAttribute="bottom" id="DHo-Rb-q4A"/>
+                    <constraint firstItem="y8N-oH-nKl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T9r-FI-5Oz"/>
+                    <constraint firstItem="y8N-oH-nKl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gch-O1-uxv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

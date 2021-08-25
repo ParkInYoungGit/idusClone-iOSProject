@@ -10,7 +10,7 @@ import UIKit
 class ctegoryCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var ImgArr = ["category1.png","category2.png","category3.png","category4.png","category5.png","category6.png","category7.png","category8.png","category9.png","category10.png","category11.png","category12.png","category13.png","category14.png","category15.png","category16.png","category17.png","category18.png","category19.png","category20.png","category21.png",]
-    var cateArr = ["잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화","잡화",]
+    var cateArr = ["수제청","와인","채소","요거트","떡,베이커리","반찬","홈웨어","키링","지갑","이너웨어","악세서리","가방","수제화","홈슈즈","파우치","시트","악세서리","반지","팔찌","자동차키","꽃"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

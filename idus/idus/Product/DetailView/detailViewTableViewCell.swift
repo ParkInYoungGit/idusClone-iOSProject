@@ -10,7 +10,7 @@ import UIKit
 class detailViewTableViewCell: UITableViewCell {
     
     var photo : [PhotoResult] = []
-    var photoArr = [""]
+    var photoArr: [String] = []
     var dataManager = detailPhotoDataManager()
     @IBOutlet weak var smallImageCollectionView: UICollectionView!
     @IBOutlet weak var imageCollectionView: UICollectionView!
@@ -29,7 +29,7 @@ class detailViewTableViewCell: UITableViewCell {
         smallImageCollectionView.delegate = self
         smallImageCollectionView.dataSource = self
         smallImageCollectionView.register(UINib(nibName: "smallCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "smallImage")
-        smallImageCollectionView.collectionViewLayout = createCompositionalLayout2()
+        //smallImageCollectionView.collectionViewLayout = createCompositionalLayout2()
         
         dataManager.getProductDetailPhoto(productNum: (productNum), delegate: self)
         
@@ -38,10 +38,11 @@ class detailViewTableViewCell: UITableViewCell {
     
     func didSuccessProductDetailPhoto(data: detailPhotoRes) {
         photo = data.result
-        for i in 0..<photo.count{
+        for i in 0 ..< photo.count{
             photoArr.append(photo[i].photoURL)
+            print(" >> \(photo[i].photoURL) <<")
+            
         }
-        print("CV reload")
         imageCollectionView.reloadData()
         smallImageCollectionView.reloadData()
         
@@ -60,12 +61,20 @@ class detailViewTableViewCell: UITableViewCell {
     
 }
 
-extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoArr.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == smallImageCollectionView {
+            return 5
+        }
+        return 5
+      }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == smallImageCollectionView {
         let cellWidth = 50
         let numberOfItems = photoArr.count
         let spaceBetweenCell = 5
@@ -73,9 +82,20 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
         let leftInset = (collectionView.frame.width - CGFloat(totalWidth + totalSpacingWidth)) / 2
         let rightInset = leftInset
-       
+            print(">>>leftInset\(leftInset)")
         return UIEdgeInsets(top: 10, left: leftInset, bottom: 0, right: rightInset)
+        } else {
+        return UIEdgeInsets()
+        }
       }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == smallImageCollectionView {
+          return CGSize(width: 50, height: smallImageCollectionView.frame.height)
+        }
+        return CGSize(width: 50, height: smallImageCollectionView.frame.height)
+        }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
@@ -91,7 +111,8 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
                         let data = try? Data(contentsOf: url)
                     DispatchQueue.main.async {
                         cell.detailImage.image = UIImage(data: data!)
-                        cell.detailImage.contentMode = .scaleAspectFill
+                        cell.detailImage.contentMode = .center
+                        cell.detailImage.contentMode = .scaleToFill
                         }
                     }
                 }
@@ -105,7 +126,7 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
                     let data = try? Data(contentsOf: url)
                 DispatchQueue.main.async {
                         cell.smallImage?.image = UIImage(data: data!)
-                        cell.smallImage.contentMode = .scaleAspectFit
+                        cell.smallImage.contentMode = .scaleToFill
                         }
                     }
                 }
@@ -177,6 +198,8 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         }
         return layout
     }
+    
+    
     
     
     fileprivate func createCompositionalLayout2() -> UICollectionViewLayout {

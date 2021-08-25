@@ -77,7 +77,13 @@ extension reviewTableViewCell: UITableViewDelegate, UITableViewDataSource {
         
         
         cell.reviewContent.text = detail?.reviewContent.replacingOccurrences(of: "\\n", with: "\n")
-        cell.option.text = "\(detail?.option1Value)\(detail?.option1Name),\(detail?.option2Value)\(detail?.option2Name),\(detail?.option3Value)\(detail?.option3Name)"
+//        cell.option.text = "\(detail?.option1Value)\(detail?.option1Name),\(detail?.option2Value)\(detail?.option2Name),\(detail?.option3Value)\(detail?.option3Name)"
+//
+        if let optionValue1 = detail?.option1Value, let optionName1 = detail?.option1Name, let optionValue2 = detail?.option2Value, let optionName2 = detail?.option2Name, let optionValue3 = detail?.option3Value, let optionName3 = detail?.option3Name {
+            cell.option.text = "\(optionName1) \(optionValue1)  \(optionName2) \(optionValue2) \(optionName3)   \(optionValue3)"
+        }
+        
+        cell.selectionStyle = .none
         return cell
     }
     

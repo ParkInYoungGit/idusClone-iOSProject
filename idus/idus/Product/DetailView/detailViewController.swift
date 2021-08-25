@@ -38,11 +38,43 @@ class detailViewController: UIViewController {
         
         dataManager.getProductDetail(productNum: (productNum), delegate: self)
       
+        var image = UIImage(named: "back29.png")
+        image = image?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        
+        let backBtn = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem = backBtn
+        
+        
+        var home = UIImage(named: "home40.png")
+        home = home?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        let homeBtn = UIBarButtonItem(image: home, style: .plain, target: self, action: nil)
+        
+        var cart = UIImage(named: "cart40.png")
+        cart = cart?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        let cartBtn = UIBarButtonItem(image: cart, style: .plain, target: self, action: nil)
+        
+        var search = UIImage(named: "search40.png")
+        search = search?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        let searchBtn = UIBarButtonItem(image: search, style: .plain, target: self, action: nil)
+        
+        
+        // RightBarButtons에 추가할 UIBarButtonItem을 생성
+        let customButton = UIBarButtonItem()
+        // Container가 될 Array를 생성 (혹은 직접 지정하는 방법도 있습니다)
+        var rightBarButtons: [UIBarButtonItem] = [homeBtn, cartBtn, searchBtn]
+        // Array에 버튼 아이템을 추가
+        rightBarButtons.append(customButton)
+        // RightBarButtonItems 배열을 셋업
+        navigationItem.rightBarButtonItems = rightBarButtons
+        
         
         print("viewDidLoadproductNum>>>>>>>\(productNum)")
         //self.tabBarController?.tabBar.isHidden = true
     }
-    
+    @objc func back() {
+           self.navigationController?.popViewController(animated: true)
+       }
+
     @IBAction func btnBuy(_ sender: Any) {
 //        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "buyVC")as? buyViewController else { return }
 //            self.navigationController?.pushViewController(vc, animated: true)
@@ -50,9 +82,11 @@ class detailViewController: UIViewController {
 //        let buyVc = buyViewController()
 //        buyVc.receiveItem(data : detail)
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionTable") as! optionTableViewController
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionVC") as! optionViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionTableVC") as! optionTableViewController
+        
         presentPanModal(vc)
-        vc.receiveItem(data: detail)
+        vc.receiveItemToOption(data: detail)
     }
     
     func receiveIndexPath(_ indexPath: Int) {
@@ -145,7 +179,7 @@ extension detailViewController: UITableViewDataSource {
             cell.content.text = detail?.content.replacingOccurrences(of: "\\n", with: "\n")
             cell.prodPolicyName.text = detail?.prodPolicyName
             cell.prodPolicyDetail.text = detail?.prodPolicyDetail
-            cell.refundPolicyDetail.text = detail?.refundPolicyDetail
+            cell.refundPolicyDetail.text = detail?.refundPolicyDetail.replacingOccurrences(of: "\\n", with: "\n")
             
             
             return cell
@@ -175,8 +209,11 @@ extension detailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 400
+        }
         if indexPath.row == 4 {
-            return 500
+            return 600
         }
         return tableView.rowHeight
     }

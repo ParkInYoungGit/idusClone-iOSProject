@@ -18,8 +18,8 @@ class optionDataManager {
                 case .success(let response):
                     // 성공했을 때
                     delegate.didSuccessOption(data: response)
-                        print("todayViewSuccess>>>>>>>>>>\(response.result)")
-                        print("todayViewSuccess>>>>>>>>>>\(response.message)")
+                        print("optionData>>>>>>>>>>\(response.result)")
+                        print("optionData>>>>>>>>>>\(response.message)")
 
                     // 실패했을 때
 //                    else {
