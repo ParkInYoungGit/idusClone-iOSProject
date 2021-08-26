@@ -131,7 +131,11 @@ extension detailViewController: UITableViewDataSource {
             }
             
             if let oriprice = detail?.price{
-                cell.oriPrice.text = "\(oriprice)"
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                if let price2 = numberFormatter.string(from: NSNumber(value: (oriprice))) {
+                    cell.oriPrice.text = "\(price2)원"
+                }
             }
             if let review = detail?.numOfReview{
                 cell.numOfReview.text = "\(review)"

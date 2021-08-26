@@ -212,6 +212,7 @@
 		6FC690DA26D810F9006327DA /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690D726D810F9006327DA /* friend.png */; };
 		6FC690DE26D81236006327DA /* hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690DD26D81236006327DA /* hand.png */; };
 		6FC690E026D812BF006327DA /* grade.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690DF26D812BF006327DA /* grade.jpeg */; };
+		6FC690E226D81977006327DA /* likeShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690E126D81977006327DA /* likeShare.png */; };
 		6FDE138A26CE237900A52132 /* todayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE138926CE237900A52132 /* todayTableViewCell.swift */; };
 		6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */; };
 		6FDE139026CE25F000A52132 /* today2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138D26CE25F000A52132 /* today2.jpeg */; };
@@ -443,6 +444,7 @@
 		6FC690D726D810F9006327DA /* friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friend.png; sourceTree = "<group>"; };
 		6FC690DD26D81236006327DA /* hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand.png; sourceTree = "<group>"; };
 		6FC690DF26D812BF006327DA /* grade.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grade.jpeg; sourceTree = "<group>"; };
+		6FC690E126D81977006327DA /* likeShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likeShare.png; sourceTree = "<group>"; };
 		6FDE138926CE237900A52132 /* todayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayTableViewCell.swift; sourceTree = "<group>"; };
 		6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138D26CE25F000A52132 /* today2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = today2.jpeg; sourceTree = "<group>"; };
@@ -975,6 +977,7 @@
 		6FEE744026C7DF8000D0D159 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6FC690E126D81977006327DA /* likeShare.png */,
 				6FC690DF26D812BF006327DA /* grade.jpeg */,
 				6FC690D726D810F9006327DA /* friend.png */,
 				6FC690DD26D81236006327DA /* hand.png */,
@@ -1261,6 +1264,7 @@
 				6FC690D426D803CA006327DA /* splash.png in Resources */,
 				6FC68FA926D37842006327DA /* contentTableViewCell.xib in Resources */,
 				6FC6907C26D623B9006327DA /* search40.png in Resources */,
+				6FC690E226D81977006327DA /* likeShare.png in Resources */,
 				6FC6902F26D4E267006327DA /* kakaologo.png in Resources */,
 				6FC68FD126D3F571006327DA /* buyDataTableViewCell.xib in Resources */,
 				6F9F6CB626C94F8C00802FD1 /* MenuCell.xib in Resources */,

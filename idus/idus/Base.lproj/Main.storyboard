@@ -956,6 +956,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="내 정보" id="PB6-5N-3vW">
                         <rightBarButtonItems>
+                            <barButtonItem title="Item" image="cart" catalog="system" style="plain" id="Mjp-2Q-YB0">
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </barButtonItem>
                             <barButtonItem image="bell" catalog="system" style="plain" id="5oC-7m-Amw">
                                 <color key="tintColor" systemColor="labelColor"/>
                             </barButtonItem>
@@ -1472,11 +1475,7 @@
                         <viewLayoutGuide key="safeArea" id="ZUu-hx-wNP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" image="cart" catalog="system" style="plain" id="Mjp-2Q-YB0">
-                            <color key="tintColor" systemColor="labelColor"/>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNL-A8-QGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2167,6 +2166,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FXu-dB-t4W">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
