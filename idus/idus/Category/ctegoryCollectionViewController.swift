@@ -20,8 +20,19 @@ class ctegoryCollectionViewController: UIViewController {
         // Do any additional setup after loading the view.
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.collectionViewLayout = createCompositionalLayout()
+        navigationSetting()
     }
 
+    
+    func navigationSetting(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "mainidus.png")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        navigationController?.navigationBar.barTintColor = UIColor.white
+    }
+    
 }
 
 extension ctegoryCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {

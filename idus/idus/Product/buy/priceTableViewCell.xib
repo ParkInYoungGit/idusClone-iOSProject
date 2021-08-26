@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" restorationIdentifier="priceCell" selectionStyle="default" indentationWidth="10" rowHeight="344" id="KGk-i7-Jjw" customClass="priceTableViewCell" customModule="idus" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
+            <rect key="frame" x="0.0" y="0.0" width="362" height="344"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
+                <rect key="frame" x="0.0" y="0.0" width="362" height="344"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUO-gL-d87">
-                        <rect key="frame" x="23" y="35" width="60" height="20"/>
+                        <rect key="frame" x="23" y="35" width="102" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,36 +34,34 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="작품 금액" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-YN-zEM">
-                        <rect key="frame" x="238.5" y="79" width="52.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="작품 금액" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-YN-zEM">
+                        <rect key="frame" x="279" y="78" width="52.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="배송비" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-gi-0ta">
-                        <rect key="frame" x="254" y="103" width="37" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배송비" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-gi-0ta">
+                        <rect key="frame" x="294" y="103" width="37" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------------------------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3I-54-Uj2">
-                        <rect key="frame" x="23" y="143" width="274" height="21"/>
+                        <rect key="frame" x="44" y="143" width="274" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="imC-NY-b60"/>
+                            <constraint firstAttribute="width" constant="274" id="x9Z-3I-Bvd"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="36,500원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ3-kE-dbJ">
-                        <rect key="frame" x="192" y="177" width="99" height="28"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                        <color key="textColor" red="0.92856472729999995" green="0.51252931359999998" blue="0.26656383280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyI-on-QYi">
-                        <rect key="frame" x="52.5" y="264" width="215" height="50"/>
+                        <rect key="frame" x="73.5" y="264" width="215" height="50"/>
                         <color key="backgroundColor" red="0.92856657509999996" green="0.51250487570000003" blue="0.27048769589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="RhK-ht-zeA"/>
-                            <constraint firstAttribute="width" constant="215" id="efx-bU-K88"/>
+                            <constraint firstAttribute="height" constant="50" id="IZD-Of-Mfc"/>
+                            <constraint firstAttribute="width" constant="215" id="ZyG-Rk-tCT"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <state key="normal" title="결제하기">
@@ -76,30 +74,38 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36,500원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ3-kE-dbJ">
+                        <rect key="frame" x="232" y="173" width="99" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                        <color key="textColor" red="0.92856472729999995" green="0.51252931359999998" blue="0.26656383280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="EyI-on-QYi" secondAttribute="bottom" constant="30" id="20q-hQ-FUn"/>
-                    <constraint firstItem="Tb7-YN-zEM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="244" id="2IU-zb-BzT"/>
-                    <constraint firstItem="EyI-on-QYi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="264" id="8LN-fN-9r7"/>
-                    <constraint firstItem="Tb7-YN-zEM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="79" id="AcD-5d-QzL"/>
-                    <constraint firstItem="bQ3-kE-dbJ" firstAttribute="trailing" secondItem="G2P-gi-0ta" secondAttribute="trailing" id="BFe-Li-ePA"/>
-                    <constraint firstItem="UXx-1q-cgv" firstAttribute="leading" secondItem="iPL-OF-JC0" secondAttribute="leading" id="Cy6-14-Ld7"/>
-                    <constraint firstItem="iPL-OF-JC0" firstAttribute="leading" secondItem="PUO-gL-d87" secondAttribute="leading" id="GVe-WS-7ot"/>
-                    <constraint firstItem="G2P-gi-0ta" firstAttribute="top" secondItem="Tb7-YN-zEM" secondAttribute="bottom" constant="7" id="HOt-iX-9eT"/>
-                    <constraint firstItem="UXx-1q-cgv" firstAttribute="top" secondItem="iPL-OF-JC0" secondAttribute="bottom" constant="8" symbolic="YES" id="L9S-9f-qbi"/>
-                    <constraint firstItem="EyI-on-QYi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Nl2-aH-YPk"/>
-                    <constraint firstItem="dri-t0-6YY" firstAttribute="leading" secondItem="UXx-1q-cgv" secondAttribute="leading" id="PbG-t0-uCk"/>
-                    <constraint firstItem="bQ3-kE-dbJ" firstAttribute="top" secondItem="G2P-gi-0ta" secondAttribute="bottom" constant="57" id="S5u-1H-EJX"/>
-                    <constraint firstItem="dri-t0-6YY" firstAttribute="top" secondItem="UXx-1q-cgv" secondAttribute="bottom" constant="62" id="SVk-ou-fh8"/>
-                    <constraint firstItem="p3I-54-Uj2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="143" id="UzN-yh-e2m"/>
-                    <constraint firstAttribute="bottom" secondItem="PUO-gL-d87" secondAttribute="bottom" constant="289" id="Yrs-9n-xAc"/>
-                    <constraint firstAttribute="bottom" secondItem="p3I-54-Uj2" secondAttribute="bottom" constant="180" id="cmu-8w-zFS"/>
-                    <constraint firstItem="iPL-OF-JC0" firstAttribute="top" secondItem="PUO-gL-d87" secondAttribute="bottom" constant="24" id="enC-GW-TzH"/>
-                    <constraint firstItem="PUO-gL-d87" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="h9Y-oc-wIt"/>
-                    <constraint firstItem="p3I-54-Uj2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nEk-Th-HAD"/>
-                    <constraint firstAttribute="trailing" secondItem="PUO-gL-d87" secondAttribute="trailing" constant="237" id="pLt-Y3-jyT"/>
-                    <constraint firstItem="PUO-gL-d87" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="u4Y-CZ-Dvm"/>
-                    <constraint firstItem="G2P-gi-0ta" firstAttribute="trailing" secondItem="Tb7-YN-zEM" secondAttribute="trailing" id="zUj-Lj-IjR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="G2P-gi-0ta" secondAttribute="trailing" constant="11" id="1zL-iv-Q50"/>
+                    <constraint firstItem="PUO-gL-d87" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="97y-9j-khr"/>
+                    <constraint firstItem="p3I-54-Uj2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9cH-LY-ajX"/>
+                    <constraint firstItem="iPL-OF-JC0" firstAttribute="leading" secondItem="PUO-gL-d87" secondAttribute="leading" id="B3F-89-rKy"/>
+                    <constraint firstItem="bQ3-kE-dbJ" firstAttribute="leading" secondItem="dri-t0-6YY" secondAttribute="trailing" constant="117" id="D2y-DG-o0u"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="EyI-on-QYi" secondAttribute="bottom" constant="19" id="Gu5-g1-zTi"/>
+                    <constraint firstItem="UXx-1q-cgv" firstAttribute="leading" secondItem="iPL-OF-JC0" secondAttribute="leading" id="K0f-Xf-V7a"/>
+                    <constraint firstItem="EyI-on-QYi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KzW-vI-m4c"/>
+                    <constraint firstItem="p3I-54-Uj2" firstAttribute="top" secondItem="G2P-gi-0ta" secondAttribute="bottom" constant="23" id="M96-1w-4Pe"/>
+                    <constraint firstItem="G2P-gi-0ta" firstAttribute="top" secondItem="Tb7-YN-zEM" secondAttribute="bottom" constant="8" symbolic="YES" id="MAZ-rJ-52I"/>
+                    <constraint firstItem="bQ3-kE-dbJ" firstAttribute="top" secondItem="p3I-54-Uj2" secondAttribute="bottom" constant="9" id="Nld-xC-Oqq"/>
+                    <constraint firstAttribute="trailing" secondItem="PUO-gL-d87" secondAttribute="trailing" constant="237" id="PSn-fQ-MbV"/>
+                    <constraint firstItem="EyI-on-QYi" firstAttribute="top" secondItem="bQ3-kE-dbJ" secondAttribute="bottom" constant="63" id="Py1-FS-rmt"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Tb7-YN-zEM" secondAttribute="trailing" constant="10.5" id="T6J-JH-9Ze"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bQ3-kE-dbJ" secondAttribute="trailing" constant="11" id="UT4-nf-Rkq"/>
+                    <constraint firstItem="dri-t0-6YY" firstAttribute="top" secondItem="p3I-54-Uj2" secondAttribute="bottom" constant="17" id="aTB-qj-dsQ"/>
+                    <constraint firstItem="iPL-OF-JC0" firstAttribute="top" secondItem="PUO-gL-d87" secondAttribute="bottom" constant="24" id="dEV-AQ-Zm1"/>
+                    <constraint firstItem="UXx-1q-cgv" firstAttribute="top" secondItem="iPL-OF-JC0" secondAttribute="bottom" constant="8" symbolic="YES" id="gOa-0d-kgX"/>
+                    <constraint firstItem="PUO-gL-d87" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="gjV-H4-fM3"/>
+                    <constraint firstItem="bQ3-kE-dbJ" firstAttribute="top" secondItem="p3I-54-Uj2" secondAttribute="bottom" constant="9" id="m39-KH-onY"/>
+                    <constraint firstItem="Tb7-YN-zEM" firstAttribute="leading" secondItem="iPL-OF-JC0" secondAttribute="trailing" constant="207" id="prm-0w-nbU"/>
+                    <constraint firstItem="G2P-gi-0ta" firstAttribute="leading" secondItem="UXx-1q-cgv" secondAttribute="trailing" constant="237" id="rhK-U5-WHE"/>
+                    <constraint firstItem="Tb7-YN-zEM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="78" id="vTM-mS-Uga"/>
+                    <constraint firstItem="dri-t0-6YY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="wla-gd-pbf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -109,7 +115,7 @@
                 <outlet property="lblPrice" destination="Tb7-YN-zEM" id="TEZ-f2-7NT"/>
                 <outlet property="lblTotalPrice" destination="bQ3-kE-dbJ" id="rdk-aN-ej8"/>
             </connections>
-            <point key="canvasLocation" x="47.826086956521742" y="173.4375"/>
+            <point key="canvasLocation" x="78.260869565217391" y="173.4375"/>
         </tableViewCell>
     </objects>
 </document>

@@ -10,6 +10,8 @@ import UIKit
 class buyDataTableViewCell: UITableViewCell {
 
     @IBOutlet weak var tfPhone: UITextField!
+    @IBOutlet weak var recieveName: UITextField!
+    @IBOutlet weak var address: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

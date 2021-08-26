@@ -112,7 +112,7 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
                     DispatchQueue.main.async {
                         cell.detailImage.image = UIImage(data: data!)
                         cell.detailImage.contentMode = .center
-                        cell.detailImage.contentMode = .scaleToFill
+                        cell.detailImage.contentMode = .scaleAspectFill
                         }
                     }
                 }
@@ -126,7 +126,7 @@ extension detailViewTableViewCell: UICollectionViewDelegate, UICollectionViewDat
                     let data = try? Data(contentsOf: url)
                 DispatchQueue.main.async {
                         cell.smallImage?.image = UIImage(data: data!)
-                        cell.smallImage.contentMode = .scaleToFill
+                        cell.smallImage.contentMode = .scaleAspectFill
                         }
                     }
                 }

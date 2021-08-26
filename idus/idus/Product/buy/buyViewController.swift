@@ -10,11 +10,18 @@ var detail: detailResult?
 
 class buyViewController: UIViewController {
 
+    var dataManager = orderInfoDataManager()
+    var data: [orderInfoResult] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
    
     var imgArr = ["pay1.png","pay2.png","pay3.png","pay4.png","pay5.png","pay6.png"]
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataManager.getOrderInfo(delegate: self)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "buyDataTableViewCell", bundle: nil), forCellReuseIdentifier: "buyInfoCell")
@@ -29,13 +36,21 @@ class buyViewController: UIViewController {
         let backBtn = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(back))
         navigationItem.leftBarButtonItem = backBtn
         
+       
     }
     
+    func didSuccessOrderInfo(_ result: [orderInfoResult]) {
+        data = result
+        print("userInfo>>>>>>>>>>>>>>>>>>\(data)")
+        tableView.reloadData()
+    }
+    func failedToRequestOrderInfo(message: String) {
+        //self.presentAlert(title: message)
+        
+    }
     @objc func back() {
            self.navigationController?.popViewController(animated: true)
        }
-
-    
     func receiveItem(data : detailResult?) {
         detail = data
         print(">>>>>>>>>>>>>>>>>\(data)")
@@ -50,18 +65,7 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.row{
-//        case 0 :
-//            return tableView.rowHeight
-//        case 1 :
-//            return 200
-//        case 2:
-//            return tableView.rowHeight
-//        case 3:
-//            return 140
-//        default :
-//            return tableView.rowHeight
-//        }
+
         
         return tableView.rowHeight
         
@@ -88,18 +92,29 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
         let phone = UserDefaults.standard.string(forKey: "phone")
         if indexPath.section == 0 {
             switch indexPath.row {
-            case 0: let cell = tableView.dequeueReusableCell(withIdentifier: "buyCell", for: indexPath)
-            cell.textLabel?.text = "주문고객"
-            if let name2 = name, let phone2 = phone {
-                cell.detailTextLabel?.text = "\(name2)(\(phone2))"
-            }
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "buyCell", for: indexPath)
+                cell.textLabel?.text = "주문고객"
+                    if indexPath.row < data.count {
+                        if let name2 = data[indexPath.row].userName, let phone2 = data[indexPath.row].userPhone {
+                        print("몇번째셀!!\(indexPath.row)")
+                        
+                        print("name2!!\(name2)")
+                        print("데이타네임!!\(data[indexPath.row].userName)")
+                        
+                        cell.detailTextLabel?.text = "\(name2)(\(phone2))"
+                        }
+                    }
             return cell
             
             case 1 : let cell = tableView.dequeueReusableCell(withIdentifier: "buyInfoCell", for: indexPath) as! buyDataTableViewCell
-                cell.selectionStyle = .none
-                if let phone2 = phone {
-                    cell.tfPhone.text = "\(phone2)"
+                if indexPath.row < data.count {
+                    var item = data[indexPath.row]
                 }
+                cell.selectionStyle = .none
+              //  cell.tfPhone.text = "\(item?.userPhone)"
+//              cell.address.text = data[0].address
+//              cell.recieveName.text = data[0].userName
             return cell
             default: UITableViewCell()
             }
@@ -148,5 +163,6 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension buyViewController {
+    
 
 }

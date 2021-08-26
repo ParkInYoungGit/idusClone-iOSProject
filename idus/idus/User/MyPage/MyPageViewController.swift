@@ -17,8 +17,8 @@ class MyPageViewController: UIViewController {
     var userName: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        //userName = UserDefaults.standard.string(forKey: "nickName")!
-        //lblName.text = userName
+        userName = UserDefaults.standard.string(forKey: "nickName") ?? "비회원"
+        lblName.text = userName
         profileImage.image = UIImage(named: "profileImage.png")
         profileImage.layer.cornerRadius = 10
 
@@ -44,14 +44,21 @@ class MyPageViewController: UIViewController {
 extension MyPageViewController {
     func didSuccessMypage(_ result: myPageResult) {
         data = result
-        lblName.text = data?.userName
+        viewWillAppear(true)
+        
         UserDefaults.standard.set(data?.userName, forKey: "nickName")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        lblName.text = data?.userName
+    }
+    
     func failedToRequest(message: String) {
         //self.presentAlert(title: message)
-        
-        let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mypageVC = splashStoryboard.instantiateViewController(identifier: "viewControlloer")
-        self.changeRootViewController(mypageVC)
+        if userName == nil {
+            let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mypageVC = splashStoryboard.instantiateViewController(identifier: "viewControlloer")
+            self.changeRootViewController(mypageVC)
+        }
     }
 }

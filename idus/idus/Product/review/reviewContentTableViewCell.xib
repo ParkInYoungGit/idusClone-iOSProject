@@ -25,8 +25,8 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JlD-1c-s0c">
-                        <rect key="frame" x="217" y="49" width="100" height="89"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JlD-1c-s0c">
+                        <rect key="frame" x="217" y="54.5" width="100" height="83.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRM-r1-EuP">
                         <rect key="frame" x="8" y="152" width="28.5" height="14"/>
@@ -64,20 +64,20 @@
                     <constraint firstItem="hWx-cX-Bo7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="Kmv-fe-atz"/>
                     <constraint firstAttribute="bottom" secondItem="wRM-r1-EuP" secondAttribute="bottom" constant="10" id="NbJ-VX-08z"/>
                     <constraint firstItem="iN6-ex-hlp" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1375" id="Oiz-9r-Ra0"/>
+                    <constraint firstAttribute="bottom" secondItem="JlD-1c-s0c" secondAttribute="bottom" constant="38" id="Qs0-N8-5Lv"/>
                     <constraint firstItem="iN6-ex-hlp" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.232955" id="SY4-gg-lng"/>
                     <constraint firstItem="OPX-m4-fSc" firstAttribute="leading" secondItem="hWx-cX-Bo7" secondAttribute="leading" id="Tlg-Si-2MK"/>
                     <constraint firstItem="hWx-cX-Bo7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="U4v-mt-smN"/>
                     <constraint firstItem="FDc-Lc-SVi" firstAttribute="leading" secondItem="OPX-m4-fSc" secondAttribute="leading" id="Uyx-CQ-clN"/>
                     <constraint firstItem="JlD-1c-s0c" firstAttribute="trailing" secondItem="sHD-j1-2Zk" secondAttribute="trailing" id="ZeP-k8-CsN"/>
-                    <constraint firstItem="JlD-1c-s0c" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.505682" id="b2c-h2-tOJ"/>
                     <constraint firstItem="sHD-j1-2Zk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="bTj-Si-4fw"/>
                     <constraint firstItem="FDc-Lc-SVi" firstAttribute="top" secondItem="OPX-m4-fSc" secondAttribute="bottom" constant="8" symbolic="YES" id="bw4-3X-JEk"/>
                     <constraint firstItem="wRM-r1-EuP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dJN-En-gx7"/>
-                    <constraint firstItem="wRM-r1-EuP" firstAttribute="top" secondItem="JlD-1c-s0c" secondAttribute="bottom" constant="14" id="gCC-5u-ca7"/>
                     <constraint firstItem="sHD-j1-2Zk" firstAttribute="leading" secondItem="iN6-ex-hlp" secondAttribute="trailing" constant="6" id="plp-88-7v3"/>
                     <constraint firstItem="JlD-1c-s0c" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3125" id="rgv-zp-LIf"/>
                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="wRM-r1-EuP" secondAttribute="trailing" constant="283.5" id="tKL-sk-v5T"/>
                     <constraint firstAttribute="trailing" secondItem="sHD-j1-2Zk" secondAttribute="trailing" constant="3" id="teU-11-Frh"/>
+                    <constraint firstItem="JlD-1c-s0c" firstAttribute="top" secondItem="iN6-ex-hlp" secondAttribute="bottom" constant="15" id="wDC-yj-GNY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

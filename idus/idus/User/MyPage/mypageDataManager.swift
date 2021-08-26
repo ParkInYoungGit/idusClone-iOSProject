@@ -10,11 +10,16 @@ import Alamofire
 var userIdx = 5
 
 class MyPageDataManager {
+ 
     func getMyPage(_ parameters: Int, delegate: MyPageViewController) {
-        AF.request("\(Constant.BASE_URL)users/info/\(parameters)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+        
+        let header: HTTPHeaders = [
+            "x-access-token" : Constant.shared.jwt]
+
+        AF.request("\(Constant.BASE_URL)users/info/\(parameters)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
             .validate()
             .responseDecodable(of: myPageRes.self) { response in
-                print("response result >>> \(response.result)")
+                print("responsemypage result >>> \(response.result)")
                 switch response.result {
                 case .success(let response):
                     // 성공했을 때

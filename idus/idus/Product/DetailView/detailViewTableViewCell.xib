@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-SG-bDt">
-                        <rect key="frame" x="0.0" y="0.0" width="470" height="239.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="470" height="226"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AVC-Nq-4MQ">
                             <size key="itemSize" width="128" height="128"/>
@@ -28,7 +28,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-jn-hfe">
-                        <rect key="frame" x="0.0" y="190.5" width="470" height="75.5"/>
+                        <rect key="frame" x="0.0" y="226" width="470" height="40"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2Jt-xu-xQr">
                             <size key="itemSize" width="128" height="128"/>
@@ -39,10 +39,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3bH-jn-hfe" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.283619" id="2Gk-Ce-eBA"/>
+                    <constraint firstItem="3bH-jn-hfe" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.15" id="2Gk-Ce-eBA"/>
                     <constraint firstItem="UAO-SG-bDt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6hj-XX-ilV"/>
                     <constraint firstAttribute="trailing" secondItem="3bH-jn-hfe" secondAttribute="trailing" id="J8a-3X-R0R"/>
-                    <constraint firstItem="UAO-SG-bDt" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.9" id="Je3-8f-8n9"/>
+                    <constraint firstItem="UAO-SG-bDt" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.85" id="Je3-8f-8n9"/>
                     <constraint firstAttribute="bottom" secondItem="3bH-jn-hfe" secondAttribute="bottom" id="QU0-UJ-1OR"/>
                     <constraint firstItem="3bH-jn-hfe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QeB-Gv-DKc"/>
                     <constraint firstAttribute="trailing" secondItem="UAO-SG-bDt" secondAttribute="trailing" id="QuI-bd-1Tw"/>

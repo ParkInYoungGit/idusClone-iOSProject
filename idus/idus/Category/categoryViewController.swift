@@ -39,9 +39,18 @@ class categoryViewController: UIViewController {
         menuViewController3.reloadData()
         contentViewController3.reloadData()
         menuViewController3.cellAlignment = .center
+        navigationSetting()
         // Do any additional setup after loading the view.
     }
     
+    func navigationSetting(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "mainidus.png")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        navigationController?.navigationBar.barTintColor = UIColor.white
+    }
 
     
     

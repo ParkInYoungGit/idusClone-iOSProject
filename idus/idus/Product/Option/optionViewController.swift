@@ -67,22 +67,22 @@ class optionViewController: UIViewController {
         totalPrice.text = "\(numberFormatter(number: totalP))원"
     }
     
-    func receiveItem(data : detailResult?) {
+    func receiveItemToOption(data : detailResult?) {
         detail = data
         print("optionTableView>>>>>>>>>>>>>>>>>\(data)")
         //print("\(item.count)")
     }
     
-//
-//    func didSuccessOption(data : optionRes){
-//        item = data.result
-//        print("optionitemTableView>>>>>>>>>>>>>>>>>\(item)")
-//        viewWillAppear(true)
-//    }
-//
-//    func failedToRequest(message: String) {
-//
-//    }
+
+    func didSuccessOption(data : optionRes){
+        item = data.result
+        print("optionitemTableView>>>>>>>>>>>>>>>>>\(item)")
+        viewWillAppear(true)
+    }
+
+    func failedToRequest(message: String) {
+
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         lblItemName.text = detail?.name
@@ -110,6 +110,8 @@ class optionViewController: UIViewController {
         
         
             mypageVC.receiveItem(data : detail)
+        
+        
             print("버튼테스트")
         }
     

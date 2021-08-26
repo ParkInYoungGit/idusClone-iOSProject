@@ -13,6 +13,10 @@ class optionTableViewController: UIViewController, UITableViewDataSource, UITabl
     var item: [optionResult] = []
     var dataManager = optionDataManager()
     var sections = [""]
+    var itemOpen: Bool = false
+    var itemSeleted: Bool = false
+    var optionCount = 0
+    var arr: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +26,23 @@ class optionTableViewController: UIViewController, UITableViewDataSource, UITabl
 
         tvlistView.register(UINib(nibName: "optionTableViewCell", bundle: nil), forCellReuseIdentifier: "optionCell")
         
+        //tvlistView.reloadData()
+        
         if let productNum = detail?.itemIdx {
             dataManager.getOption(productNum: productNum, delegate: self)
         }
     }
-
-    func receiveItemToOption(data : detailResult?) {
-        detail = data
-        print("optionTableView>>>>>>>>>>>>>>>>>\(data)")
-        //print("\(item.count)")
+    override func viewWillAppear(_ animated: Bool) {
+        if let productNum = detail?.itemIdx {
+            dataManager.getOption(productNum: productNum, delegate: self)
+            tvlistView.reloadData()
+        }
     }
+//    func receiveItemToOption(data : detailResult?) {
+//        detail = data
+//        print("optionTableView>>>>>>>>>>>>>>>>>\(data)")
+//        //print("\(item.count)")
+//    }
 
     func didSuccessOption(data : optionRes){
         item = data.result
@@ -52,45 +63,121 @@ class optionTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-//        for i in 0 ... item.count {
-//            switch item[i].optionNum {
-//            case 1:
-//                return 1
-//            case 2:
-//                return 2
-//            case 3:
-//                return 3
-//            default:
+        for i in 0 ..< item.count {
+            arr = [item[i].optionNum]
+            }
+        if let maxValue = arr.max() {
+            print("maxValuemaxValuemaxValuemaxValue\(maxValue)")
+            return maxValue
+            arr = Array()
+        }
+        return 1
+    
+            
+//            print(">>>>item.count\(item[i].optionNum)")
+//            if item[i].optionNum == 3 {
+//            return 3
+//            } else if item[i].optionNum == 2 {
+//                    return 2
+//            } else {
 //                return 1
 //            }
 //        }
-        return 1
+//        return 1
     }
-    
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 4
-    }
-
+        switch section {
+        case 0:
+            if itemOpen == true {
+            let count = arr.filter( {$0 == 1}).count
+            return count + 1
+            } else {
+                return 1
+            }
+        case 1:
+            if itemOpen == true {
+                let count = arr.filter( {$0 == 2}).count
+                return count + 1
+                } else {
+                    return 1
+                }
+        case 2:
+            if itemOpen == true {
+                let count = arr.filter( {$0 == 3}).count
+                return count + 1
+                } else {
+                    return 1
+                }
+        default:
+            return 1
+        }
+        }
+        // #warning Incomplete implementatio n, return the number of rows
+//        for i in 0 ..< item.count {
+//            switch section {
+//            case 0:
+//                if itemOpen == true {
+//                    let detailCount = item[i].optionName.count + 1
+//                    return detailCount
+//                } else {
+//                    return 1
+//                }
+//            case 1:
+//                if itemSeleted == true {
+//                    var optionValueCount = item[i].optionValue.count + 1 {
+//                        optionCount = optionValueCount
+//                        return optionCount
+//                    }
+//                }
+//
+//
+//
+//
+//            default:
+//                return 1
+//            }
+//
+//        }
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "optionCell", for: indexPath)
-//
-//        for i in 0 ..< item.count {
-//            sections.append(item[i].optionName)
-//        }
-//
-//        if indexPath.section == 0 {
-//            let optionValue = item[indexPath.row].optionValue
-//            cell.textLabel?.text = "\(optionValue)"
-//        }
-        let cell = tvlistView.dequeueReusableCell(withIdentifier: "optionCell") as! optionTableViewCell
-        cell.lblNumber.text = "test"
 
+        let cell = tvlistView.dequeueReusableCell(withIdentifier: "optionCell") as! optionTableViewCell
+   //     return cell
+//        let data = item[indexPath.row - 1].optionName
+//        let value = item[indexPath.row - 1].optionValue
+
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == 0 {
+                print("아이템!!:\(item)")
+                var newIndex = indexPath.row
+                cell.lblNumber.text = "1번 name"
+                cell.lblOption.text = "인덱스패스"
+            } else {
+                cell.lblNumber.text = "1번 value"
+                cell.lblOption.text = "\(item[0].optionValue)"
+                
+//                cell.lblNumber.text = "\(indexPath.section + 1)번"
+//                cell.lblOption.text = "\(value)"
+            }
+        default:
+            cell.lblNumber.text = "1번"
+            cell.lblOption.text = "1"
+        }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            itemOpen = !itemOpen
+            tableView.reloadData()
+        } else {
+            itemOpen = false
+            tableView.reloadData()
+            print("접어버렷")
+        }
     }
 }
 extension optionTableViewController: PanModalPresentable {

@@ -18,17 +18,15 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NKG-cd-gD2">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="MWC-tx-s4D"/>
-                            <constraint firstAttribute="width" constant="50" id="XO6-lR-yzD"/>
-                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="NKG-cd-gD2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="aMo-e9-VsH"/>
-                <constraint firstItem="NKG-cd-gD2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="dye-Kk-a3d"/>
+                <constraint firstItem="NKG-cd-gD2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AF3-R1-f3P"/>
+                <constraint firstItem="NKG-cd-gD2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="egz-gQ-u79"/>
+                <constraint firstAttribute="trailing" secondItem="NKG-cd-gD2" secondAttribute="trailing" id="ucY-jS-f6D"/>
+                <constraint firstAttribute="bottom" secondItem="NKG-cd-gD2" secondAttribute="bottom" id="vMe-ZD-fZf"/>
             </constraints>
             <connections>
                 <outlet property="smallImage" destination="NKG-cd-gD2" id="fcR-Fg-jpW"/>

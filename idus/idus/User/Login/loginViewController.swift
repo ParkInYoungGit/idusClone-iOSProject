@@ -12,13 +12,33 @@ class loginViewController: UIViewController {
     lazy var dataManager: LoginDataManager = LoginDataManager()
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var btnNaver: UIButton!
+    @IBOutlet weak var btnKakao: UIButton!
     
+    @IBOutlet weak var btnTwiter: UIButton!
+    @IBOutlet weak var btnFacebook: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnLogin.layer.cornerRadius = 10
-        btnLogin.layer.borderWidth = 2
+        btnLogin.layer.borderWidth = 1
         btnLogin.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        btnNaver.layer.cornerRadius = 10
+        btnNaver.layer.borderWidth = 1
+        btnNaver.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        btnKakao.layer.cornerRadius = 10
+        btnKakao.layer.borderWidth = 1
+        btnKakao.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        btnTwiter.layer.cornerRadius = 10
+        btnTwiter.layer.borderWidth = 1
+        btnTwiter.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        btnFacebook.layer.cornerRadius = 10
+        btnFacebook.layer.borderWidth = 1
+        btnFacebook.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         tfEmail.layer.addBorder([.bottom], color: UIColor.white, width: 1.0)
         tfPassword.layer.addBorder([.bottom], color: UIColor.white, width: 1.0)

@@ -82,9 +82,9 @@ class detailViewController: UIViewController {
 //        let buyVc = buyViewController()
 //        buyVc.receiveItem(data : detail)
         
-//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionVC") as! optionViewController
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionTableVC") as! optionTableViewController
-        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionVC") as! optionViewController
+//        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "optionTableVC") as! optionTableViewController
+//
         presentPanModal(vc)
         vc.receiveItemToOption(data: detail)
     }
