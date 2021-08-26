@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-var userIdx = 5
+//var userIdx = 5
 
 class MyPageDataManager {
  

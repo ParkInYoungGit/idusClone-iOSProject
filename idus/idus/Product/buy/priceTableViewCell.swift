@@ -12,7 +12,7 @@ class priceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lblDelivery: UILabel!
     @IBOutlet weak var lblTotalPrice: UILabel!
-    @IBOutlet weak var btnBuy: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

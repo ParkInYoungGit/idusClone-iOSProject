@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="priceCell" selectionStyle="default" indentationWidth="10" rowHeight="344" id="KGk-i7-Jjw" customClass="priceTableViewCell" customModule="idus" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="362" height="344"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="priceCell" selectionStyle="default" indentationWidth="10" rowHeight="260" id="KGk-i7-Jjw" customClass="priceTableViewCell" customModule="idus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="362" height="344"/>
+                <rect key="frame" x="0.0" y="0.0" width="362" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUO-gL-d87">
@@ -56,18 +56,6 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyI-on-QYi">
-                        <rect key="frame" x="73.5" y="264" width="215" height="50"/>
-                        <color key="backgroundColor" red="0.92856657509999996" green="0.51250487570000003" blue="0.27048769589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="IZD-Of-Mfc"/>
-                            <constraint firstAttribute="width" constant="215" id="ZyG-Rk-tCT"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <state key="normal" title="결제하기">
-                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최종 결제 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dri-t0-6YY">
                         <rect key="frame" x="23" y="181" width="92" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
@@ -83,18 +71,16 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="G2P-gi-0ta" secondAttribute="trailing" constant="11" id="1zL-iv-Q50"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bQ3-kE-dbJ" secondAttribute="bottom" constant="48" id="8sP-tA-kju"/>
                     <constraint firstItem="PUO-gL-d87" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="97y-9j-khr"/>
                     <constraint firstItem="p3I-54-Uj2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9cH-LY-ajX"/>
                     <constraint firstItem="iPL-OF-JC0" firstAttribute="leading" secondItem="PUO-gL-d87" secondAttribute="leading" id="B3F-89-rKy"/>
                     <constraint firstItem="bQ3-kE-dbJ" firstAttribute="leading" secondItem="dri-t0-6YY" secondAttribute="trailing" constant="117" id="D2y-DG-o0u"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="EyI-on-QYi" secondAttribute="bottom" constant="19" id="Gu5-g1-zTi"/>
                     <constraint firstItem="UXx-1q-cgv" firstAttribute="leading" secondItem="iPL-OF-JC0" secondAttribute="leading" id="K0f-Xf-V7a"/>
-                    <constraint firstItem="EyI-on-QYi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="KzW-vI-m4c"/>
                     <constraint firstItem="p3I-54-Uj2" firstAttribute="top" secondItem="G2P-gi-0ta" secondAttribute="bottom" constant="23" id="M96-1w-4Pe"/>
                     <constraint firstItem="G2P-gi-0ta" firstAttribute="top" secondItem="Tb7-YN-zEM" secondAttribute="bottom" constant="8" symbolic="YES" id="MAZ-rJ-52I"/>
                     <constraint firstItem="bQ3-kE-dbJ" firstAttribute="top" secondItem="p3I-54-Uj2" secondAttribute="bottom" constant="9" id="Nld-xC-Oqq"/>
                     <constraint firstAttribute="trailing" secondItem="PUO-gL-d87" secondAttribute="trailing" constant="237" id="PSn-fQ-MbV"/>
-                    <constraint firstItem="EyI-on-QYi" firstAttribute="top" secondItem="bQ3-kE-dbJ" secondAttribute="bottom" constant="63" id="Py1-FS-rmt"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Tb7-YN-zEM" secondAttribute="trailing" constant="10.5" id="T6J-JH-9Ze"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bQ3-kE-dbJ" secondAttribute="trailing" constant="11" id="UT4-nf-Rkq"/>
                     <constraint firstItem="dri-t0-6YY" firstAttribute="top" secondItem="p3I-54-Uj2" secondAttribute="bottom" constant="17" id="aTB-qj-dsQ"/>
@@ -110,12 +96,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="btnBuy" destination="EyI-on-QYi" id="Wda-lu-s11"/>
                 <outlet property="lblDelivery" destination="G2P-gi-0ta" id="REH-T6-9H8"/>
                 <outlet property="lblPrice" destination="Tb7-YN-zEM" id="TEZ-f2-7NT"/>
                 <outlet property="lblTotalPrice" destination="bQ3-kE-dbJ" id="rdk-aN-ej8"/>
             </connections>
-            <point key="canvasLocation" x="78.260869565217391" y="173.4375"/>
+            <point key="canvasLocation" x="78.260869565217391" y="145.3125"/>
         </tableViewCell>
     </objects>
 </document>

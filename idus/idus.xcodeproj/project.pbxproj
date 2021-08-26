@@ -197,6 +197,16 @@
 		6FC690BA26D7377A006327DA /* userInfoRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690B926D7377A006327DA /* userInfoRes.swift */; };
 		6FC690BE26D779A9006327DA /* orderInfoRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690BD26D779A9006327DA /* orderInfoRes.swift */; };
 		6FC690C026D779EB006327DA /* orderInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690BF26D779EB006327DA /* orderInfoDataManager.swift */; };
+		6FC690C226D7B096006327DA /* orderReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690C126D7B096006327DA /* orderReq.swift */; };
+		6FC690C426D7B154006327DA /* orderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690C326D7B154006327DA /* orderDataManager.swift */; };
+		6FC690C626D7D8E0006327DA /* orderRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690C526D7D8E0006327DA /* orderRes.swift */; };
+		6FC690CB26D7F30B006327DA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690C726D7F30A006327DA /* play.png */; };
+		6FC690CC26D7F30B006327DA /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690C826D7F30B006327DA /* gift.png */; };
+		6FC690CD26D7F30B006327DA /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690C926D7F30B006327DA /* mail.png */; };
+		6FC690CE26D7F30B006327DA /* vip.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690CA26D7F30B006327DA /* vip.png */; };
+		6FC690D026D7F92A006327DA /* nowImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690CF26D7F929006327DA /* nowImg.png */; };
+		6FC690D226D7FA3D006327DA /* categoryClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC690D126D7FA3D006327DA /* categoryClassViewController.swift */; };
+		6FC690D426D803CA006327DA /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FC690D326D803CA006327DA /* splash.png */; };
 		6FDE138A26CE237900A52132 /* todayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDE138926CE237900A52132 /* todayTableViewCell.swift */; };
 		6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */; };
 		6FDE139026CE25F000A52132 /* today2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6FDE138D26CE25F000A52132 /* today2.jpeg */; };
@@ -413,6 +423,16 @@
 		6FC690B926D7377A006327DA /* userInfoRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfoRes.swift; sourceTree = "<group>"; };
 		6FC690BD26D779A9006327DA /* orderInfoRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderInfoRes.swift; sourceTree = "<group>"; };
 		6FC690BF26D779EB006327DA /* orderInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderInfoDataManager.swift; sourceTree = "<group>"; };
+		6FC690C126D7B096006327DA /* orderReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderReq.swift; sourceTree = "<group>"; };
+		6FC690C326D7B154006327DA /* orderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderDataManager.swift; sourceTree = "<group>"; };
+		6FC690C526D7D8E0006327DA /* orderRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderRes.swift; sourceTree = "<group>"; };
+		6FC690C726D7F30A006327DA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		6FC690C826D7F30B006327DA /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
+		6FC690C926D7F30B006327DA /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		6FC690CA26D7F30B006327DA /* vip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vip.png; sourceTree = "<group>"; };
+		6FC690CF26D7F929006327DA /* nowImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nowImg.png; sourceTree = "<group>"; };
+		6FC690D126D7FA3D006327DA /* categoryClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryClassViewController.swift; sourceTree = "<group>"; };
+		6FC690D326D803CA006327DA /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		6FDE138926CE237900A52132 /* todayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayTableViewCell.swift; sourceTree = "<group>"; };
 		6FDE138B26CE23A100A52132 /* todayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todayTableViewCell.xib; sourceTree = "<group>"; };
 		6FDE138D26CE25F000A52132 /* today2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = today2.jpeg; sourceTree = "<group>"; };
@@ -738,6 +758,7 @@
 				6FC68FB526D395F7006327DA /* MenuCell3.xib */,
 				6FC68FC926D3B3EC006327DA /* ctegoryCollectionViewController.swift */,
 				6FC6903226D4F45E006327DA /* MyCollectionViewCell.swift */,
+				6FC690D126D7FA3D006327DA /* categoryClassViewController.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -871,6 +892,8 @@
 			isa = PBXGroup;
 			children = (
 				6FC690BD26D779A9006327DA /* orderInfoRes.swift */,
+				6FC690C126D7B096006327DA /* orderReq.swift */,
+				6FC690C526D7D8E0006327DA /* orderRes.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -879,6 +902,7 @@
 			isa = PBXGroup;
 			children = (
 				6FC690BF26D779EB006327DA /* orderInfoDataManager.swift */,
+				6FC690C326D7B154006327DA /* orderDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -941,6 +965,12 @@
 		6FEE744026C7DF8000D0D159 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6FC690D326D803CA006327DA /* splash.png */,
+				6FC690CF26D7F929006327DA /* nowImg.png */,
+				6FC690C826D7F30B006327DA /* gift.png */,
+				6FC690C926D7F30B006327DA /* mail.png */,
+				6FC690C726D7F30A006327DA /* play.png */,
+				6FC690CA26D7F30B006327DA /* vip.png */,
 				6FC690B126D6C68B006327DA /* newTop.png */,
 				6FC6909726D6BDB2006327DA /* classAdImg1.png */,
 				6FC6908F26D6BDAF006327DA /* classAdImg2.png */,
@@ -1142,6 +1172,7 @@
 				6FC690A026D6BDB2006327DA /* classSmallImg2.png in Resources */,
 				6FC690B226D6C68C006327DA /* newTop.png in Resources */,
 				6FA4383A26D0A693008E887A /* detailProduct6.png in Resources */,
+				6FC690CB26D7F30B006327DA /* play.png in Resources */,
 				6FDE138C26CE23A100A52132 /* todayTableViewCell.xib in Resources */,
 				6FC690A326D6BDB2006327DA /* classAdImg1.png in Resources */,
 				6FA4380026CF8880008E887A /* productImgSample.png in Resources */,
@@ -1175,10 +1206,12 @@
 				6FA4381926D00B0D008E887A /* giftBtn.png in Resources */,
 				6FA437ED26CF6FAA008E887A /* baner5.png in Resources */,
 				6FC68FE926D4D13A006327DA /* line.png in Resources */,
+				6FC690CC26D7F30B006327DA /* gift.png in Resources */,
 				6FC68FB626D395F7006327DA /* MenuCell3.xib in Resources */,
 				6FC6906826D61D39006327DA /* carticon.png in Resources */,
 				6FDE139226CE25F000A52132 /* today3.jpeg in Resources */,
 				6FA4383826D0A693008E887A /* detailProduct5.png in Resources */,
+				6FC690CD26D7F30B006327DA /* mail.png in Resources */,
 				6FA4381126CF93A9008E887A /* delivery.png in Resources */,
 				6FC6909926D6BDB2006327DA /* classSmallImg7.png in Resources */,
 				6FC6909B26D6BDB2006327DA /* classAdImg2.png in Resources */,
@@ -1196,6 +1229,7 @@
 				6FC6902026D4DFD4006327DA /* category10.png in Resources */,
 				6FC6903026D4E267006327DA /* facebooklogo.png in Resources */,
 				6FC6905426D55353006327DA /* reviewContentTableViewCell.xib in Resources */,
+				6FC690CE26D7F30B006327DA /* vip.png in Resources */,
 				6FEE744D26C8036C00D0D159 /* mainImage.jpg in Resources */,
 				6FA4381426CF93A9008E887A /* myreview.png in Resources */,
 				6FC6901E26D4DFD4006327DA /* category8.png in Resources */,
@@ -1206,6 +1240,7 @@
 				6FA4381226CF93A9008E887A /* like.png in Resources */,
 				6FC6908226D65BAA006327DA /* optionTableViewCell.xib in Resources */,
 				6FC6901F26D4DFD4006327DA /* category19.png in Resources */,
+				6FC690D426D803CA006327DA /* splash.png in Resources */,
 				6FC68FA926D37842006327DA /* contentTableViewCell.xib in Resources */,
 				6FC6907C26D623B9006327DA /* search40.png in Resources */,
 				6FC6902F26D4E267006327DA /* kakaologo.png in Resources */,
@@ -1251,6 +1286,7 @@
 				6FC6904826D54322006327DA /* class.png in Resources */,
 				6FC68FF426D4DAD2006327DA /* pay6.png in Resources */,
 				6FA437F126CF6FAA008E887A /* baner9.png in Resources */,
+				6FC690D026D7F92A006327DA /* nowImg.png in Resources */,
 				6FC68F8726D153A2006327DA /* itemTableViewCell.xib in Resources */,
 				6FEE744226C7DF9600D0D159 /* kakao.png in Resources */,
 				6FC6905E26D618AF006327DA /* back.png in Resources */,
@@ -1321,6 +1357,7 @@
 				6FC6904226D52B79006327DA /* optionRes.swift in Sources */,
 				6FC68FC226D39AEF006327DA /* offlineViewController.swift in Sources */,
 				6FA437F726CF7AB0008E887A /* ProductCollectionViewCell.swift in Sources */,
+				6FC690C226D7B096006327DA /* orderReq.swift in Sources */,
 				6FC6904426D52B9B006327DA /* optionDataManager.swift in Sources */,
 				6FC6904F26D55229006327DA /* reviewTableViewCell.swift in Sources */,
 				6FC690B826D736A7006327DA /* userInfoDataManager.swift in Sources */,
@@ -1330,6 +1367,7 @@
 				6FC68FB226D3956D006327DA /* categoryViewController.swift in Sources */,
 				6FC690B026D6C201006327DA /* newDataManager.swift in Sources */,
 				6FC6905C26D5ED04006327DA /* optionViewController.swift in Sources */,
+				6FC690D226D7FA3D006327DA /* categoryClassViewController.swift in Sources */,
 				6FA437DD26CF67CC008E887A /* AdCollectionViewCell.swift in Sources */,
 				6F9CD69926CA200A00A2AEC0 /* todayViewController.swift in Sources */,
 				6FA4381D26D00CD0008E887A /* detailViewController.swift in Sources */,
@@ -1359,6 +1397,7 @@
 				6FC6903826D4FBA8006327DA /* detailPhotoRes.swift in Sources */,
 				6FA4382E26D0A4EA008E887A /* imageCollectionViewCell.swift in Sources */,
 				6FC68FD826D3FCFE006327DA /* payTableViewCell.swift in Sources */,
+				6FC690C626D7D8E0006327DA /* orderRes.swift in Sources */,
 				6FC68F9F26D2B9E5006327DA /* detailViewDataManager.swift in Sources */,
 				6FC690AD26D6C090006327DA /* MyCollectionViewCell2.swift in Sources */,
 				6FC6908126D65BAA006327DA /* optionTableViewCell.swift in Sources */,
@@ -1377,6 +1416,7 @@
 				6F9CD6C526CAD14500A2AEC0 /* loginViewController.swift in Sources */,
 				6F8C492226CB990900E4E1C4 /* Device.swift in Sources */,
 				6FC68FCD26D3C0A6006327DA /* buyViewController.swift in Sources */,
+				6FC690C426D7B154006327DA /* orderDataManager.swift in Sources */,
 				6FEE742F26C7DA7700D0D159 /* SceneDelegate.swift in Sources */,
 				6FC68FAC26D38953006327DA /* imageTableViewCell.swift in Sources */,
 				6F8C492026CB98F200E4E1C4 /* IndicatorView.swift in Sources */,

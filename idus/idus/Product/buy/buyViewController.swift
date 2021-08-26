@@ -9,8 +9,15 @@ import UIKit
 var detail: detailResult?
 
 class buyViewController: UIViewController {
-
+var finishPrice = 0
+var useridx = 0
+var addidx = 0
+var count = 0
+var itemidx: Int? = 0
+var optionidx = 0
+    
     var dataManager = orderInfoDataManager()
+    var dataManager2 = orderDataManager()
     var data: [orderInfoResult] = [] {
         didSet {
             tableView.reloadData()
@@ -42,6 +49,7 @@ class buyViewController: UIViewController {
     func didSuccessOrderInfo(_ result: [orderInfoResult]) {
         data = result
         print("userInfo>>>>>>>>>>>>>>>>>>\(data)")
+        addidx = data[0].addressIdx!
         tableView.reloadData()
     }
     func failedToRequestOrderInfo(message: String) {
@@ -51,11 +59,56 @@ class buyViewController: UIViewController {
     @objc func back() {
            self.navigationController?.popViewController(animated: true)
        }
-    func receiveItem(data : detailResult?) {
+    func receiveItem(data : detailResult?, price : Int, quantity: Int) {
+        finishPrice = price
         detail = data
+        itemidx = detail?.itemIdx
+        count = quantity
         print(">>>>>>>>>>>>>>>>>\(data)")
     }
+    
+    
+    
+    @IBAction func btnBuy(_ sender: Any) {
+        useridx = Constant.shared.idx
+        switch itemidx {
+        case 1:
+            optionidx = 8
+        case 2:
+            optionidx = 16
+        case 3:
+            optionidx = 23
+        case 4:
+            optionidx = 4
+        case 5:
+            optionidx = 31
+        default:
+            optionidx = 1
+        }
+        
+        
+        let input = orderReq(userIdx: useridx, addressIdx: addidx, price: finishPrice, purchaseQuantity: count, itemOpt1Idx: optionidx)
+        print("inputinputinputinputinput\(input)")
+        dataManager2.postOrder(input, delegate: self)
+    }
+    
+    func didSuccessOrder(_ result: orderRes) {
+        
+let orderAlert = UIAlertController(title: "확인", message: "성공적으로 주문이 완료 되었습니다.", preferredStyle: UIAlertController.Style.alert)
+let onAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
+    orderAlert.addAction(onAction)
+    present(orderAlert, animated: true, completion: nil)
+        
+        let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
+        self.changeRootViewController(mypageVC)
+    }
+    func failedToOrder(message: String) {
+        self.presentAlert(title: message)
+    }
+    
 
+    
 }
 
 extension buyViewController: UITableViewDelegate, UITableViewDataSource {
@@ -88,8 +141,8 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         
-        let name = UserDefaults.standard.string(forKey: "nickName")
-        let phone = UserDefaults.standard.string(forKey: "phone")
+        //let name = UserDefaults.standard.string(forKey: "nickName")
+        //let phone = UserDefaults.standard.string(forKey: "phone")
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0:
@@ -109,9 +162,14 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
             
             case 1 : let cell = tableView.dequeueReusableCell(withIdentifier: "buyInfoCell", for: indexPath) as! buyDataTableViewCell
                 if indexPath.row < data.count {
-                    var item = data[indexPath.row]
+                    //var item = data[indexPath.row]
+                    cell.recieveName.text = data[indexPath.row].recipientName
+                    cell.address.text = data[indexPath.row].address
+                    cell.tfPhone.text = data[indexPath.row].recipientPhone
+                
                 }
                 cell.selectionStyle = .none
+
               //  cell.tfPhone.text = "\(item?.userPhone)"
 //              cell.address.text = data[0].address
 //              cell.recieveName.text = data[0].userName
@@ -132,7 +190,7 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
             
             
             if let price1 = detail?.reducedPrice {
-                if let price = numberFormatter.string(from: NSNumber(value: (price1))) {
+                if let price = numberFormatter.string(from: NSNumber(value: (finishPrice))) {
             cell.lblPrice.text = "\(price)원"
                 }
             }
@@ -144,7 +202,7 @@ extension buyViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             if let delivery = detail?.deliveryCharge, let price = detail?.reducedPrice {
-                let total = delivery + price
+                let total = delivery + finishPrice
                     if let sum = numberFormatter.string(from: NSNumber(value: total)) {
                 cell.lblTotalPrice.text = "\(sum)원"
                 }

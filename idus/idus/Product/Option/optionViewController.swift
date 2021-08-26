@@ -109,7 +109,7 @@ class optionViewController: UIViewController {
             self.changeRootViewController(mypageVC)
         
         
-            mypageVC.receiveItem(data : detail)
+        mypageVC.receiveItem(data : detail, price: productPrice, quantity: count)
         
         
             print("버튼테스트")

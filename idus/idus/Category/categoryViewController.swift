@@ -86,8 +86,8 @@ class categoryViewController: UIViewController {
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "categoryCV") as!
                 ctegoryCollectionViewController
                 return (menu: title, content: vc)
-            case "오프라인":
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController
+            case "클래스":
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "categoryClass") as! categoryClassViewController
                 return (menu: title, content: vc)
             default:
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "today") as! todayViewController

@@ -18,7 +18,7 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userName = UserDefaults.standard.string(forKey: "nickName") ?? "비회원"
-        lblName.text = userName
+        //lblName.text = userName
         profileImage.image = UIImage(named: "profileImage.png")
         profileImage.layer.cornerRadius = 10
 
@@ -51,6 +51,7 @@ extension MyPageViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         lblName.text = data?.userName
+        lblName.text = UserDefaults.standard.string(forKey: "nickName") ?? "비회원"
     }
     
     func failedToRequest(message: String) {
