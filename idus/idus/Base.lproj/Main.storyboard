@@ -671,6 +671,9 @@
                                                         <state key="normal" title="나의 등급 확인하기 &gt;">
                                                             <color key="titleColor" red="0.30703160169999999" green="0.67111635209999998" blue="0.61960858110000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="caP-Z8-J9w" kind="show" id="I84-36-TAr"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQq-J9-WUA">
                                                         <rect key="frame" x="380" y="62" width="21" height="22"/>
@@ -680,9 +683,12 @@
                                                         <state key="normal" image="gearshape" catalog="system">
                                                             <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="a6o-Nt-Yju" kind="show" id="yfN-LI-2hd"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="아기손" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTi-jT-eGy">
-                                                        <rect key="frame" x="137" y="25" width="29" height="14"/>
+                                                        <rect key="frame" x="160" y="32" width="29" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="11"/>
                                                         <nil key="textColor"/>
@@ -754,6 +760,10 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" image="like.png"/>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hand.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Py-vF-qjk">
+                                                        <rect key="frame" x="133" y="26" width="24" height="27"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="285" id="8Dg-bx-HiL"/>
@@ -784,6 +794,9 @@
                                                         <state key="normal" title="   VIP 클럽">
                                                             <color key="titleColor" red="0.15525185941445707" green="0.15525185941445707" blue="0.15525185941445707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="yLE-NO-soO" kind="show" id="CtS-Rk-rcq"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3e-ia-jrL">
                                                         <rect key="frame" x="0.0" y="106" width="374" height="50"/>
@@ -806,6 +819,9 @@
                                                         <state key="normal" title="   친구 초대">
                                                             <color key="titleColor" red="0.1552518594" green="0.1552518594" blue="0.1552518594" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="Vjh-63-Bmn" kind="show" id="xQv-oM-K9b"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1080,6 +1096,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLV-NP-L1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11271" y="502"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3GB-Cu-sDc">
+            <objects>
+                <viewController id="caP-Z8-J9w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vpi-Gv-TYj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grade.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="TXe-7s-Wqw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="863"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lt0-k3-gJ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cgs-Rk-jiv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHx-EM-eaT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11940" y="369"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lko-A3-apD">
+            <objects>
+                <viewController id="yLE-NO-soO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VY1-Ji-2OE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vipClub.png" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-Pj-kgJ">
+                                <rect key="frame" x="0.0" y="48" width="414" height="863"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="39d-0q-Rhw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jFA-o7-Ur8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYN-Qu-8xs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11300" y="1390"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="47w-wp-w27">
+            <objects>
+                <viewController id="Vjh-63-Bmn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ka8-uy-NzX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friend.png" translatesAutoresizingMaskIntoConstraints="NO" id="IPJ-iO-rrN">
+                                <rect key="frame" x="0.0" y="47" width="414" height="863"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5HZ-gd-boi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P27-px-JBY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpU-0c-SQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11931.884057971016" y="1017.8571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eaf-0T-YsI">
+            <objects>
+                <viewController id="a6o-Nt-Yju" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X61-2t-JTp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mydata.png" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-fo-X9m">
+                                <rect key="frame" x="0.0" y="43" width="414" height="863"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="489-z2-CRe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Bm-PK-ied"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrX-Fr-V3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12605" y="1199"/>
         </scene>
         <!--Notice Table View Controller-->
         <scene sceneID="vfl-by-Ap4">
@@ -1356,7 +1460,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWQ-Zx-Oyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11151" y="1238"/>
+            <point key="canvasLocation" x="10401" y="1864"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="c1e-ab-AnJ">
@@ -2440,8 +2544,11 @@
         <image name="class.png" width="424" height="677"/>
         <image name="delivery.png" width="78" height="77"/>
         <image name="facebooklogo.png" width="13" height="24.5"/>
+        <image name="friend.png" width="488" height="925"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="gift.png" width="35" height="36"/>
+        <image name="grade.jpeg" width="1242" height="2380"/>
+        <image name="hand.png" width="31" height="33"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="kakao.png" width="54" height="48"/>
         <image name="kakaologo.png" width="25.5" height="22"/>
@@ -2452,6 +2559,7 @@
         <image name="mainImage.jpg" width="810" height="477"/>
         <image name="mainpage.png" width="888" height="842"/>
         <image name="minus.square" catalog="system" width="128" height="114"/>
+        <image name="mydata.png" width="419" height="797"/>
         <image name="mypageBaner.png" width="423" height="73"/>
         <image name="mypagebottom.jpeg" width="1242" height="548"/>
         <image name="myreview.png" width="85" height="77"/>
@@ -2472,6 +2580,7 @@
         <image name="toolbarImg2.png" width="40" height="48"/>
         <image name="twiterlogo.png" width="23" height="19"/>
         <image name="vip.png" width="36" height="36"/>
+        <image name="vipClub.png" width="489" height="942"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

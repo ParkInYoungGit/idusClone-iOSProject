@@ -94,14 +94,16 @@ var optionidx = 0
     
     func didSuccessOrder(_ result: orderRes) {
         
-let orderAlert = UIAlertController(title: "확인", message: "성공적으로 주문이 완료 되었습니다.", preferredStyle: UIAlertController.Style.alert)
-let onAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
+let orderAlert = UIAlertController(title: "알림", message: "성공적으로 주문이 완료 되었습니다.", preferredStyle: UIAlertController.Style.alert)
+let onAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: {ACTION in
+    let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
+    self.changeRootViewController(mypageVC)
+})
     orderAlert.addAction(onAction)
     present(orderAlert, animated: true, completion: nil)
         
-        let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mypageVC = splashStoryboard.instantiateViewController(identifier: "mainpage")
-        self.changeRootViewController(mypageVC)
+        
     }
     func failedToOrder(message: String) {
         self.presentAlert(title: message)
