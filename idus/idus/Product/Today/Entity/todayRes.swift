@@ -22,7 +22,7 @@ struct todayResult: Decodable {
     let category, itemName, sellerName: String
     let itemPhotoURL: String
     let averageRate: Double
-    let newReview: String
+    let newReview: String?
     let numOfReview: Int
     
     enum CodingKeys: String, CodingKey {

@@ -122,9 +122,16 @@ class signupViewController: UIViewController {
     
     extension signupViewController {
         func didSuccessSignUp(_ result: Result) {
-            let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mypageVC = splashStoryboard.instantiateViewController(identifier: "loginPage")
-            self.changeRootViewController(mypageVC)
+            
+            let orderAlert = UIAlertController(title: "알림", message: "성공적으로 가입이 완료 되었습니다.", preferredStyle: UIAlertController.Style.alert)
+            let onAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: {ACTION in
+                let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let mypageVC = splashStoryboard.instantiateViewController(identifier: "loginPage")
+                self.changeRootViewController(mypageVC)
+            })
+                orderAlert.addAction(onAction)
+                present(orderAlert, animated: true, completion: nil)
+            
         }
         func failedToRequest(message: String) {
             self.presentAlert(title: message)

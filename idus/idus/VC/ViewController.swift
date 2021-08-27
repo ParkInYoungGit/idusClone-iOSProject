@@ -64,9 +64,26 @@ class ViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
     }
 
     @IBAction func otherLogin(_ sender: UIButton) {
-
-        
+        let actionR = UIAlertAction(title: "페이스북", style: .default) { action in
+            self.view.backgroundColor = .red
+        }
+        let actionG = UIAlertAction(title: "트위터", style: .default) { action in
+            self.view.backgroundColor = .green
+        }
+        let actionB = UIAlertAction(title: "이메일", style: .default) { action in
+            let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mypageVC = splashStoryboard.instantiateViewController(identifier: "signup")
+            self.changeRootViewController(mypageVC)
+        }
+       
+        self.presentAlert(
+            title: "다른방법으로 가입하기",
+            preferredStyle: .actionSheet,
+            with: actionR, actionG, actionB
+        )
     }
+        
+    
     
     @IBAction func noLogin(_ sender: Any) {
         let splashStoryboard = UIStoryboard(name: "Main", bundle: nil)

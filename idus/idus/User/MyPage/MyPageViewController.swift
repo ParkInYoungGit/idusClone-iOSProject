@@ -18,7 +18,7 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userName = UserDefaults.standard.string(forKey: "nickName") ?? "비회원"
-        //lblName.text = userName
+        lblName.text = userName
         profileImage.image = UIImage(named: "profileImage.png")
         profileImage.layer.cornerRadius = 10
 
@@ -44,9 +44,11 @@ class MyPageViewController: UIViewController {
 extension MyPageViewController {
     func didSuccessMypage(_ result: myPageResult) {
         data = result
+        UserDefaults.standard.set(data?.userName, forKey: "nickName")
+        lblName.text = data?.userName
         viewWillAppear(true)
         
-        UserDefaults.standard.set(data?.userName, forKey: "nickName")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
