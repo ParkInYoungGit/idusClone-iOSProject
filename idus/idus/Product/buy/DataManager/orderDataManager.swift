@@ -13,7 +13,7 @@ class orderDataManager {
         let header: HTTPHeaders = [
             "x-access-token" : Constant.shared.jwt]
         let userIdx = Constant.shared.idx
-        AF.request("\(Constant.BASE_URL)items/\(userIdx)/order", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+        AF.request("\(Constant.BASE_URL)items/5/order", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
             .validate()
             .responseDecodable(of: orderRes.self) { response in
                 print("response result >>> \(response.result)")
