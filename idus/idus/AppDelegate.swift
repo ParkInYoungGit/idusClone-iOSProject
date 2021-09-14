@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         NaverThirdPartyLoginConnection.getSharedInstance()?.isInAppOauthEnable = true
 
-        KakaoSDKCommon.initSDK(appKey: "ecde480714ca72f4205e6d74dc9dfb32")
+        KakaoSDKCommon.initSDK(appKey: "")
         let instance = NaverThirdPartyLoginConnection.getSharedInstance()
             
             // 네이버 앱으로 인증하는 방식을 활성화
