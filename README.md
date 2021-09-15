@@ -1,5 +1,18 @@
 # RP_idus_C
 
+
+<img width="1723" alt="idus1" src="https://user-images.githubusercontent.com/74819307/133392010-e12b7ae9-d9ca-473d-8048-621f86744bd8.png">
+<img width="1723" alt="idus2" src="https://user-images.githubusercontent.com/74819307/133392046-6249e70c-71d6-47d4-89f6-3e51db46081b.png">
+<img width="1690" alt="idus3" src="https://user-images.githubusercontent.com/74819307/133392049-5804c8d6-ff12-4325-a8b7-2f77eb47f0cd.png">
+<img width="1690" alt="idus4" src="https://user-images.githubusercontent.com/74819307/133392071-2a6a243e-6b55-4c6d-8df9-cc1d317021fb.png">
+<img width="1759" alt="idus5" src="https://user-images.githubusercontent.com/74819307/133392077-623f76f3-2d8b-46da-9309-e29d2e59c18f.png">
+<img width="1767" alt="idus6" src="https://user-images.githubusercontent.com/74819307/133392082-49a3d9dc-ae8a-43b8-96db-9519d32325cd.png">
+<img width="1767" alt="idus7" src="https://user-images.githubusercontent.com/74819307/133392084-b7be8021-afcd-4233-89ab-eba839a45e39.png">
+<img width="1731" alt="idus8" src="https://user-images.githubusercontent.com/74819307/133392087-458f02c3-d736-4d89-b5c1-b40959814398.png">
+
+***
+## 개발일지
+
 2021.08.14
 - 메인페이지 화면 구성 완료
 - 나의 정보 페이지 스크롤뷰 구현
